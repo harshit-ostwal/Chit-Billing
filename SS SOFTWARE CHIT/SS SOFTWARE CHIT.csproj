@@ -1,0 +1,394 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1990003C-E2C3-4880-AA8D-033EAE3BA1DC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>SS_SOFTWARE_CHIT</RootNamespace>
+    <AssemblyName>SS SOFTWARE CHIT</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu.UI.WinForms.BunifuButton">
+      <HintPath>..\..\..\Download\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForms.BunifuButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuCheckBox">
+      <HintPath>..\..\..\Download\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForms.BunifuCheckBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuTextbox">
+      <HintPath>..\..\..\Download\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForms.BunifuTextbox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>..\..\..\Download\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="SeleniumExtras.WaitHelpers, Version=3.11.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DotNetSeleniumExtras.WaitHelpers.3.11.0\lib\net45\SeleniumExtras.WaitHelpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing.Common, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Drawing.Common.7.0.0\lib\net462\System.Drawing.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WebDriver, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Selenium.WebDriver.4.14.0\lib\netstandard2.0\WebDriver.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Connection.cs" />
+    <Compile Include="CRY_CHIT_BILLING.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRY_CHIT_BILLING.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CRY_CUSTOMER_ACTIVITY_REPORT.cs">
+      <DependentUpon>CRY_CUSTOMER_ACTIVITY_REPORT.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="CRY_YEARLY_REPORTS.cs">
+      <DependentUpon>CRY_YEARLY_REPORTS.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="CRY_MONTHLY_REPORTS.cs">
+      <DependentUpon>CRY_MONTHLY_REPORTS.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="CRY_DAILY_REPORTS.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRY_DAILY_REPORTS.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FRM_ADMIN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_ADMIN.Designer.cs">
+      <DependentUpon>FRM_ADMIN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_CALCULATOR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_CALCULATOR.designer.cs">
+      <DependentUpon>FRM_CALCULATOR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_CHIT_BILLING.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_CHIT_BILLING.Designer.cs">
+      <DependentUpon>FRM_CHIT_BILLING.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_COMPANY_MASTER.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_COMPANY_MASTER.Designer.cs">
+      <DependentUpon>FRM_COMPANY_MASTER.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_CONTACT_US.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_CONTACT_US.designer.cs">
+      <DependentUpon>FRM_CONTACT_US.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_CRY_CUSTOMER_ACTIVITY_REPORTS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_CRY_CUSTOMER_ACTIVITY_REPORTS.designer.cs">
+      <DependentUpon>FRM_CRY_CUSTOMER_ACTIVITY_REPORTS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_CRY_CHIT_BILLING.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_CRY_CHIT_BILLING.designer.cs">
+      <DependentUpon>FRM_CRY_CHIT_BILLING.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_CRY_DAILY_REPORTS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_CRY_DAILY_REPORTS.designer.cs">
+      <DependentUpon>FRM_CRY_DAILY_REPORTS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_CRY_MONTHLY_REPORTS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_CRY_MONTHLY_REPORTS.designer.cs">
+      <DependentUpon>FRM_CRY_MONTHLY_REPORTS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_CRY_YEARLY_REPORTS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_CRY_YEARLY_REPORTS.designer.cs">
+      <DependentUpon>FRM_CRY_YEARLY_REPORTS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_CUSTOMER_ACTIVITY.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_CUSTOMER_ACTIVITY.Designer.cs">
+      <DependentUpon>FRM_CUSTOMER_ACTIVITY.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_CUSTOMER_MASTER.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_CUSTOMER_MASTER.Designer.cs">
+      <DependentUpon>FRM_CUSTOMER_MASTER.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_DAILY_REPORTS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_DAILY_REPORTS.Designer.cs">
+      <DependentUpon>FRM_DAILY_REPORTS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_FORGOT_PASSWORD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_FORGOT_PASSWORD.designer.cs">
+      <DependentUpon>FRM_FORGOT_PASSWORD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_HOME.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_HOME.Designer.cs">
+      <DependentUpon>FRM_HOME.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_LOGIN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_LOGIN.designer.cs">
+      <DependentUpon>FRM_LOGIN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_MONTHLY_REPORTS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_MONTHLY_REPORTS.Designer.cs">
+      <DependentUpon>FRM_MONTHLY_REPORTS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_RECORD_DELETE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_RECORD_DELETE.Designer.cs">
+      <DependentUpon>FRM_RECORD_DELETE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_SETTINGS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_SETTINGS.designer.cs">
+      <DependentUpon>FRM_SETTINGS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_WHATSAPP_SETTINGS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_WHATSAPP_SETTINGS.Designer.cs">
+      <DependentUpon>FRM_WHATSAPP_SETTINGS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_YEARLY_REPORTS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_YEARLY_REPORTS.Designer.cs">
+      <DependentUpon>FRM_YEARLY_REPORTS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MainDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Settings_dbDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Settings_dbDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="WhatsApp.cs" />
+    <EmbeddedResource Include="CRY_CHIT_BILLING.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRY_CHIT_BILLING.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRY_CUSTOMER_ACTIVITY_REPORT.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRY_CUSTOMER_ACTIVITY_REPORT.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRY_YEARLY_REPORTS.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRY_YEARLY_REPORTS.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRY_MONTHLY_REPORTS.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRY_MONTHLY_REPORTS.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRY_DAILY_REPORTS.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRY_DAILY_REPORTS.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_ADMIN.resx">
+      <DependentUpon>FRM_ADMIN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_CALCULATOR.resx">
+      <DependentUpon>FRM_CALCULATOR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_CHIT_BILLING.resx">
+      <DependentUpon>FRM_CHIT_BILLING.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_COMPANY_MASTER.resx">
+      <DependentUpon>FRM_COMPANY_MASTER.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_CONTACT_US.resx">
+      <DependentUpon>FRM_CONTACT_US.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_CRY_CUSTOMER_ACTIVITY_REPORTS.resx">
+      <DependentUpon>FRM_CRY_CUSTOMER_ACTIVITY_REPORTS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_CRY_CHIT_BILLING.resx">
+      <DependentUpon>FRM_CRY_CHIT_BILLING.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_CRY_DAILY_REPORTS.resx">
+      <DependentUpon>FRM_CRY_DAILY_REPORTS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_CRY_MONTHLY_REPORTS.resx">
+      <DependentUpon>FRM_CRY_MONTHLY_REPORTS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_CRY_YEARLY_REPORTS.resx">
+      <DependentUpon>FRM_CRY_YEARLY_REPORTS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_CUSTOMER_ACTIVITY.resx">
+      <DependentUpon>FRM_CUSTOMER_ACTIVITY.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_CUSTOMER_MASTER.resx">
+      <DependentUpon>FRM_CUSTOMER_MASTER.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_DAILY_REPORTS.resx">
+      <DependentUpon>FRM_DAILY_REPORTS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_FORGOT_PASSWORD.resx">
+      <DependentUpon>FRM_FORGOT_PASSWORD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_HOME.resx">
+      <DependentUpon>FRM_HOME.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_LOGIN.resx">
+      <DependentUpon>FRM_LOGIN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_MONTHLY_REPORTS.resx">
+      <DependentUpon>FRM_MONTHLY_REPORTS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_RECORD_DELETE.resx">
+      <DependentUpon>FRM_RECORD_DELETE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_SETTINGS.resx">
+      <DependentUpon>FRM_SETTINGS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_WHATSAPP_SETTINGS.resx">
+      <DependentUpon>FRM_WHATSAPP_SETTINGS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_YEARLY_REPORTS.resx">
+      <DependentUpon>FRM_YEARLY_REPORTS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="MainDataSet.xsc">
+      <DependentUpon>MainDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="MainDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MainDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MainDataSet.xss">
+      <DependentUpon>MainDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Settings_dbDataSet.xsc">
+      <DependentUpon>Settings_dbDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Settings_dbDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Settings_dbDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Settings_dbDataSet.xss">
+      <DependentUpon>Settings_dbDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Selenium.WebDriver.4.14.0\build\Selenium.WebDriver.targets" Condition="Exists('..\packages\Selenium.WebDriver.4.14.0\build\Selenium.WebDriver.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Selenium.WebDriver.4.14.0\build\Selenium.WebDriver.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Selenium.WebDriver.4.14.0\build\Selenium.WebDriver.targets'))" />
+  </Target>
+</Project>
