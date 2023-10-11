@@ -301,6 +301,10 @@ namespace SS_SOFTWARE_CHIT
             string Url = "https://web.whatsapp.com/send?phone=" + txtmobileno.Text + "&text=" + "*" + txtcustomername.Text + "*";
             if (lblstatus.Text == "WHATSAPP READY")
             {
+                //if (lblattach.Text == "")
+                //{
+                //try
+                //{
                 WebDriverWait wait = new WebDriverWait(app.driver, TimeSpan.FromSeconds(10));
                 app.driver.Navigate().GoToUrl(Url);
                 try
@@ -323,6 +327,75 @@ namespace SS_SOFTWARE_CHIT
                     MessageBox.Show("SMS SENT SUCCESSFULLY!", "SS SOFTWARE", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 this.Focus();
+                //}
+                //catch (Exception)
+                //{
+                //    WebDriverWait wait = new WebDriverWait(app.driver, TimeSpan.FromSeconds(20));
+                //    app.driver.Navigate().GoToUrl(Url);
+                //    try
+                //    {
+                //        if (wait.Until(driver => app.driver.PageSource.Contains("Phone number shared via url is invalid.")) == true)
+                //        {
+                //            app.driver.FindElement(By.XPath("// div[@class='tvf2evcx m0h2a7mj lb5m6g5c j7l1k36l ktfrpxia nu7pwgvd p357zi0d dnb887gk gjuq5ydh i2cterl7 i6vnu1w3 qjslfuze ac2vgrno sap93d0t gndfcl4n']")).Click();
+                //            MessageBox.Show("WRONG MOBILE NO?", "SS SOFTWARE", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                //            txtmobileno.Focus();
+                //        }
+                //    }
+                //    catch (Exception)
+                //    {
+                //        app.driver.FindElement(By.XPath("// span[@data-icon='send']")).Click();
+                //        MessageBox.Show("SMS SENT SUCCESSFULLY!", "SS SOFTWARE", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //    }
+                //    this.Focus();
+                //}
+                //}
+                //else
+                //{
+                //    //try
+                //    //{
+                //    //    WebDriverWait wait = new WebDriverWait(app.driver, TimeSpan.FromSeconds(10));
+                //    //    app.driver.Navigate().GoToUrl(Url);
+                //    //    try
+                //    //    {
+                //    //        if (wait.Until(driver => app.driver.PageSource.Contains("Phone number shared via url is invalid.")) == true)
+                //    //        {
+                //    //            app.driver.FindElement(By.XPath("// div[@class='tvf2evcx m0h2a7mj lb5m6g5c j7l1k36l ktfrpxia nu7pwgvd p357zi0d dnb887gk gjuq5ydh i2cterl7 i6vnu1w3 qjslfuze ac2vgrno sap93d0t gndfcl4n']")).Click();
+                //    //            MessageBox.Show("WRONG MOBILE NO?", "SS SOFTWARE", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                //    //            txtmobileno.Focus();
+                //    //        }
+                //    //    }
+                //    //    catch (Exception)
+                //    //    {
+                //    //        app.driver.FindElement(By.XPath("// div[@title='Attach']")).Click();
+                //    //        wait.Until(driver => app.driver.FindElement(By.XPath("//input[@accept='*']"))).SendKeys(openFileDialog1.FileName.ToString());
+                //    //        wait.Until(driver => app.driver.FindElement(By.XPath("// span[@data-icon='send']"))).Click();
+                //    //        MessageBox.Show("SMS SENT SUCCESSFULLY!", "SS SOFTWARE", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //    //    }
+                //    //    this.Focus();
+                //    //}
+                //    //catch (Exception)
+                //    //{
+                //    //    WebDriverWait wait = new WebDriverWait(app.driver, TimeSpan.FromSeconds(30));
+                //    //    app.driver.Navigate().GoToUrl(Url);
+                //    //    try
+                //    //    {
+                //    //        if (wait.Until(driver => app.driver.PageSource.Contains("Phone number shared via url is invalid.")) == true)
+                //    //        {
+                //    //            app.driver.FindElement(By.XPath("// div[@class='tvf2evcx m0h2a7mj lb5m6g5c j7l1k36l ktfrpxia nu7pwgvd p357zi0d dnb887gk gjuq5ydh i2cterl7 i6vnu1w3 qjslfuze ac2vgrno sap93d0t gndfcl4n']")).Click();
+                //    //            MessageBox.Show("WRONG MOBILE NO?", "SS SOFTWARE", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                //    //            txtmobileno.Focus();
+                //    //        }
+                //    //    }
+                //    //    catch (Exception)
+                //    //    {
+                //    //        app.driver.FindElement(By.XPath("// div[@title='Attach']")).Click();
+                //    //        app.driver.FindElement(By.XPath("//input[@accept='*']")).SendKeys(openFileDialog1.FileName.ToString());
+                //    //        wait.Until(driver => app.driver.FindElement(By.XPath("// span[@data-icon='send']"))).Click();
+                //    //        MessageBox.Show("SMS SENT SUCCESSFULLY!", "SS SOFTWARE", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //    //    }
+                //    //    this.Focus();
+                //    //}
+                //}
             }
             else
             {
