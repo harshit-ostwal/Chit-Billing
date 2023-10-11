@@ -59,10 +59,6 @@ namespace SS_SOFTWARE_CHIT
                     {
                         lblstatus.Text = "WHATSAPP NOT AUTHORIZED";
                     }
-                    else if (app.driver.PageSource.Contains("Loading your Chats"))
-                    {
-                        lblstatus.Text = "WHATSAPP LOADING...";
-                    }
                     else
                     {
                         lblstatus.Text = "WHATSAPP READY";
@@ -411,10 +407,6 @@ namespace SS_SOFTWARE_CHIT
                 if (app.driver.PageSource.Contains("Use WhatsApp on your computer"))
                 {
                     lblstatus.Text = "WHATSAPP NOT AUTHORIZED";
-                }
-                else if (app.driver.PageSource.Contains("Loading your Chats"))
-                {
-                    lblstatus.Text = "WHATSAPP LOADING...";
                 }
                 else
                 {

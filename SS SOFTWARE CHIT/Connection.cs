@@ -5,6 +5,7 @@ using System;
 using System.Data;
 using System.Data.OleDb;
 using System.IO;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SS_SOFTWARE_CHIT
@@ -21,6 +22,7 @@ namespace SS_SOFTWARE_CHIT
         public static OleDbConnection con;
         public static OleDbCommand cmd = new OleDbCommand();
         public static DataSet ds = new DataSet();
+
 
         //Bill
         public void Bill(TextBox txtcustomerid, TextBox txtcustomername, TextBox txtarea, TextBox txtmobileno, TextBox txtsno, DateTimePicker txtdate, TextBox txtmonth, TextBox txttype, TextBox txtamount)
@@ -93,107 +95,7 @@ namespace SS_SOFTWARE_CHIT
             }
         }
 
-        //public void Send(Label lblstatus,TextBox txtmobileno,TextBox txtmsg)
-        //{
-        //    string Url = "https://web.whatsapp.com/send?phone=" + txtmobileno.Text + "&text=" + "*" + txtmsg.Text + "*";
-        //    if (lblstatus.Text == "WHATSAPP READY")
-        //    {
-        //        //if (lblattach.Text == "")
-        //        //{
-        //        try
-        //        {
-        //            WebDriverWait wait = new WebDriverWait(app.driver, TimeSpan.FromSeconds(10));
-        //            app.driver.Navigate().GoToUrl(Url);
-        //            try
-        //            {
-        //                if (wait.Until(driver => app.driver.PageSource.Contains("Phone number shared via url is invalid.")) == true)
-        //                {
-        //                    app.driver.FindElement(By.XPath("// div[@class='tvf2evcx m0h2a7mj lb5m6g5c j7l1k36l ktfrpxia nu7pwgvd p357zi0d dnb887gk gjuq5ydh i2cterl7 i6vnu1w3 qjslfuze ac2vgrno sap93d0t gndfcl4n']")).Click();
-        //                    MessageBox.Show("WRONG MOBILE NO?", "SS SOFTWARE", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-        //                    txtmobileno.Focus();
-        //                }
-        //            }
-        //            catch (Exception)
-        //            {
-        //                app.driver.FindElement(By.XPath("// span[@data-icon='send']")).Click();
-        //                MessageBox.Show("SMS SENT SUCCESSFULLY!", "SS SOFTWARE", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        //            }
-        //        }
-        //        catch (Exception)
-        //        {
-        //            WebDriverWait wait = new WebDriverWait(app.driver, TimeSpan.FromSeconds(20));
-        //            app.driver.Navigate().GoToUrl(Url);
-        //            try
-        //            {
-        //                if (wait.Until(driver => app.driver.PageSource.Contains("Phone number shared via url is invalid.")) == true)
-        //                {
-        //                    app.driver.FindElement(By.XPath("// div[@class='tvf2evcx m0h2a7mj lb5m6g5c j7l1k36l ktfrpxia nu7pwgvd p357zi0d dnb887gk gjuq5ydh i2cterl7 i6vnu1w3 qjslfuze ac2vgrno sap93d0t gndfcl4n']")).Click();
-        //                    MessageBox.Show("WRONG MOBILE NO?", "SS SOFTWARE", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-        //                    txtmobileno.Focus();
-        //                }
-        //            }
-        //            catch (Exception)
-        //            {
-        //                app.driver.FindElement(By.XPath("// span[@data-icon='send']")).Click();
-        //                MessageBox.Show("SMS SENT SUCCESSFULLY!", "SS SOFTWARE", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        //            }
-        //        }
-        //        //}
-        //        //else
-        //        //{
-        //        //    //try
-        //        //    //{
-        //        //    //    WebDriverWait wait = new WebDriverWait(app.driver, TimeSpan.FromSeconds(10));
-        //        //    //    app.driver.Navigate().GoToUrl(Url);
-        //        //    //    try
-        //        //    //    {
-        //        //    //        if (wait.Until(driver => app.driver.PageSource.Contains("Phone number shared via url is invalid.")) == true)
-        //        //    //        {
-        //        //    //            app.driver.FindElement(By.XPath("// div[@class='tvf2evcx m0h2a7mj lb5m6g5c j7l1k36l ktfrpxia nu7pwgvd p357zi0d dnb887gk gjuq5ydh i2cterl7 i6vnu1w3 qjslfuze ac2vgrno sap93d0t gndfcl4n']")).Click();
-        //        //    //            MessageBox.Show("WRONG MOBILE NO?", "SS SOFTWARE", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-        //        //    //            txtmobileno.Focus();
-        //        //    //        }
-        //        //    //    }
-        //        //    //    catch (Exception)
-        //        //    //    {
-        //        //    //        app.driver.FindElement(By.XPath("// div[@title='Attach']")).Click();
-        //        //    //        wait.Until(driver => app.driver.FindElement(By.XPath("//input[@accept='*']"))).SendKeys(openFileDialog1.FileName.ToString());
-        //        //    //        wait.Until(driver => app.driver.FindElement(By.XPath("// span[@data-icon='send']"))).Click();
-        //        //    //        MessageBox.Show("SMS SENT SUCCESSFULLY!", "SS SOFTWARE", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        //        //    //    }
-        //        //    //    this.Focus();
-        //        //    //}
-        //        //    //catch (Exception)
-        //        //    //{
-        //        //    //    WebDriverWait wait = new WebDriverWait(app.driver, TimeSpan.FromSeconds(30));
-        //        //    //    app.driver.Navigate().GoToUrl(Url);
-        //        //    //    try
-        //        //    //    {
-        //        //    //        if (wait.Until(driver => app.driver.PageSource.Contains("Phone number shared via url is invalid.")) == true)
-        //        //    //        {
-        //        //    //            app.driver.FindElement(By.XPath("// div[@class='tvf2evcx m0h2a7mj lb5m6g5c j7l1k36l ktfrpxia nu7pwgvd p357zi0d dnb887gk gjuq5ydh i2cterl7 i6vnu1w3 qjslfuze ac2vgrno sap93d0t gndfcl4n']")).Click();
-        //        //    //            MessageBox.Show("WRONG MOBILE NO?", "SS SOFTWARE", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-        //        //    //            txtmobileno.Focus();
-        //        //    //        }
-        //        //    //    }
-        //        //    //    catch (Exception)
-        //        //    //    {
-        //        //    //        app.driver.FindElement(By.XPath("// div[@title='Attach']")).Click();
-        //        //    //        app.driver.FindElement(By.XPath("//input[@accept='*']")).SendKeys(openFileDialog1.FileName.ToString());
-        //        //    //        wait.Until(driver => app.driver.FindElement(By.XPath("// span[@data-icon='send']"))).Click();
-        //        //    //        MessageBox.Show("SMS SENT SUCCESSFULLY!", "SS SOFTWARE", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        //        //    //    }
-        //        //    //    this.Focus();
-        //        //    //}
-        //        //}
-        //    }
-        //    else
-        //    {
-        //        MessageBox.Show("WHATSAPP NOT AUTHORIZED?", "SS SOFTWARE", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-        //    }
-        //}
-
-        public void MainSave(string MSaveData,TextBox txtcustomerid, TextBox txtcustomername, TextBox txtarea, TextBox txtmobileno, TextBox txtsno, DateTimePicker txtdate, TextBox txtmonth, TextBox txttype, TextBox txtamount)
+        public async void MainSave(string MSaveData,TextBox txtcustomerid, TextBox txtcustomername, TextBox txtarea, TextBox txtmobileno, TextBox txtsno, DateTimePicker txtdate, TextBox txtmonth, TextBox txttype, TextBox txtamount)
         {
             try
             {
@@ -205,9 +107,11 @@ namespace SS_SOFTWARE_CHIT
                     cmd.CommandText = MSaveData;
                     cmd.ExecuteNonQuery();
                     con.Close();
-                    Bill(txtcustomerid, txtcustomername, txtarea, txtmobileno, txtsno, txtdate, txtmonth, txttype, txtamount);
-                    //Send(lblstatus,txtmobileno,txtmsg);
                     MessageBox.Show("ADDED SUCCESSFULLY!!!", "SS SOFTWARE", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    await Task.Run(() =>
+                    {
+                        Bill(txtcustomerid, txtcustomername, txtarea, txtmobileno, txtsno, txtdate, txtmonth, txttype, txtamount);
+                    });
                     string ThisDB = Application.StartupPath + "\\DATABASE\\Main_db.accdb";
                     string SP = Application.StartupPath + "\\BACKUP\\";
                     string Destitnation = SP + "\\Main_db " + DateTime.Now.ToString(" dd-MM-yyyy hh-mm-ss") + ".bak";
@@ -220,7 +124,7 @@ namespace SS_SOFTWARE_CHIT
             }
 }
 
-        public void MainEdit(string MEditdata, TextBox txtcustomerid, TextBox txtcustomername, TextBox txtarea, TextBox txtmobileno, TextBox txtsno, DateTimePicker txtdate, TextBox txtmonth, TextBox txttype, TextBox txtamount)
+        public async void MainEdit(string MEditdata, TextBox txtcustomerid, TextBox txtcustomername, TextBox txtarea, TextBox txtmobileno, TextBox txtsno, DateTimePicker txtdate, TextBox txtmonth, TextBox txttype, TextBox txtamount)
         {
             try
             {
@@ -232,10 +136,11 @@ namespace SS_SOFTWARE_CHIT
                     cmd.CommandText = MEditdata;
                     cmd.ExecuteNonQuery();
                     con.Close();
-                    Bill(txtcustomerid, txtcustomername, txtarea, txtmobileno, txtsno, txtdate, txtmonth, txttype, txtamount);
-                    //Send(lblstatus, txtmobileno, txtmsg);
                     MessageBox.Show("UPDATED SUCCESSFULLY!!!", "SS SOFTWARE", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    string ThisDB = Application.StartupPath + "\\DATABASE\\Main_db.accdb";
+                    await Task.Run(() =>
+                    {
+                        Bill(txtcustomerid, txtcustomername, txtarea, txtmobileno, txtsno, txtdate, txtmonth, txttype, txtamount);
+                    }); string ThisDB = Application.StartupPath + "\\DATABASE\\Main_db.accdb";
                     string SP = Application.StartupPath + "\\BACKUP\\";
                     string Destitnation = SP + "\\Main_db " + DateTime.Now.ToString(" dd-MM-yyyy hh-mm-ss") + ".bak";
                     File.Copy(ThisDB, Destitnation);

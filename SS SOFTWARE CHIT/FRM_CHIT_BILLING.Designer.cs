@@ -104,6 +104,7 @@ namespace SS_SOFTWARE_CHIT
             this.lblstatus = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.lblmsg = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picminimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.piclose)).BeginInit();
@@ -936,12 +937,24 @@ namespace SS_SOFTWARE_CHIT
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // lblmsg
+            // 
+            this.lblmsg.AutoSize = true;
+            this.lblmsg.Font = new System.Drawing.Font("Futura Std Book", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblmsg.ForeColor = System.Drawing.Color.Black;
+            this.lblmsg.Location = new System.Drawing.Point(8, 330);
+            this.lblmsg.Name = "lblmsg";
+            this.lblmsg.Size = new System.Drawing.Size(125, 21);
+            this.lblmsg.TabIndex = 890;
+            this.lblmsg.Text = "CUSTOMER ID :";
+            // 
             // FRM_CHIT_BILLING
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(166)))), ((int)(((byte)(0)))));
             this.ClientSize = new System.Drawing.Size(1280, 720);
+            this.Controls.Add(this.lblmsg);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.lblstatus);
             this.Controls.Add(this.lblmobileno1);
@@ -1058,5 +1071,6 @@ namespace SS_SOFTWARE_CHIT
         private System.Windows.Forms.Label lblstatus;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Label lblmsg;
     }
 }

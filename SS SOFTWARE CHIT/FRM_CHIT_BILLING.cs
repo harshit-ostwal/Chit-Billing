@@ -43,10 +43,6 @@ namespace SS_SOFTWARE_CHIT
                 {
                     lblstatus.Text = "WHATSAPP NOT AUTHORIZED";
                 }
-                else if (app.driver.PageSource.Contains("Loading your Chats"))
-                {
-                    lblstatus.Text = "WHATSAPP LOADING...";
-                }
                 else
                 {
                     lblstatus.Text = "WHATSAPP READY";
@@ -294,39 +290,40 @@ namespace SS_SOFTWARE_CHIT
             dgw_view.Columns[10].HeaderText = "BALANCE";
         }
 
-        private void Send()
+        public void Send()
         {
-            string pdf = Path.Combine(Application.StartupPath, "REPORTS", "BILL" + ".pdf");
-            openFileDialog1.FileName = pdf;
-            string Url = "https://web.whatsapp.com/send?phone=" + txtmobileno.Text + "&text=" + "*" + txtcustomername.Text + "*";
-            if (lblstatus.Text == "WHATSAPP READY")
+            if (MessageBox.Show("DO YOU WANT TO SEND WHATSAPP BILL?", "SS SOFTWARE", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
             {
-                WebDriverWait wait = new WebDriverWait(app.driver, TimeSpan.FromSeconds(10));
-                app.driver.Navigate().GoToUrl(Url);
-                try
+                string pdf = Path.Combine(Application.StartupPath, "REPORTS", "BILL" + ".pdf");
+                openFileDialog1.FileName = pdf;
+                string Url = "https://web.whatsapp.com/send?phone=" + txtmobileno.Text + "&text=" + "*" + txtcustomername.Text + "*";
+                if (lblstatus.Text == "WHATSAPP READY")
                 {
-                    if (wait.Until(driver => app.driver.PageSource.Contains("Phone number shared via url is invalid.")) == true)
+                    WebDriverWait wait = new WebDriverWait(app.driver, TimeSpan.FromSeconds(10));
+                    app.driver.Navigate().GoToUrl(Url);
+                    try
                     {
-                        app.driver.FindElement(By.XPath("// div[@class='tvf2evcx m0h2a7mj lb5m6g5c j7l1k36l ktfrpxia nu7pwgvd p357zi0d dnb887gk gjuq5ydh i2cterl7 i6vnu1w3 qjslfuze ac2vgrno sap93d0t gndfcl4n']")).Click();
-                        MessageBox.Show("WRONG MOBILE NO?", "SS SOFTWARE", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        txtmobileno.Focus();
+                        if (wait.Until(driver => driver.PageSource.Contains("Phone number shared via url is invalid.")) == true)
+                        {
+                            app.driver.FindElement(By.XPath("// div[@class='tvf2evcx m0h2a7mj lb5m6g5c j7l1k36l ktfrpxia nu7pwgvd p357zi0d dnb887gk gjuq5ydh i2cterl7 i6vnu1w3 qjslfuze ac2vgrno sap93d0t gndfcl4n']")).Click();
+                            MessageBox.Show("WRONG MOBILE NO?", "SS SOFTWARE", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            txtmobileno.Focus();
+                        }
                     }
+                    catch (Exception)
+                    {
+                        app.driver.FindElement(By.XPath("//div[@title='Attach']")).Click();
+                        app.driver.FindElement(By.XPath("//input[@accept='*']")).SendKeys(openFileDialog1.FileName.ToString());
+                        wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(By.XPath("//div[@aria-label='Send']")));
+                        app.driver.FindElement(By.XPath("//div[@aria-label='Send']")).Click();
+                        MessageBox.Show("SMS SENT SUCCESSFULLY!", "SS SOFTWARE", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    this.Focus();
                 }
-                catch (Exception)
+                else
                 {
-                    wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementIsVisible(By.XPath("//div[@title='Attach']")));
-                    app.driver.FindElement(By.XPath("//div[@title='Attach']")).Click();
-                    wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("//input[@accept='*']")));
-                    app.driver.FindElement(By.XPath("//input[@accept='*']")).SendKeys(openFileDialog1.FileName.ToString());
-                    wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(By.XPath("//div[@aria-label='Send']")));
-                    app.driver.FindElement(By.XPath("//div[@aria-label='Send']")).Click();
-                    MessageBox.Show("SMS SENT SUCCESSFULLY!", "SS SOFTWARE", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("WHATSAPP NOT AUTHORIZED?", "SS SOFTWARE", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
-                this.Focus();
-            }
-            else
-            {
-                MessageBox.Show("WHATSAPP NOT AUTHORIZED?", "SS SOFTWARE", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -355,8 +352,8 @@ namespace SS_SOFTWARE_CHIT
                     {
                         string MEditData = "Update Chit_Billing_db set f_customer_id='" + txtcustomerid.Text + "', f_customer_name='" + txtcustomername.Text + "',f_area='" + txtarea.Text + "',f_mobile_no='" + txtmobileno.Text + "',f_sno='" + txtsno.Text + "',f_date='" + txtdate.Text + "',f_month='" + txtmonth.Text + "',f_type='" + txttype.Text + "',f_amount='" + txtamount.Text + "',f_balance='" + txtbalance.Text + "'  where ID=" + dgw_view.SelectedRows[i].Cells[0].Value.ToString() + "";
                         connection.MainEdit(MEditData, txtcustomerid, txtcustomername, txtarea, txtmobileno, txtsno, txtdate, txtmonth, txttype, txtamount);
-                        Send();
                         Clear();
+                        Send();
                         btnsave.Text = "F2 Save";
                         grpchit.Text = "Create";
                     }
