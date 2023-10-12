@@ -60,6 +60,8 @@ namespace SS_SOFTWARE_CHIT
 
         private void FRM_CHIT_BILLING_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'settings_dbDataSet.Whatsapp_db' table. You can move, or remove it, as needed.
+            this.whatsapp_dbTableAdapter.Fill(this.settings_dbDataSet.Whatsapp_db);
             //timer1.Start();
             try
             {
@@ -294,13 +296,55 @@ namespace SS_SOFTWARE_CHIT
             dgw_view.Columns[10].HeaderText = "BALANCE";
         }
 
+        private void msg()
+        {
+            string msg = lblmsg.Text;
+            string customerIdRemove = "{CUSTOMER_ID}";
+            string customerNameRemove = "{CUSTOMER_NAME}";
+            string mobileNoRemove = "{MOBILE_NO}";
+            string typeRemove = "{TYPE}";
+            string amountRemove = "{AMOUNT}";
+            string dateRemove = "{DATE}";
+            if (lblmsgcustomerid.Text == "True")
+            {
+                msg = msg.Replace(customerIdRemove, txtcustomerid.Text);
+                lblmsg.Text = msg;
+            }
+            if (lblmsgcustomername.Text == "True")
+            {
+                msg = msg.Replace(customerNameRemove, txtcustomername.Text);
+                lblmsg.Text = msg;
+            }
+            if (lblmsgmobileno.Text == "True")
+            {
+                msg = msg.Replace(mobileNoRemove, txtmobileno.Text);
+                lblmsg.Text = msg;
+            }
+            if (lblmsgtype.Text == "True")
+            {
+                msg = msg.Replace(typeRemove, txttype.Text);
+                lblmsg.Text = msg;
+            }
+            if (lblmsgamount.Text == "True")
+            {
+                msg = msg.Replace(amountRemove, txtamount.Text);
+                lblmsg.Text = msg;
+            }
+            if (lblmsgdate.Text == "True")
+            {
+                msg = msg.Replace(dateRemove, txtdate.Text);
+                lblmsg.Text = msg;
+            }
+        }
+
         public void Send()
         {
             if (MessageBox.Show("DO YOU WANT TO SEND WHATSAPP BILL?", "SS SOFTWARE", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
             {
+                msg();
                 string pdf = Path.Combine(Application.StartupPath, "REPORTS", "BILL" + ".pdf");
                 openFileDialog1.FileName = pdf;
-                string Url = "https://web.whatsapp.com/send?phone=" + txtmobileno.Text + "&text=" + "*" + txtcustomername.Text + "*";
+                string Url = "https://web.whatsapp.com/send?phone=" + txtmobileno.Text + "&text=" + lblmsg.Text;
                 if (lblstatus.Text == "WHATSAPP READY")
                 {
                     WebDriverWait wait = new WebDriverWait(app.driver, TimeSpan.FromSeconds(10));
@@ -317,18 +361,11 @@ namespace SS_SOFTWARE_CHIT
                     }
                     catch (Exception)
                     {
-                        if(txtmobileno.MaxLength == 10)
-                        {
-                            app.driver.FindElement(By.XPath("//div[@title='Attach']")).Click();
-                            app.driver.FindElement(By.XPath("//input[@accept='*']")).SendKeys(openFileDialog1.FileName.ToString());
-                            wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(By.XPath("//div[@aria-label='Send']")));
-                            app.driver.FindElement(By.XPath("//div[@aria-label='Send']")).Click();
-                            MessageBox.Show("SMS SENT SUCCESSFULLY!", "SS SOFTWARE", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        }
-                        else
-                        {
-                            MessageBox.Show("INCORRECT MOBILE NO?", "SS SOFTWARE", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        }
+                        app.driver.FindElement(By.XPath("//div[@title='Attach']")).Click();
+                        app.driver.FindElement(By.XPath("//input[@accept='*']")).SendKeys(openFileDialog1.FileName.ToString());
+                        wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(By.XPath("//div[@aria-label='Send']")));
+                        app.driver.FindElement(By.XPath("//div[@aria-label='Send']")).Click();
+                        MessageBox.Show("SMS SENT SUCCESSFULLY!", "SS SOFTWARE", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     this.Focus();
                 }

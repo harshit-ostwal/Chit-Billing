@@ -31,16 +31,16 @@ namespace SS_SOFTWARE_CHIT
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FRM_CHIT_BILLING));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.picminimize = new System.Windows.Forms.PictureBox();
@@ -105,6 +105,14 @@ namespace SS_SOFTWARE_CHIT
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.lblmsg = new System.Windows.Forms.Label();
+            this.whatsappdbBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.whatsapp_dbTableAdapter = new SS_SOFTWARE_CHIT.Settings_dbDataSetTableAdapters.Whatsapp_dbTableAdapter();
+            this.lblmsgcustomerid = new System.Windows.Forms.Label();
+            this.lblmsgcustomername = new System.Windows.Forms.Label();
+            this.lblmsgmobileno = new System.Windows.Forms.Label();
+            this.lblmsgtype = new System.Windows.Forms.Label();
+            this.lblmsgamount = new System.Windows.Forms.Label();
+            this.lblmsgdate = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picminimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.piclose)).BeginInit();
@@ -114,6 +122,7 @@ namespace SS_SOFTWARE_CHIT
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chitBillingdbBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.settings_dbDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.whatsappdbBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -201,49 +210,49 @@ namespace SS_SOFTWARE_CHIT
             // dgw_customer
             // 
             this.dgw_customer.AllowUserToAddRows = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dgw_customer.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dgw_customer.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
             this.dgw_customer.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgw_customer.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgw_customer.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(63)))), ((int)(((byte)(92)))));
             this.dgw_customer.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
             this.dgw_customer.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgw_customer.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgw_customer.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.dgw_customer.ColumnHeadersHeight = 30;
             this.dgw_customer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.LemonChiffon;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.LightCoral;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgw_customer.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.LemonChiffon;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
+            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.LightCoral;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgw_customer.DefaultCellStyle = dataGridViewCellStyle13;
             this.dgw_customer.EnableHeadersVisualStyles = false;
             this.dgw_customer.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(63)))), ((int)(((byte)(92)))));
             this.dgw_customer.Location = new System.Drawing.Point(6, 123);
             this.dgw_customer.Name = "dgw_customer";
             this.dgw_customer.ReadOnly = true;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.LemonChiffon;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgw_customer.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.LemonChiffon;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgw_customer.RowHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.dgw_customer.RowHeadersVisible = false;
             this.dgw_customer.RowHeadersWidth = 40;
             this.dgw_customer.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dgw_customer.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dgw_customer.RowsDefaultCellStyle = dataGridViewCellStyle15;
             this.dgw_customer.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgw_customer.Size = new System.Drawing.Size(988, 124);
             this.dgw_customer.TabIndex = 879;
@@ -254,49 +263,49 @@ namespace SS_SOFTWARE_CHIT
             // dgw_view
             // 
             this.dgw_view.AllowUserToAddRows = false;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dgw_view.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dgw_view.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle16;
             this.dgw_view.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgw_view.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgw_view.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(63)))), ((int)(((byte)(92)))));
             this.dgw_view.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
             this.dgw_view.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgw_view.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle17.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
+            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgw_view.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
             this.dgw_view.ColumnHeadersHeight = 30;
             this.dgw_view.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.LemonChiffon;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.LightCoral;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgw_view.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle18.BackColor = System.Drawing.Color.LemonChiffon;
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
+            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.LightCoral;
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgw_view.DefaultCellStyle = dataGridViewCellStyle18;
             this.dgw_view.EnableHeadersVisualStyles = false;
             this.dgw_view.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(63)))), ((int)(((byte)(92)))));
             this.dgw_view.Location = new System.Drawing.Point(6, 253);
             this.dgw_view.Name = "dgw_view";
             this.dgw_view.ReadOnly = true;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.LemonChiffon;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgw_view.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle19.BackColor = System.Drawing.Color.LemonChiffon;
+            dataGridViewCellStyle19.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
+            dataGridViewCellStyle19.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgw_view.RowHeadersDefaultCellStyle = dataGridViewCellStyle19;
             this.dgw_view.RowHeadersVisible = false;
             this.dgw_view.RowHeadersWidth = 40;
             this.dgw_view.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dgw_view.RowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dgw_view.RowsDefaultCellStyle = dataGridViewCellStyle20;
             this.dgw_view.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgw_view.Size = new System.Drawing.Size(988, 241);
             this.dgw_view.TabIndex = 16;
@@ -940,13 +949,95 @@ namespace SS_SOFTWARE_CHIT
             // lblmsg
             // 
             this.lblmsg.AutoSize = true;
+            this.lblmsg.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.whatsappdbBindingSource, "f_msg", true));
             this.lblmsg.Font = new System.Drawing.Font("Futura Std Book", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblmsg.ForeColor = System.Drawing.Color.Black;
-            this.lblmsg.Location = new System.Drawing.Point(8, 330);
+            this.lblmsg.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(166)))), ((int)(((byte)(0)))));
+            this.lblmsg.Location = new System.Drawing.Point(11, 597);
             this.lblmsg.Name = "lblmsg";
             this.lblmsg.Size = new System.Drawing.Size(125, 21);
             this.lblmsg.TabIndex = 890;
             this.lblmsg.Text = "CUSTOMER ID :";
+            // 
+            // whatsappdbBindingSource
+            // 
+            this.whatsappdbBindingSource.DataMember = "Whatsapp_db";
+            this.whatsappdbBindingSource.DataSource = this.settings_dbDataSet;
+            // 
+            // whatsapp_dbTableAdapter
+            // 
+            this.whatsapp_dbTableAdapter.ClearBeforeFill = true;
+            // 
+            // lblmsgcustomerid
+            // 
+            this.lblmsgcustomerid.AutoSize = true;
+            this.lblmsgcustomerid.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.whatsappdbBindingSource, "f_customer_id", true));
+            this.lblmsgcustomerid.Font = new System.Drawing.Font("Futura Std Book", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblmsgcustomerid.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(166)))), ((int)(((byte)(0)))));
+            this.lblmsgcustomerid.Location = new System.Drawing.Point(12, 615);
+            this.lblmsgcustomerid.Name = "lblmsgcustomerid";
+            this.lblmsgcustomerid.Size = new System.Drawing.Size(130, 21);
+            this.lblmsgcustomerid.TabIndex = 891;
+            this.lblmsgcustomerid.Text = "ENGINE STATUS";
+            // 
+            // lblmsgcustomername
+            // 
+            this.lblmsgcustomername.AutoSize = true;
+            this.lblmsgcustomername.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.whatsappdbBindingSource, "f_customer_name", true));
+            this.lblmsgcustomername.Font = new System.Drawing.Font("Futura Std Book", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblmsgcustomername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(166)))), ((int)(((byte)(0)))));
+            this.lblmsgcustomername.Location = new System.Drawing.Point(12, 632);
+            this.lblmsgcustomername.Name = "lblmsgcustomername";
+            this.lblmsgcustomername.Size = new System.Drawing.Size(130, 21);
+            this.lblmsgcustomername.TabIndex = 892;
+            this.lblmsgcustomername.Text = "ENGINE STATUS";
+            // 
+            // lblmsgmobileno
+            // 
+            this.lblmsgmobileno.AutoSize = true;
+            this.lblmsgmobileno.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.whatsappdbBindingSource, "f_mobile_no", true));
+            this.lblmsgmobileno.Font = new System.Drawing.Font("Futura Std Book", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblmsgmobileno.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(166)))), ((int)(((byte)(0)))));
+            this.lblmsgmobileno.Location = new System.Drawing.Point(12, 648);
+            this.lblmsgmobileno.Name = "lblmsgmobileno";
+            this.lblmsgmobileno.Size = new System.Drawing.Size(130, 21);
+            this.lblmsgmobileno.TabIndex = 893;
+            this.lblmsgmobileno.Text = "ENGINE STATUS";
+            // 
+            // lblmsgtype
+            // 
+            this.lblmsgtype.AutoSize = true;
+            this.lblmsgtype.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.whatsappdbBindingSource, "f_type", true));
+            this.lblmsgtype.Font = new System.Drawing.Font("Futura Std Book", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblmsgtype.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(166)))), ((int)(((byte)(0)))));
+            this.lblmsgtype.Location = new System.Drawing.Point(12, 661);
+            this.lblmsgtype.Name = "lblmsgtype";
+            this.lblmsgtype.Size = new System.Drawing.Size(130, 21);
+            this.lblmsgtype.TabIndex = 894;
+            this.lblmsgtype.Text = "ENGINE STATUS";
+            // 
+            // lblmsgamount
+            // 
+            this.lblmsgamount.AutoSize = true;
+            this.lblmsgamount.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.whatsappdbBindingSource, "f_amount", true));
+            this.lblmsgamount.Font = new System.Drawing.Font("Futura Std Book", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblmsgamount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(166)))), ((int)(((byte)(0)))));
+            this.lblmsgamount.Location = new System.Drawing.Point(12, 679);
+            this.lblmsgamount.Name = "lblmsgamount";
+            this.lblmsgamount.Size = new System.Drawing.Size(130, 21);
+            this.lblmsgamount.TabIndex = 895;
+            this.lblmsgamount.Text = "ENGINE STATUS";
+            // 
+            // lblmsgdate
+            // 
+            this.lblmsgdate.AutoSize = true;
+            this.lblmsgdate.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.whatsappdbBindingSource, "f_date", true));
+            this.lblmsgdate.Font = new System.Drawing.Font("Futura Std Book", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblmsgdate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(166)))), ((int)(((byte)(0)))));
+            this.lblmsgdate.Location = new System.Drawing.Point(12, 700);
+            this.lblmsgdate.Name = "lblmsgdate";
+            this.lblmsgdate.Size = new System.Drawing.Size(130, 21);
+            this.lblmsgdate.TabIndex = 896;
+            this.lblmsgdate.Text = "ENGINE STATUS";
             // 
             // FRM_CHIT_BILLING
             // 
@@ -954,15 +1045,24 @@ namespace SS_SOFTWARE_CHIT
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(166)))), ((int)(((byte)(0)))));
             this.ClientSize = new System.Drawing.Size(1280, 720);
-            this.Controls.Add(this.lblmsg);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.lblstatus);
-            this.Controls.Add(this.lblmobileno1);
-            this.Controls.Add(this.lblarea1);
             this.Controls.Add(this.lbltotalbal);
             this.Controls.Add(this.lbltxtbal);
             this.Controls.Add(this.lbltotalamount);
             this.Controls.Add(this.lbltxtamt);
+            this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.grpchit);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.lblmsgdate);
+            this.Controls.Add(this.lblmsgamount);
+            this.Controls.Add(this.lblmsgtype);
+            this.Controls.Add(this.lblmsgmobileno);
+            this.Controls.Add(this.lblmsgcustomername);
+            this.Controls.Add(this.lblmsgcustomerid);
+            this.Controls.Add(this.lblmsg);
+            this.Controls.Add(this.lblmobileno1);
+            this.Controls.Add(this.lblarea1);
             this.Controls.Add(this.lblid);
             this.Controls.Add(this.lblamount1);
             this.Controls.Add(this.lbltype);
@@ -980,9 +1080,6 @@ namespace SS_SOFTWARE_CHIT
             this.Controls.Add(this.lblcustomerid1);
             this.Controls.Add(this.lblcustomername);
             this.Controls.Add(this.lblcustomerid);
-            this.Controls.Add(this.flowLayoutPanel1);
-            this.Controls.Add(this.grpchit);
-            this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.KeyPreview = true;
             this.Name = "FRM_CHIT_BILLING";
@@ -1001,6 +1098,7 @@ namespace SS_SOFTWARE_CHIT
             this.flowLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chitBillingdbBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.settings_dbDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.whatsappdbBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1072,5 +1170,13 @@ namespace SS_SOFTWARE_CHIT
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Label lblmsg;
+        private System.Windows.Forms.BindingSource whatsappdbBindingSource;
+        private Settings_dbDataSetTableAdapters.Whatsapp_dbTableAdapter whatsapp_dbTableAdapter;
+        private System.Windows.Forms.Label lblmsgcustomerid;
+        private System.Windows.Forms.Label lblmsgcustomername;
+        private System.Windows.Forms.Label lblmsgmobileno;
+        private System.Windows.Forms.Label lblmsgtype;
+        private System.Windows.Forms.Label lblmsgamount;
+        private System.Windows.Forms.Label lblmsgdate;
     }
 }
