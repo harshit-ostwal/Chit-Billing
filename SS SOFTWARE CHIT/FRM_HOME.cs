@@ -13,7 +13,7 @@ namespace SS_SOFTWARE_CHIT
         {
             try
             {
-                timer2.Start();
+                //timer2.Start();
                 if (app.driver.WindowHandles.Count > 0)
                 {
                     if (app.driver.Url.Contains("https://web.whatsapp.com/") == false)
@@ -58,6 +58,10 @@ namespace SS_SOFTWARE_CHIT
                     if (app.driver.PageSource.Contains("Use WhatsApp on your computer"))
                     {
                         lblstatus.Text = "WHATSAPP NOT AUTHORIZED";
+                    }
+                    else if(app.driver.PageSource.Contains("Loading your Chats"))
+                    {
+                        lblstatus.Text = "WHATSAPP LOADING...";
                     }
                     else
                     {
@@ -404,9 +408,14 @@ namespace SS_SOFTWARE_CHIT
         {
             try
             {
+
                 if (app.driver.PageSource.Contains("Use WhatsApp on your computer"))
                 {
                     lblstatus.Text = "WHATSAPP NOT AUTHORIZED";
+                }
+                else if (app.driver.PageSource.Contains("Loading your Chats"))
+                {
+                    lblstatus.Text = "WHATSAPP LOADING...";
                 }
                 else
                 {

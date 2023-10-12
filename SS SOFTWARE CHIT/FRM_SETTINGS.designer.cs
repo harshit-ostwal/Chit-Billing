@@ -4347,11 +4347,11 @@ namespace SS_SOFTWARE_CHIT
             this.ClientSize = new System.Drawing.Size(1280, 720);
             this.Controls.Add(this.txtsearch);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnlcustomermaster);
             this.Controls.Add(this.pnlmain);
             this.Controls.Add(this.pnlcompanymaster);
             this.Controls.Add(this.pnlchit);
             this.Controls.Add(this.pnluser);
-            this.Controls.Add(this.pnlcustomermaster);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FRM_SETTINGS";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

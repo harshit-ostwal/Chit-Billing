@@ -3,7 +3,9 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.OleDb;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,7 +15,9 @@ namespace SS_SOFTWARE_CHIT
 {
     public partial class FRM_WHATSAPP_SETTINGS : Form
     {
-
+        string path = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source =" + Application.StartupPath + "/DATABASE/Settings_db.accdb;Jet OLEDB:Database Password = SS9975";
+        OleDbConnection con = new OleDbConnection();
+        OleDbCommand cmd = new OleDbCommand();
         WhatsApp app;
             
         public FRM_WHATSAPP_SETTINGS(WhatsApp whatsappInitialize)
@@ -183,6 +187,8 @@ namespace SS_SOFTWARE_CHIT
 
         private void FRM_WHATSAPP_SETTINGS_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'settings_dbDataSet.Whatsapp_db' table. You can move, or remove it, as needed.
+            this.whatsapp_dbTableAdapter.Fill(this.settings_dbDataSet.Whatsapp_db);
             try
             {
                 if (app.driver.WindowHandles.Count > 0)
@@ -234,6 +240,153 @@ namespace SS_SOFTWARE_CHIT
                     FRM_SETTINGS Settings = new FRM_SETTINGS(app);
                     Settings.Show();
                 }
+            }
+        }
+
+        private void btnbold_Click(object sender, EventArgs e)
+        {
+            if(txtmsg.SelectionLength > 1)
+            {
+                txtmsg.SelectedText = "*" + txtmsg.SelectedText + "*";
+            }
+            else
+            {
+                MessageBox.Show("SELECT THE TEXT?", "SS SOFTWARE", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtmsg.Focus();
+            }
+        }
+
+        private void btnitalic_Click(object sender, EventArgs e)
+        {
+            if (txtmsg.SelectionLength > 1)
+            {
+                txtmsg.SelectedText = "_" + txtmsg.SelectedText + "_";
+            }
+            else
+            {
+                MessageBox.Show("SELECT THE TEXT?", "SS SOFTWARE", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtmsg.Focus();
+            }
+            txtmsg.Focus();
+        }
+
+        private void chkdate_CheckedChanged(object sender, Bunifu.UI.WinForms.BunifuCheckBox.CheckedChangedEventArgs e)
+        {
+            string msg = txtmsg.Text;
+            string dateRemove = "{DATE}";
+            if(chkdate.Checked==true)
+            {
+                txtmsg.Text = txtmsg.Text + "{DATE}";
+            }
+            else
+            {
+                msg = msg.Replace(dateRemove,string.Empty);
+                txtmsg.Text = msg;
+            }
+            txtmsg.Focus();
+        }
+
+        private void chkamount_CheckedChanged(object sender, Bunifu.UI.WinForms.BunifuCheckBox.CheckedChangedEventArgs e)
+        {
+            string msg = txtmsg.Text;
+            string amountRemove = "{AMOUNT}";
+            if (chkamount.Checked == true)
+            {
+                txtmsg.Text = txtmsg.Text + "{AMOUNT}";
+            }
+            else
+            {
+                msg = msg.Replace(amountRemove, string.Empty);
+                txtmsg.Text = msg;
+            }
+            txtmsg.Focus();
+        }
+
+        private void chktype_CheckedChanged(object sender, Bunifu.UI.WinForms.BunifuCheckBox.CheckedChangedEventArgs e)
+        {
+            string msg = txtmsg.Text;
+            string typeRemove = "{TYPE}";
+            if (chktype.Checked == true)
+            {
+                txtmsg.Text = txtmsg.Text + "{TYPE}";
+            }
+            else
+            {
+                msg = msg.Replace(typeRemove, string.Empty);
+                txtmsg.Text = msg;
+            }
+            txtmsg.Focus();
+        }
+
+        private void chkcustomername_CheckedChanged(object sender, Bunifu.UI.WinForms.BunifuCheckBox.CheckedChangedEventArgs e)
+        {
+            string msg = txtmsg.Text;
+            string customerNameRemove = "{CUSTOMER_NAME}";
+            if (chkcustomername.Checked == true)
+            {
+                txtmsg.Text = txtmsg.Text + "{CUSTOMER_NAME}";
+            }
+            else
+            {
+                msg = msg.Replace(customerNameRemove, string.Empty);
+                txtmsg.Text = msg;
+            }
+            txtmsg.Focus();
+        }
+
+        private void chkcustomerid_CheckedChanged(object sender, Bunifu.UI.WinForms.BunifuCheckBox.CheckedChangedEventArgs e)
+        {
+            string msg = txtmsg.Text;
+            string customerIdRemove = "{CUSTOMER_ID}";
+            if (chkcustomerid.Checked == true)
+            {
+                txtmsg.Text = txtmsg.Text + "{CUSTOMER_ID}";
+            }
+            else
+            {
+                msg = msg.Replace(customerIdRemove, string.Empty);
+                txtmsg.Text = msg;
+            }
+            txtmsg.Focus();
+        }
+
+        private void chkmobileno_CheckedChanged(object sender, Bunifu.UI.WinForms.BunifuCheckBox.CheckedChangedEventArgs e)
+        {
+            string msg = txtmsg.Text;
+            string mobileNoRemove = "{MOBILE_NO}";
+            if (chkmobileno.Checked == true)
+            {
+                txtmsg.Text = txtmsg.Text + "{MOBILE_NO}";
+            }
+            else
+            {
+                msg = msg.Replace(mobileNoRemove, string.Empty);
+                txtmsg.Text = msg;
+            }
+            txtmsg.Focus();
+        }
+
+        private void btndelete_Click(object sender, EventArgs e)
+        {
+            txtmsg.Clear();
+        }
+
+        private void btnsave_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("DO YOU WANT TO SAVE???", "SS SOFTWARE", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                con = new OleDbConnection(path);
+                con.Open();
+                cmd.Connection = con;
+                cmd.CommandText = "UPDATE Whatsapp_db set f_msg='" + txtmsg.Text + "' , f_customer_id ='"+chkcustomerid.Checked+ "' , f_customer_name ='" + chkcustomername.Checked + "', f_mobile_no ='" + chkmobileno.Checked + "', f_type ='" + chktype.Checked + "',f_amount ='" + chkamount.Checked + "', f_date ='" + chkdate.Checked + "'";
+                cmd.ExecuteNonQuery();
+                con.Close();
+                string SP = Application.StartupPath + "\\BACKUP\\";
+                string ThisDB = Application.StartupPath + "\\DATABASE\\Settings_db.accdb";
+                string Destitnation = SP + "\\Settings_db " + DateTime.Now.ToString(" dd-MM-yyyy hh-mm-ss") + ".bak";
+                File.Copy(ThisDB, Destitnation);
+                pnlmain.Visible = true;
+                MessageBox.Show("UPDATED SUCCESSFULLY!", "SS SOFTWARE", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
     }

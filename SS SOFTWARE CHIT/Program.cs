@@ -38,7 +38,7 @@ namespace SS_SOFTWARE_CHIT
                         {
                             // Run the application
 
-                            Application.Run(new FRM_LOGIN(app));
+                            Application.Run(new FRM_WHATSAPP_SETTINGS(app));
                         }
                     }
                     else

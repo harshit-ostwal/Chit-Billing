@@ -43,6 +43,10 @@ namespace SS_SOFTWARE_CHIT
                 {
                     lblstatus.Text = "WHATSAPP NOT AUTHORIZED";
                 }
+                else if (app.driver.PageSource.Contains("Loading your Chats"))
+                {
+                    lblstatus.Text = "WHATSAPP LOADING...";
+                }
                 else
                 {
                     lblstatus.Text = "WHATSAPP READY";
@@ -56,7 +60,7 @@ namespace SS_SOFTWARE_CHIT
 
         private void FRM_CHIT_BILLING_Load(object sender, EventArgs e)
         {
-            timer1.Start();
+            //timer1.Start();
             try
             {
                 if (app.driver.WindowHandles.Count > 0)
@@ -301,6 +305,7 @@ namespace SS_SOFTWARE_CHIT
                 {
                     WebDriverWait wait = new WebDriverWait(app.driver, TimeSpan.FromSeconds(10));
                     app.driver.Navigate().GoToUrl(Url);
+
                     try
                     {
                         if (wait.Until(driver => driver.PageSource.Contains("Phone number shared via url is invalid.")) == true)
@@ -312,11 +317,18 @@ namespace SS_SOFTWARE_CHIT
                     }
                     catch (Exception)
                     {
-                        app.driver.FindElement(By.XPath("//div[@title='Attach']")).Click();
-                        app.driver.FindElement(By.XPath("//input[@accept='*']")).SendKeys(openFileDialog1.FileName.ToString());
-                        wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(By.XPath("//div[@aria-label='Send']")));
-                        app.driver.FindElement(By.XPath("//div[@aria-label='Send']")).Click();
-                        MessageBox.Show("SMS SENT SUCCESSFULLY!", "SS SOFTWARE", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        if(txtmobileno.MaxLength == 10)
+                        {
+                            app.driver.FindElement(By.XPath("//div[@title='Attach']")).Click();
+                            app.driver.FindElement(By.XPath("//input[@accept='*']")).SendKeys(openFileDialog1.FileName.ToString());
+                            wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(By.XPath("//div[@aria-label='Send']")));
+                            app.driver.FindElement(By.XPath("//div[@aria-label='Send']")).Click();
+                            MessageBox.Show("SMS SENT SUCCESSFULLY!", "SS SOFTWARE", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else
+                        {
+                            MessageBox.Show("INCORRECT MOBILE NO?", "SS SOFTWARE", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
                     }
                     this.Focus();
                 }
