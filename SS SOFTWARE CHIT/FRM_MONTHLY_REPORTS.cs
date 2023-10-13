@@ -1,4 +1,6 @@
 ﻿using CrystalDecisions.CrystalReports.Engine;
+using OpenQA.Selenium;
+using OpenQA.Selenium.Support.UI;
 using System;
 using System.Data;
 using System.Data.OleDb;
@@ -31,7 +33,7 @@ namespace SS_SOFTWARE_CHIT
 
         private void Enter_Only(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            if (e.KeyCode == System.Windows.Forms.Keys.Enter)
             {
                 SendKeys.Send("{TAB}");
             }
@@ -63,6 +65,7 @@ namespace SS_SOFTWARE_CHIT
             txtfromdate.Refresh();
             txttodate.Refresh();
             txtemail.Clear();
+            txtmobileno.Clear();
             lblamount.Text = null;
             lblbalance.Text = null;
             txttype.Text = null;
@@ -326,6 +329,58 @@ namespace SS_SOFTWARE_CHIT
             }
         }
 
+        public void Send()
+        {
+            try
+            {
+                if (app.driver.PageSource.Contains("Use WhatsApp on your computer"))
+                {
+                    MessageBox.Show("WHATSAPP NOT AUTHORIZED?", "SS SOFTWARE", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                if (app.driver.PageSource.Contains("Loading your Chats"))
+                {
+                    MessageBox.Show("WHATSAPP LOADING...", "SS SOFTWARE", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    if (MessageBox.Show("DO YOU WANT TO SEND WHATSAPP?", "SS SOFTWARE", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                    {
+                        Pdf();
+                        string pdfMail = Path.Combine(Application.StartupPath, "REPORTS", "MONTHLY REPORTS " + txtfromdate.Value.ToString("dd-MM-yyyy") + " TO " + txttodate.Value.ToString("dd-MM-yyyy") + ".pdf");
+                        openFileDialog1.FileName = pdfMail;
+                        string Url = "https://web.whatsapp.com/send?phone=" + txtmobileno.Text + "&text=" + "Dear *" + lblusername.Text + "*," + "%0a%0a_*" + "Greetings from SS SOFTWARE!♥️*_%0a%0a_🎉 We're thrilled to share today's Chit Billing Report with you. It's been an exciting day, and we want to keep you in the loop. 📊_%0a%0a_*Detailed Report 👇*_%0a%0a" + "_📎 For a closer look, please find the attached PDF containing all the details, including participant information, billing statements, balance histories, and more. 📄_%0a%0a_*🔗 Stay Connected 🤝*_%0a%0a_🤔 Got questions, suggestions, or just want to chat? We're here for you. Don't hesitate to reach out; we're just a click away. 😊_" + "_%0a%0a*_Best regards,_*%0a%0a*_SS SOFTWARE_*%0a*♥️ Developed By ♥️ Harshit Jain ♥️*";
+                        WebDriverWait wait = new WebDriverWait(app.driver, TimeSpan.FromSeconds(10));
+                        app.driver.Navigate().GoToUrl(Url);
+
+                        try
+                        {
+                            if (wait.Until(driver => driver.PageSource.Contains("Phone number shared via url is invalid.")) == true)
+                            {
+                                app.driver.FindElement(By.XPath("// div[@class='tvf2evcx m0h2a7mj lb5m6g5c j7l1k36l ktfrpxia nu7pwgvd p357zi0d dnb887gk gjuq5ydh i2cterl7 i6vnu1w3 qjslfuze ac2vgrno sap93d0t gndfcl4n']")).Click();
+                                MessageBox.Show("WRONG MOBILE NO?", "SS SOFTWARE", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                txtmobileno.Focus();
+                            }
+                        }
+                        catch (Exception)
+                        {
+                            app.driver.FindElement(By.XPath("//div[@title='Attach']")).Click();
+                            app.driver.FindElement(By.XPath("//input[@accept='*']")).SendKeys(openFileDialog1.FileName.ToString());
+                            wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(By.XPath("//div[@aria-label='Send']")));
+                            app.driver.FindElement(By.XPath("//div[@aria-label='Send']")).Click();
+                            MessageBox.Show("SMS SENT SUCCESSFULLY!", "SS SOFTWARE", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            Clear();
+                            pnlwhatsapp.Hide();
+                        }
+                        this.Focus();
+                    }
+                }
+            }
+            catch (Exception)
+            {
+
+            }
+        }
+
         private async void btnmailsender_Click(object sender, EventArgs e)
         {
             try
@@ -453,11 +508,15 @@ namespace SS_SOFTWARE_CHIT
 
         private void FRM_MONTHLY_REPORTS_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Escape)
+            if (e.KeyCode == System.Windows.Forms.Keys.Escape)
             {
                 if (pnlmail.Visible == true)
                 {
                     pnlmail.Visible = false;
+                }
+                if (pnlwhatsapp.Visible == true)
+                {
+                    pnlwhatsapp.Visible = false;
                 }
                 if (pnldate.Visible == false)
                 {
@@ -505,6 +564,25 @@ namespace SS_SOFTWARE_CHIT
         private void picminimize_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
+        }
+
+
+        private void btnwhatsapp_Click(object sender, EventArgs e)
+        {
+            if (pnlwhatsapp.Visible == false)
+            {
+                pnlwhatsapp.Visible = true;
+                txtmobileno.Focus();
+            }
+            else
+            {
+                pnlwhatsapp.Visible = false;
+            }
+        }
+
+        private void btnsendwhatsapp_Click(object sender, EventArgs e)
+        {
+            Send();
         }
     }
 }

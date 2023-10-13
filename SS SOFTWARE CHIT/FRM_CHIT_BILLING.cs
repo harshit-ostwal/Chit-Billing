@@ -62,7 +62,7 @@ namespace SS_SOFTWARE_CHIT
         {
             // TODO: This line of code loads data into the 'settings_dbDataSet.Whatsapp_db' table. You can move, or remove it, as needed.
             this.whatsapp_dbTableAdapter.Fill(this.settings_dbDataSet.Whatsapp_db);
-            //timer1.Start();
+            timer1.Start();
             try
             {
                 if (app.driver.WindowHandles.Count > 0)

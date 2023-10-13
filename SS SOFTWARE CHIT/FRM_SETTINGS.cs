@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data.OleDb;
 using System.IO;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SS_SOFTWARE_CHIT
@@ -26,13 +27,16 @@ namespace SS_SOFTWARE_CHIT
             }
         }
 
-        private void FRM_SETTINGS_Load(object sender, EventArgs e)
+        private async void FRM_SETTINGS_Load(object sender, EventArgs e)
         {
-            this.login_dbTableAdapter.Fill(this.settings_dbDataSet.Login_db);
-            this.customer_dbTableAdapter.Fill(this.settings_dbDataSet.Customer_db);
-            this.chit_Billing_dbTableAdapter.Fill(this.settings_dbDataSet.Chit_Billing_db);
-            this.company_dbTableAdapter1.Fill(this.settings_dbDataSet.Company_db);
-            this.company_dbTableAdapter.Fill(this.mainDataSet.Company_db);
+            await Task.Run(() =>
+            {
+                this.login_dbTableAdapter.Fill(this.settings_dbDataSet.Login_db);
+                this.customer_dbTableAdapter.Fill(this.settings_dbDataSet.Customer_db);
+                this.chit_Billing_dbTableAdapter.Fill(this.settings_dbDataSet.Chit_Billing_db);
+                this.company_dbTableAdapter1.Fill(this.settings_dbDataSet.Company_db);
+                this.company_dbTableAdapter.Fill(this.mainDataSet.Company_db);
+            });
             this.KeyPreview = true;
         }
 
