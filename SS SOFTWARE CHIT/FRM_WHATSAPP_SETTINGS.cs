@@ -255,7 +255,7 @@ namespace SS_SOFTWARE_CHIT
         {
             if (txtmsg.SelectionLength > 1)
             {
-                txtmsg.SelectedText = "%20" + "*" + txtmsg.SelectedText + "*" + "%20";
+                txtmsg.SelectedText = "%20*" + txtmsg.SelectedText + "*%20";
             }
             else
             {
@@ -268,7 +268,7 @@ namespace SS_SOFTWARE_CHIT
         {
             if (txtmsg.SelectionLength > 1)
             {
-                txtmsg.SelectedText = "%20" + "_" + txtmsg.SelectedText + "_" + "%20";
+                txtmsg.SelectedText = "%20_" + txtmsg.SelectedText + "_%20";
             }
             else
             {
@@ -381,26 +381,19 @@ namespace SS_SOFTWARE_CHIT
 
         private void btnsave_Click(object sender, EventArgs e)
         {
-            if (txtmsg.Text.Contains(" "))
+            if (MessageBox.Show("DO YOU WANT TO SAVE???", "SS SOFTWARE", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                txtmsg.Text = txtmsg.Text.Replace(" ", "%20");
-            }
-            else
-            {
-                if (MessageBox.Show("DO YOU WANT TO SAVE???", "SS SOFTWARE", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                {
-                    con = new OleDbConnection(path);
-                    con.Open();
-                    cmd.Connection = con;
-                    cmd.CommandText = "UPDATE Whatsapp_db set f_msg='" + txtmsg.Text + "' , f_customer_id ='" + chkcustomerid.Checked + "' , f_customer_name ='" + chkcustomername.Checked + "', f_mobile_no ='" + chkmobileno.Checked + "', f_type ='" + chktype.Checked + "',f_amount ='" + chkamount.Checked + "', f_date ='" + chkdate.Checked + "'";
-                    cmd.ExecuteNonQuery();
-                    con.Close();
-                    string SP = Application.StartupPath + "\\BACKUP\\";
-                    string ThisDB = Application.StartupPath + "\\DATABASE\\Settings_db.accdb";
-                    string Destitnation = SP + "\\Settings_db " + DateTime.Now.ToString(" dd-MM-yyyy hh-mm-ss") + ".bak";
-                    File.Copy(ThisDB, Destitnation);
-                    MessageBox.Show("UPDATED SUCCESSFULLY!", "SS SOFTWARE", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
+                con = new OleDbConnection(path);
+                con.Open();
+                cmd.Connection = con;
+                cmd.CommandText = "UPDATE Whatsapp_db set f_customer_id ='" + chkcustomerid.Checked + "' , f_customer_name ='" + chkcustomername.Checked + "', f_mobile_no ='" + chkmobileno.Checked + "', f_type ='" + chktype.Checked + "',f_amount ='" + chkamount.Checked + "', f_date ='" + chkdate.Checked + "'";
+                cmd.ExecuteNonQuery();
+                con.Close();
+                string SP = Application.StartupPath + "\\BACKUP\\";
+                string ThisDB = Application.StartupPath + "\\DATABASE\\Settings_db.accdb";
+                string Destitnation = SP + "\\Settings_db " + DateTime.Now.ToString(" dd-MM-yyyy hh-mm-ss") + ".bak";
+                File.Copy(ThisDB, Destitnation);
+                MessageBox.Show("UPDATED SUCCESSFULLY!", "SS SOFTWARE", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 

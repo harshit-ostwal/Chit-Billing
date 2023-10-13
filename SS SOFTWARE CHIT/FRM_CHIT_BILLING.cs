@@ -344,7 +344,7 @@ namespace SS_SOFTWARE_CHIT
                 msg();
                 string pdf = Path.Combine(Application.StartupPath, "REPORTS", "BILL" + ".pdf");
                 openFileDialog1.FileName = pdf;
-                string Url = "https://web.whatsapp.com/send?phone=" + txtmobileno.Text + "&text=" + lblmsg.Text;
+                string Url = "https://web.whatsapp.com/send?phone=" + txtmobileno.Text + "&text=" + lblmsg.Text + "%0a%0a_" + "👍 Feel free to reach out if you need any further assistance or have specific payment preferences. Thank you for your business. 😊" + "_%0a%0a*_Best regards,_*%0a%0a*_SS SOFTWARE_*%0a*♥️ Developed By ♥️ Harshit Jain ♥️*";
                 if (lblstatus.Text == "WHATSAPP READY")
                 {
                     WebDriverWait wait = new WebDriverWait(app.driver, TimeSpan.FromSeconds(10));
