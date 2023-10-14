@@ -242,12 +242,6 @@
     <Compile Include="FRM_RECORD_DELETE.Designer.cs">
       <DependentUpon>FRM_RECORD_DELETE.cs</DependentUpon>
     </Compile>
-    <Compile Include="FRM_REMINDER.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FRM_REMINDER.Designer.cs">
-      <DependentUpon>FRM_REMINDER.cs</DependentUpon>
-    </Compile>
     <Compile Include="FRM_SETTINGS.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -352,9 +346,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FRM_RECORD_DELETE.resx">
       <DependentUpon>FRM_RECORD_DELETE.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FRM_REMINDER.resx">
-      <DependentUpon>FRM_REMINDER.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FRM_SETTINGS.resx">
       <DependentUpon>FRM_SETTINGS.cs</DependentUpon>
