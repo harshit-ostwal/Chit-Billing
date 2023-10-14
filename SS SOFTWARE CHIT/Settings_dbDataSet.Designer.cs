@@ -1011,6 +1011,8 @@ namespace SS_SOFTWARE_CHIT {
             
             private global::System.Data.DataColumn columnf_chit_mobile_no;
             
+            private global::System.Data.DataColumn columnField1;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public Chit_Billing_dbDataTable() {
@@ -1206,6 +1208,14 @@ namespace SS_SOFTWARE_CHIT {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Field1Column {
+                get {
+                    return this.columnField1;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1260,7 +1270,8 @@ namespace SS_SOFTWARE_CHIT {
                         string f_chit_amount_1, 
                         string f_chit_id, 
                         string f_chit_area, 
-                        string f_chit_mobile_no) {
+                        string f_chit_mobile_no, 
+                        string Field1) {
                 Chit_Billing_dbRow rowChit_Billing_dbRow = ((Chit_Billing_dbRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -1282,7 +1293,8 @@ namespace SS_SOFTWARE_CHIT {
                         f_chit_amount_1,
                         f_chit_id,
                         f_chit_area,
-                        f_chit_mobile_no};
+                        f_chit_mobile_no,
+                        Field1};
                 rowChit_Billing_dbRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowChit_Billing_dbRow);
                 return rowChit_Billing_dbRow;
@@ -1332,6 +1344,7 @@ namespace SS_SOFTWARE_CHIT {
                 this.columnf_chit_id = base.Columns["f_chit_id"];
                 this.columnf_chit_area = base.Columns["f_chit_area"];
                 this.columnf_chit_mobile_no = base.Columns["f_chit_mobile_no"];
+                this.columnField1 = base.Columns["Field1"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1377,6 +1390,8 @@ namespace SS_SOFTWARE_CHIT {
                 base.Columns.Add(this.columnf_chit_area);
                 this.columnf_chit_mobile_no = new global::System.Data.DataColumn("f_chit_mobile_no", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnf_chit_mobile_no);
+                this.columnField1 = new global::System.Data.DataColumn("Field1", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnField1);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnID}, true));
                 this.columnID.AutoIncrement = true;
@@ -1403,6 +1418,7 @@ namespace SS_SOFTWARE_CHIT {
                 this.columnf_chit_id.MaxLength = 255;
                 this.columnf_chit_area.MaxLength = 255;
                 this.columnf_chit_mobile_no.MaxLength = 255;
+                this.columnField1.MaxLength = 255;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2755,34 +2771,6 @@ namespace SS_SOFTWARE_CHIT {
             
             private global::System.Data.DataColumn columnf_date;
             
-            private global::System.Data.DataColumn columnf_reports;
-            
-            private global::System.Data.DataColumn columnf_rep_customer_id;
-            
-            private global::System.Data.DataColumn columnf_rep_customer_name;
-            
-            private global::System.Data.DataColumn columnf_rep_mobile_no;
-            
-            private global::System.Data.DataColumn columnf_rep_type;
-            
-            private global::System.Data.DataColumn columnf_rep_amount;
-            
-            private global::System.Data.DataColumn columnf_rep_date;
-            
-            private global::System.Data.DataColumn columnf_reminder;
-            
-            private global::System.Data.DataColumn columnf_rem_customer_id;
-            
-            private global::System.Data.DataColumn columnf_rem_customer_name;
-            
-            private global::System.Data.DataColumn columnf_rem_mobile_no;
-            
-            private global::System.Data.DataColumn columnf_rem_type;
-            
-            private global::System.Data.DataColumn columnf_rem_amount;
-            
-            private global::System.Data.DataColumn columnf_rem_date;
-            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public Whatsapp_dbDataTable() {
@@ -2882,118 +2870,6 @@ namespace SS_SOFTWARE_CHIT {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn f_reportsColumn {
-                get {
-                    return this.columnf_reports;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn f_rep_customer_idColumn {
-                get {
-                    return this.columnf_rep_customer_id;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn f_rep_customer_nameColumn {
-                get {
-                    return this.columnf_rep_customer_name;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn f_rep_mobile_noColumn {
-                get {
-                    return this.columnf_rep_mobile_no;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn f_rep_typeColumn {
-                get {
-                    return this.columnf_rep_type;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn f_rep_amountColumn {
-                get {
-                    return this.columnf_rep_amount;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn f_rep_dateColumn {
-                get {
-                    return this.columnf_rep_date;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn f_reminderColumn {
-                get {
-                    return this.columnf_reminder;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn f_rem_customer_idColumn {
-                get {
-                    return this.columnf_rem_customer_id;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn f_rem_customer_nameColumn {
-                get {
-                    return this.columnf_rem_customer_name;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn f_rem_mobile_noColumn {
-                get {
-                    return this.columnf_rem_mobile_no;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn f_rem_typeColumn {
-                get {
-                    return this.columnf_rem_type;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn f_rem_amountColumn {
-                get {
-                    return this.columnf_rem_amount;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn f_rem_dateColumn {
-                get {
-                    return this.columnf_rem_date;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -3029,28 +2905,7 @@ namespace SS_SOFTWARE_CHIT {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public Whatsapp_dbRow AddWhatsapp_dbRow(
-                        string f_msg, 
-                        string f_customer_id, 
-                        string f_customer_name, 
-                        string f_mobile_no, 
-                        string f_type, 
-                        string f_amount, 
-                        string f_date, 
-                        string f_reports, 
-                        string f_rep_customer_id, 
-                        string f_rep_customer_name, 
-                        string f_rep_mobile_no, 
-                        string f_rep_type, 
-                        string f_rep_amount, 
-                        string f_rep_date, 
-                        string f_reminder, 
-                        string f_rem_customer_id, 
-                        string f_rem_customer_name, 
-                        string f_rem_mobile_no, 
-                        string f_rem_type, 
-                        string f_rem_amount, 
-                        string f_rem_date) {
+            public Whatsapp_dbRow AddWhatsapp_dbRow(string f_msg, string f_customer_id, string f_customer_name, string f_mobile_no, string f_type, string f_amount, string f_date) {
                 Whatsapp_dbRow rowWhatsapp_dbRow = ((Whatsapp_dbRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -3060,21 +2915,7 @@ namespace SS_SOFTWARE_CHIT {
                         f_mobile_no,
                         f_type,
                         f_amount,
-                        f_date,
-                        f_reports,
-                        f_rep_customer_id,
-                        f_rep_customer_name,
-                        f_rep_mobile_no,
-                        f_rep_type,
-                        f_rep_amount,
-                        f_rep_date,
-                        f_reminder,
-                        f_rem_customer_id,
-                        f_rem_customer_name,
-                        f_rem_mobile_no,
-                        f_rem_type,
-                        f_rem_amount,
-                        f_rem_date};
+                        f_date};
                 rowWhatsapp_dbRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowWhatsapp_dbRow);
                 return rowWhatsapp_dbRow;
@@ -3112,20 +2953,6 @@ namespace SS_SOFTWARE_CHIT {
                 this.columnf_type = base.Columns["f_type"];
                 this.columnf_amount = base.Columns["f_amount"];
                 this.columnf_date = base.Columns["f_date"];
-                this.columnf_reports = base.Columns["f_reports"];
-                this.columnf_rep_customer_id = base.Columns["f_rep_customer_id"];
-                this.columnf_rep_customer_name = base.Columns["f_rep_customer_name"];
-                this.columnf_rep_mobile_no = base.Columns["f_rep_mobile_no"];
-                this.columnf_rep_type = base.Columns["f_rep_type"];
-                this.columnf_rep_amount = base.Columns["f_rep_amount"];
-                this.columnf_rep_date = base.Columns["f_rep_date"];
-                this.columnf_reminder = base.Columns["f_reminder"];
-                this.columnf_rem_customer_id = base.Columns["f_rem_customer_id"];
-                this.columnf_rem_customer_name = base.Columns["f_rem_customer_name"];
-                this.columnf_rem_mobile_no = base.Columns["f_rem_mobile_no"];
-                this.columnf_rem_type = base.Columns["f_rem_type"];
-                this.columnf_rem_amount = base.Columns["f_rem_amount"];
-                this.columnf_rem_date = base.Columns["f_rem_date"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3147,34 +2974,6 @@ namespace SS_SOFTWARE_CHIT {
                 base.Columns.Add(this.columnf_amount);
                 this.columnf_date = new global::System.Data.DataColumn("f_date", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnf_date);
-                this.columnf_reports = new global::System.Data.DataColumn("f_reports", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnf_reports);
-                this.columnf_rep_customer_id = new global::System.Data.DataColumn("f_rep_customer_id", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnf_rep_customer_id);
-                this.columnf_rep_customer_name = new global::System.Data.DataColumn("f_rep_customer_name", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnf_rep_customer_name);
-                this.columnf_rep_mobile_no = new global::System.Data.DataColumn("f_rep_mobile_no", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnf_rep_mobile_no);
-                this.columnf_rep_type = new global::System.Data.DataColumn("f_rep_type", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnf_rep_type);
-                this.columnf_rep_amount = new global::System.Data.DataColumn("f_rep_amount", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnf_rep_amount);
-                this.columnf_rep_date = new global::System.Data.DataColumn("f_rep_date", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnf_rep_date);
-                this.columnf_reminder = new global::System.Data.DataColumn("f_reminder", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnf_reminder);
-                this.columnf_rem_customer_id = new global::System.Data.DataColumn("f_rem_customer_id", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnf_rem_customer_id);
-                this.columnf_rem_customer_name = new global::System.Data.DataColumn("f_rem_customer_name", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnf_rem_customer_name);
-                this.columnf_rem_mobile_no = new global::System.Data.DataColumn("f_rem_mobile_no", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnf_rem_mobile_no);
-                this.columnf_rem_type = new global::System.Data.DataColumn("f_rem_type", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnf_rem_type);
-                this.columnf_rem_amount = new global::System.Data.DataColumn("f_rem_amount", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnf_rem_amount);
-                this.columnf_rem_date = new global::System.Data.DataColumn("f_rem_date", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnf_rem_date);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnID}, true));
                 this.columnID.AutoIncrement = true;
@@ -3189,20 +2988,6 @@ namespace SS_SOFTWARE_CHIT {
                 this.columnf_type.MaxLength = 255;
                 this.columnf_amount.MaxLength = 255;
                 this.columnf_date.MaxLength = 255;
-                this.columnf_reports.MaxLength = 536870910;
-                this.columnf_rep_customer_id.MaxLength = 255;
-                this.columnf_rep_customer_name.MaxLength = 255;
-                this.columnf_rep_mobile_no.MaxLength = 255;
-                this.columnf_rep_type.MaxLength = 255;
-                this.columnf_rep_amount.MaxLength = 255;
-                this.columnf_rep_date.MaxLength = 255;
-                this.columnf_reminder.MaxLength = 536870910;
-                this.columnf_rem_customer_id.MaxLength = 255;
-                this.columnf_rem_customer_name.MaxLength = 255;
-                this.columnf_rem_mobile_no.MaxLength = 255;
-                this.columnf_rem_type.MaxLength = 255;
-                this.columnf_rem_amount.MaxLength = 255;
-                this.columnf_rem_date.MaxLength = 255;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4137,6 +3922,22 @@ namespace SS_SOFTWARE_CHIT {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Field1 {
+                get {
+                    try {
+                        return ((string)(this[this.tableChit_Billing_db.Field1Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Field1\' in table \'Chit_Billing_db\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableChit_Billing_db.Field1Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool Isf_chit_saveNull() {
                 return this.IsNull(this.tableChit_Billing_db.f_chit_saveColumn);
             }
@@ -4361,6 +4162,18 @@ namespace SS_SOFTWARE_CHIT {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void Setf_chit_mobile_noNull() {
                 this[this.tableChit_Billing_db.f_chit_mobile_noColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsField1Null() {
+                return this.IsNull(this.tableChit_Billing_db.Field1Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetField1Null() {
+                this[this.tableChit_Billing_db.Field1Column] = global::System.Convert.DBNull;
             }
         }
         
@@ -5372,230 +5185,6 @@ namespace SS_SOFTWARE_CHIT {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string f_reports {
-                get {
-                    try {
-                        return ((string)(this[this.tableWhatsapp_db.f_reportsColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'f_reports\' in table \'Whatsapp_db\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableWhatsapp_db.f_reportsColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string f_rep_customer_id {
-                get {
-                    try {
-                        return ((string)(this[this.tableWhatsapp_db.f_rep_customer_idColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'f_rep_customer_id\' in table \'Whatsapp_db\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableWhatsapp_db.f_rep_customer_idColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string f_rep_customer_name {
-                get {
-                    try {
-                        return ((string)(this[this.tableWhatsapp_db.f_rep_customer_nameColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'f_rep_customer_name\' in table \'Whatsapp_db\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableWhatsapp_db.f_rep_customer_nameColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string f_rep_mobile_no {
-                get {
-                    try {
-                        return ((string)(this[this.tableWhatsapp_db.f_rep_mobile_noColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'f_rep_mobile_no\' in table \'Whatsapp_db\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableWhatsapp_db.f_rep_mobile_noColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string f_rep_type {
-                get {
-                    try {
-                        return ((string)(this[this.tableWhatsapp_db.f_rep_typeColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'f_rep_type\' in table \'Whatsapp_db\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableWhatsapp_db.f_rep_typeColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string f_rep_amount {
-                get {
-                    try {
-                        return ((string)(this[this.tableWhatsapp_db.f_rep_amountColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'f_rep_amount\' in table \'Whatsapp_db\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableWhatsapp_db.f_rep_amountColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string f_rep_date {
-                get {
-                    try {
-                        return ((string)(this[this.tableWhatsapp_db.f_rep_dateColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'f_rep_date\' in table \'Whatsapp_db\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableWhatsapp_db.f_rep_dateColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string f_reminder {
-                get {
-                    try {
-                        return ((string)(this[this.tableWhatsapp_db.f_reminderColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'f_reminder\' in table \'Whatsapp_db\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableWhatsapp_db.f_reminderColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string f_rem_customer_id {
-                get {
-                    try {
-                        return ((string)(this[this.tableWhatsapp_db.f_rem_customer_idColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'f_rem_customer_id\' in table \'Whatsapp_db\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableWhatsapp_db.f_rem_customer_idColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string f_rem_customer_name {
-                get {
-                    try {
-                        return ((string)(this[this.tableWhatsapp_db.f_rem_customer_nameColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'f_rem_customer_name\' in table \'Whatsapp_db\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableWhatsapp_db.f_rem_customer_nameColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string f_rem_mobile_no {
-                get {
-                    try {
-                        return ((string)(this[this.tableWhatsapp_db.f_rem_mobile_noColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'f_rem_mobile_no\' in table \'Whatsapp_db\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableWhatsapp_db.f_rem_mobile_noColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string f_rem_type {
-                get {
-                    try {
-                        return ((string)(this[this.tableWhatsapp_db.f_rem_typeColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'f_rem_type\' in table \'Whatsapp_db\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableWhatsapp_db.f_rem_typeColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string f_rem_amount {
-                get {
-                    try {
-                        return ((string)(this[this.tableWhatsapp_db.f_rem_amountColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'f_rem_amount\' in table \'Whatsapp_db\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableWhatsapp_db.f_rem_amountColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string f_rem_date {
-                get {
-                    try {
-                        return ((string)(this[this.tableWhatsapp_db.f_rem_dateColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'f_rem_date\' in table \'Whatsapp_db\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableWhatsapp_db.f_rem_dateColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool Isf_msgNull() {
                 return this.IsNull(this.tableWhatsapp_db.f_msgColumn);
             }
@@ -5676,174 +5265,6 @@ namespace SS_SOFTWARE_CHIT {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void Setf_dateNull() {
                 this[this.tableWhatsapp_db.f_dateColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool Isf_reportsNull() {
-                return this.IsNull(this.tableWhatsapp_db.f_reportsColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Setf_reportsNull() {
-                this[this.tableWhatsapp_db.f_reportsColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool Isf_rep_customer_idNull() {
-                return this.IsNull(this.tableWhatsapp_db.f_rep_customer_idColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Setf_rep_customer_idNull() {
-                this[this.tableWhatsapp_db.f_rep_customer_idColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool Isf_rep_customer_nameNull() {
-                return this.IsNull(this.tableWhatsapp_db.f_rep_customer_nameColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Setf_rep_customer_nameNull() {
-                this[this.tableWhatsapp_db.f_rep_customer_nameColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool Isf_rep_mobile_noNull() {
-                return this.IsNull(this.tableWhatsapp_db.f_rep_mobile_noColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Setf_rep_mobile_noNull() {
-                this[this.tableWhatsapp_db.f_rep_mobile_noColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool Isf_rep_typeNull() {
-                return this.IsNull(this.tableWhatsapp_db.f_rep_typeColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Setf_rep_typeNull() {
-                this[this.tableWhatsapp_db.f_rep_typeColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool Isf_rep_amountNull() {
-                return this.IsNull(this.tableWhatsapp_db.f_rep_amountColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Setf_rep_amountNull() {
-                this[this.tableWhatsapp_db.f_rep_amountColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool Isf_rep_dateNull() {
-                return this.IsNull(this.tableWhatsapp_db.f_rep_dateColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Setf_rep_dateNull() {
-                this[this.tableWhatsapp_db.f_rep_dateColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool Isf_reminderNull() {
-                return this.IsNull(this.tableWhatsapp_db.f_reminderColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Setf_reminderNull() {
-                this[this.tableWhatsapp_db.f_reminderColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool Isf_rem_customer_idNull() {
-                return this.IsNull(this.tableWhatsapp_db.f_rem_customer_idColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Setf_rem_customer_idNull() {
-                this[this.tableWhatsapp_db.f_rem_customer_idColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool Isf_rem_customer_nameNull() {
-                return this.IsNull(this.tableWhatsapp_db.f_rem_customer_nameColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Setf_rem_customer_nameNull() {
-                this[this.tableWhatsapp_db.f_rem_customer_nameColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool Isf_rem_mobile_noNull() {
-                return this.IsNull(this.tableWhatsapp_db.f_rem_mobile_noColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Setf_rem_mobile_noNull() {
-                this[this.tableWhatsapp_db.f_rem_mobile_noColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool Isf_rem_typeNull() {
-                return this.IsNull(this.tableWhatsapp_db.f_rem_typeColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Setf_rem_typeNull() {
-                this[this.tableWhatsapp_db.f_rem_typeColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool Isf_rem_amountNull() {
-                return this.IsNull(this.tableWhatsapp_db.f_rem_amountColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Setf_rem_amountNull() {
-                this[this.tableWhatsapp_db.f_rem_amountColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool Isf_rem_dateNull() {
-                return this.IsNull(this.tableWhatsapp_db.f_rem_dateColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Setf_rem_dateNull() {
-                this[this.tableWhatsapp_db.f_rem_dateColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -7118,10 +6539,11 @@ namespace SS_SOFTWARE_CHIT.Settings_dbDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("f_chit_id", "f_chit_id");
             tableMapping.ColumnMappings.Add("f_chit_area", "f_chit_area");
             tableMapping.ColumnMappings.Add("f_chit_mobile_no", "f_chit_mobile_no");
+            tableMapping.ColumnMappings.Add("Field1", "Field1");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `Chit_Billing_db` WHERE ((`ID` = ?) AND ((? = 1 AND `f_chit_save` IS NULL) OR (`f_chit_save` = ?)) AND ((? = 1 AND `f_chit_edit` IS NULL) OR (`f_chit_edit` = ?)) AND ((? = 1 AND `f_chit_delete` IS NULL) OR (`f_chit_delete` = ?)) AND ((? = 1 AND `f_chit_customer_id` IS NULL) OR (`f_chit_customer_id` = ?)) AND ((? = 1 AND `f_chit_customer_id_1` IS NULL) OR (`f_chit_customer_id_1` = ?)) AND ((? = 1 AND `f_chit_customer_name` IS NULL) OR (`f_chit_customer_name` = ?)) AND ((? = 1 AND `f_chit_customer_name_1` IS NULL) OR (`f_chit_customer_name_1` = ?)) AND ((? = 1 AND `f_chit_area_1` IS NULL) OR (`f_chit_area_1` = ?)) AND ((? = 1 AND `f_chit_mobile_no_1` IS NULL) OR (`f_chit_mobile_no_1` = ?)) AND ((? = 1 AND `f_chit_sno` IS NULL) OR (`f_chit_sno` = ?)) AND ((? = 1 AND `f_chit_date` IS NULL) OR (`f_chit_date` = ?)) AND ((? = 1 AND `f_chit_month` IS NULL) OR (`f_chit_month` = ?)) AND ((? = 1 AND `f_chit_type` IS NULL) OR (`f_chit_type` = ?)) AND ((? = 1 AND `f_chit_amount` IS NULL) OR (`f_chit_amount` = ?)) AND ((? = 1 AND `f_chit_balance` IS NULL) OR (`f_chit_balance` = ?)) AND ((? = 1 AND `f_chit_amount_1` IS NULL) OR (`f_chit_amount_1` = ?)) AND ((? = 1 AND `f_chit_id` IS NULL) OR (`f_chit_id` = ?)) AND ((? = 1 AND `f_chit_area` IS NULL) OR (`f_chit_area` = ?)) AND ((? = 1 AND `f_chit_mobile_no` IS NULL) OR (`f_chit_mobile_no` = ?)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `Chit_Billing_db` WHERE ((`ID` = ?) AND ((? = 1 AND `f_chit_save` IS NULL) OR (`f_chit_save` = ?)) AND ((? = 1 AND `f_chit_edit` IS NULL) OR (`f_chit_edit` = ?)) AND ((? = 1 AND `f_chit_delete` IS NULL) OR (`f_chit_delete` = ?)) AND ((? = 1 AND `f_chit_customer_id` IS NULL) OR (`f_chit_customer_id` = ?)) AND ((? = 1 AND `f_chit_customer_id_1` IS NULL) OR (`f_chit_customer_id_1` = ?)) AND ((? = 1 AND `f_chit_customer_name` IS NULL) OR (`f_chit_customer_name` = ?)) AND ((? = 1 AND `f_chit_customer_name_1` IS NULL) OR (`f_chit_customer_name_1` = ?)) AND ((? = 1 AND `f_chit_area_1` IS NULL) OR (`f_chit_area_1` = ?)) AND ((? = 1 AND `f_chit_mobile_no_1` IS NULL) OR (`f_chit_mobile_no_1` = ?)) AND ((? = 1 AND `f_chit_sno` IS NULL) OR (`f_chit_sno` = ?)) AND ((? = 1 AND `f_chit_date` IS NULL) OR (`f_chit_date` = ?)) AND ((? = 1 AND `f_chit_month` IS NULL) OR (`f_chit_month` = ?)) AND ((? = 1 AND `f_chit_type` IS NULL) OR (`f_chit_type` = ?)) AND ((? = 1 AND `f_chit_amount` IS NULL) OR (`f_chit_amount` = ?)) AND ((? = 1 AND `f_chit_balance` IS NULL) OR (`f_chit_balance` = ?)) AND ((? = 1 AND `f_chit_amount_1` IS NULL) OR (`f_chit_amount_1` = ?)) AND ((? = 1 AND `f_chit_id` IS NULL) OR (`f_chit_id` = ?)) AND ((? = 1 AND `f_chit_area` IS NULL) OR (`f_chit_area` = ?)) AND ((? = 1 AND `f_chit_mobile_no` IS NULL) OR (`f_chit_mobile_no` = ?)) AND ((? = 1 AND `Field1` IS NULL) OR (`Field1` = ?)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_ID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ID", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_f_chit_save", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "f_chit_save", global::System.Data.DataRowVersion.Original, true, null));
@@ -7162,9 +6584,11 @@ namespace SS_SOFTWARE_CHIT.Settings_dbDataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_f_chit_area", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "f_chit_area", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_f_chit_mobile_no", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "f_chit_mobile_no", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_f_chit_mobile_no", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "f_chit_mobile_no", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Field1", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Field1", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Field1", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Field1", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.InsertCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO `Chit_Billing_db` (`f_chit_save`, `f_chit_edit`, `f_chit_delete`, `f_chit_customer_id`, `f_chit_customer_id_1`, `f_chit_customer_name`, `f_chit_customer_name_1`, `f_chit_area_1`, `f_chit_mobile_no_1`, `f_chit_sno`, `f_chit_date`, `f_chit_month`, `f_chit_type`, `f_chit_amount`, `f_chit_balance`, `f_chit_amount_1`, `f_chit_id`, `f_chit_area`, `f_chit_mobile_no`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO `Chit_Billing_db` (`f_chit_save`, `f_chit_edit`, `f_chit_delete`, `f_chit_customer_id`, `f_chit_customer_id_1`, `f_chit_customer_name`, `f_chit_customer_name_1`, `f_chit_area_1`, `f_chit_mobile_no_1`, `f_chit_sno`, `f_chit_date`, `f_chit_month`, `f_chit_type`, `f_chit_amount`, `f_chit_balance`, `f_chit_amount_1`, `f_chit_id`, `f_chit_area`, `f_chit_mobile_no`, `Field1`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("f_chit_save", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "f_chit_save", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("f_chit_edit", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "f_chit_edit", global::System.Data.DataRowVersion.Current, false, null));
@@ -7185,6 +6609,7 @@ namespace SS_SOFTWARE_CHIT.Settings_dbDataSetTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("f_chit_id", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "f_chit_id", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("f_chit_area", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "f_chit_area", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("f_chit_mobile_no", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "f_chit_mobile_no", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Field1", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Field1", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
             this._adapter.UpdateCommand.CommandText = "UPDATE `Chit_Billing_db` SET `f_chit_save` = ?, `f_chit_edit` = ?, `f_chit_delete" +
@@ -7192,24 +6617,25 @@ namespace SS_SOFTWARE_CHIT.Settings_dbDataSetTableAdapters {
                 "me` = ?, `f_chit_customer_name_1` = ?, `f_chit_area_1` = ?, `f_chit_mobile_no_1`" +
                 " = ?, `f_chit_sno` = ?, `f_chit_date` = ?, `f_chit_month` = ?, `f_chit_type` = ?" +
                 ", `f_chit_amount` = ?, `f_chit_balance` = ?, `f_chit_amount_1` = ?, `f_chit_id` " +
-                "= ?, `f_chit_area` = ?, `f_chit_mobile_no` = ? WHERE ((`ID` = ?) AND ((? = 1 AND" +
-                " `f_chit_save` IS NULL) OR (`f_chit_save` = ?)) AND ((? = 1 AND `f_chit_edit` IS" +
-                " NULL) OR (`f_chit_edit` = ?)) AND ((? = 1 AND `f_chit_delete` IS NULL) OR (`f_c" +
-                "hit_delete` = ?)) AND ((? = 1 AND `f_chit_customer_id` IS NULL) OR (`f_chit_cust" +
-                "omer_id` = ?)) AND ((? = 1 AND `f_chit_customer_id_1` IS NULL) OR (`f_chit_custo" +
-                "mer_id_1` = ?)) AND ((? = 1 AND `f_chit_customer_name` IS NULL) OR (`f_chit_cust" +
-                "omer_name` = ?)) AND ((? = 1 AND `f_chit_customer_name_1` IS NULL) OR (`f_chit_c" +
-                "ustomer_name_1` = ?)) AND ((? = 1 AND `f_chit_area_1` IS NULL) OR (`f_chit_area_" +
-                "1` = ?)) AND ((? = 1 AND `f_chit_mobile_no_1` IS NULL) OR (`f_chit_mobile_no_1` " +
-                "= ?)) AND ((? = 1 AND `f_chit_sno` IS NULL) OR (`f_chit_sno` = ?)) AND ((? = 1 A" +
-                "ND `f_chit_date` IS NULL) OR (`f_chit_date` = ?)) AND ((? = 1 AND `f_chit_month`" +
-                " IS NULL) OR (`f_chit_month` = ?)) AND ((? = 1 AND `f_chit_type` IS NULL) OR (`f" +
-                "_chit_type` = ?)) AND ((? = 1 AND `f_chit_amount` IS NULL) OR (`f_chit_amount` =" +
-                " ?)) AND ((? = 1 AND `f_chit_balance` IS NULL) OR (`f_chit_balance` = ?)) AND ((" +
-                "? = 1 AND `f_chit_amount_1` IS NULL) OR (`f_chit_amount_1` = ?)) AND ((? = 1 AND" +
-                " `f_chit_id` IS NULL) OR (`f_chit_id` = ?)) AND ((? = 1 AND `f_chit_area` IS NUL" +
-                "L) OR (`f_chit_area` = ?)) AND ((? = 1 AND `f_chit_mobile_no` IS NULL) OR (`f_ch" +
-                "it_mobile_no` = ?)))";
+                "= ?, `f_chit_area` = ?, `f_chit_mobile_no` = ?, `Field1` = ? WHERE ((`ID` = ?) A" +
+                "ND ((? = 1 AND `f_chit_save` IS NULL) OR (`f_chit_save` = ?)) AND ((? = 1 AND `f" +
+                "_chit_edit` IS NULL) OR (`f_chit_edit` = ?)) AND ((? = 1 AND `f_chit_delete` IS " +
+                "NULL) OR (`f_chit_delete` = ?)) AND ((? = 1 AND `f_chit_customer_id` IS NULL) OR" +
+                " (`f_chit_customer_id` = ?)) AND ((? = 1 AND `f_chit_customer_id_1` IS NULL) OR " +
+                "(`f_chit_customer_id_1` = ?)) AND ((? = 1 AND `f_chit_customer_name` IS NULL) OR" +
+                " (`f_chit_customer_name` = ?)) AND ((? = 1 AND `f_chit_customer_name_1` IS NULL)" +
+                " OR (`f_chit_customer_name_1` = ?)) AND ((? = 1 AND `f_chit_area_1` IS NULL) OR " +
+                "(`f_chit_area_1` = ?)) AND ((? = 1 AND `f_chit_mobile_no_1` IS NULL) OR (`f_chit" +
+                "_mobile_no_1` = ?)) AND ((? = 1 AND `f_chit_sno` IS NULL) OR (`f_chit_sno` = ?))" +
+                " AND ((? = 1 AND `f_chit_date` IS NULL) OR (`f_chit_date` = ?)) AND ((? = 1 AND " +
+                "`f_chit_month` IS NULL) OR (`f_chit_month` = ?)) AND ((? = 1 AND `f_chit_type` I" +
+                "S NULL) OR (`f_chit_type` = ?)) AND ((? = 1 AND `f_chit_amount` IS NULL) OR (`f_" +
+                "chit_amount` = ?)) AND ((? = 1 AND `f_chit_balance` IS NULL) OR (`f_chit_balance" +
+                "` = ?)) AND ((? = 1 AND `f_chit_amount_1` IS NULL) OR (`f_chit_amount_1` = ?)) A" +
+                "ND ((? = 1 AND `f_chit_id` IS NULL) OR (`f_chit_id` = ?)) AND ((? = 1 AND `f_chi" +
+                "t_area` IS NULL) OR (`f_chit_area` = ?)) AND ((? = 1 AND `f_chit_mobile_no` IS N" +
+                "ULL) OR (`f_chit_mobile_no` = ?)) AND ((? = 1 AND `Field1` IS NULL) OR (`Field1`" +
+                " = ?)))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("f_chit_save", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "f_chit_save", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("f_chit_edit", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "f_chit_edit", global::System.Data.DataRowVersion.Current, false, null));
@@ -7230,6 +6656,7 @@ namespace SS_SOFTWARE_CHIT.Settings_dbDataSetTableAdapters {
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("f_chit_id", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "f_chit_id", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("f_chit_area", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "f_chit_area", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("f_chit_mobile_no", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "f_chit_mobile_no", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Field1", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Field1", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_ID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ID", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_f_chit_save", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "f_chit_save", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_f_chit_save", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "f_chit_save", global::System.Data.DataRowVersion.Original, false, null));
@@ -7269,6 +6696,8 @@ namespace SS_SOFTWARE_CHIT.Settings_dbDataSetTableAdapters {
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_f_chit_area", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "f_chit_area", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_f_chit_mobile_no", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "f_chit_mobile_no", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_f_chit_mobile_no", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "f_chit_mobile_no", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Field1", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Field1", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Field1", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Field1", global::System.Data.DataRowVersion.Original, false, null));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7284,7 +6713,7 @@ namespace SS_SOFTWARE_CHIT.Settings_dbDataSetTableAdapters {
             this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT ID, f_chit_save, f_chit_edit, f_chit_delete, f_chit_customer_id, f_chit_customer_id_1, f_chit_customer_name, f_chit_customer_name_1, f_chit_area_1, f_chit_mobile_no_1, f_chit_sno, f_chit_date, f_chit_month, f_chit_type, f_chit_amount, f_chit_balance, f_chit_amount_1, f_chit_id, f_chit_area, f_chit_mobile_no FROM Chit_Billing_db";
+            this._commandCollection[0].CommandText = @"SELECT ID, f_chit_save, f_chit_edit, f_chit_delete, f_chit_customer_id, f_chit_customer_id_1, f_chit_customer_name, f_chit_customer_name_1, f_chit_area_1, f_chit_mobile_no_1, f_chit_sno, f_chit_date, f_chit_month, f_chit_type, f_chit_amount, f_chit_balance, f_chit_amount_1, f_chit_id, f_chit_area, f_chit_mobile_no, Field1 FROM Chit_Billing_db";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -7365,7 +6794,8 @@ namespace SS_SOFTWARE_CHIT.Settings_dbDataSetTableAdapters {
                     string Original_f_chit_amount_1, 
                     string Original_f_chit_id, 
                     string Original_f_chit_area, 
-                    string Original_f_chit_mobile_no) {
+                    string Original_f_chit_mobile_no, 
+                    string Original_Field1) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_ID));
             if ((Original_f_chit_save == null)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
@@ -7519,6 +6949,14 @@ namespace SS_SOFTWARE_CHIT.Settings_dbDataSetTableAdapters {
                 this.Adapter.DeleteCommand.Parameters[37].Value = ((object)(0));
                 this.Adapter.DeleteCommand.Parameters[38].Value = ((string)(Original_f_chit_mobile_no));
             }
+            if ((Original_Field1 == null)) {
+                this.Adapter.DeleteCommand.Parameters[39].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[40].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[39].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[40].Value = ((string)(Original_Field1));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -7558,7 +6996,8 @@ namespace SS_SOFTWARE_CHIT.Settings_dbDataSetTableAdapters {
                     string f_chit_amount_1, 
                     string f_chit_id, 
                     string f_chit_area, 
-                    string f_chit_mobile_no) {
+                    string f_chit_mobile_no, 
+                    string Field1) {
             if ((f_chit_save == null)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -7673,6 +7112,12 @@ namespace SS_SOFTWARE_CHIT.Settings_dbDataSetTableAdapters {
             else {
                 this.Adapter.InsertCommand.Parameters[18].Value = ((string)(f_chit_mobile_no));
             }
+            if ((Field1 == null)) {
+                this.Adapter.InsertCommand.Parameters[19].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[19].Value = ((string)(Field1));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -7713,6 +7158,7 @@ namespace SS_SOFTWARE_CHIT.Settings_dbDataSetTableAdapters {
                     string f_chit_id, 
                     string f_chit_area, 
                     string f_chit_mobile_no, 
+                    string Field1, 
                     int Original_ID, 
                     string Original_f_chit_save, 
                     string Original_f_chit_edit, 
@@ -7732,7 +7178,8 @@ namespace SS_SOFTWARE_CHIT.Settings_dbDataSetTableAdapters {
                     string Original_f_chit_amount_1, 
                     string Original_f_chit_id, 
                     string Original_f_chit_area, 
-                    string Original_f_chit_mobile_no) {
+                    string Original_f_chit_mobile_no, 
+                    string Original_Field1) {
             if ((f_chit_save == null)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -7847,158 +7294,172 @@ namespace SS_SOFTWARE_CHIT.Settings_dbDataSetTableAdapters {
             else {
                 this.Adapter.UpdateCommand.Parameters[18].Value = ((string)(f_chit_mobile_no));
             }
-            this.Adapter.UpdateCommand.Parameters[19].Value = ((int)(Original_ID));
-            if ((Original_f_chit_save == null)) {
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[21].Value = global::System.DBNull.Value;
+            if ((Field1 == null)) {
+                this.Adapter.UpdateCommand.Parameters[19].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((string)(Original_f_chit_save));
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((string)(Field1));
+            }
+            this.Adapter.UpdateCommand.Parameters[20].Value = ((int)(Original_ID));
+            if ((Original_f_chit_save == null)) {
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[22].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((string)(Original_f_chit_save));
             }
             if ((Original_f_chit_edit == null)) {
-                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[23].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[24].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[23].Value = ((string)(Original_f_chit_edit));
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((string)(Original_f_chit_edit));
             }
             if ((Original_f_chit_delete == null)) {
-                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[25].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[26].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[25].Value = ((string)(Original_f_chit_delete));
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[26].Value = ((string)(Original_f_chit_delete));
             }
             if ((Original_f_chit_customer_id == null)) {
-                this.Adapter.UpdateCommand.Parameters[26].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[27].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[28].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[26].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[27].Value = ((string)(Original_f_chit_customer_id));
+                this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[28].Value = ((string)(Original_f_chit_customer_id));
             }
             if ((Original_f_chit_customer_id_1 == null)) {
-                this.Adapter.UpdateCommand.Parameters[28].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[29].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[29].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[30].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[28].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[29].Value = ((string)(Original_f_chit_customer_id_1));
+                this.Adapter.UpdateCommand.Parameters[29].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[30].Value = ((string)(Original_f_chit_customer_id_1));
             }
             if ((Original_f_chit_customer_name == null)) {
-                this.Adapter.UpdateCommand.Parameters[30].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[31].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[31].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[32].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[30].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[31].Value = ((string)(Original_f_chit_customer_name));
+                this.Adapter.UpdateCommand.Parameters[31].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[32].Value = ((string)(Original_f_chit_customer_name));
             }
             if ((Original_f_chit_customer_name_1 == null)) {
-                this.Adapter.UpdateCommand.Parameters[32].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[33].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[33].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[34].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[32].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[33].Value = ((string)(Original_f_chit_customer_name_1));
+                this.Adapter.UpdateCommand.Parameters[33].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[34].Value = ((string)(Original_f_chit_customer_name_1));
             }
             if ((Original_f_chit_area_1 == null)) {
-                this.Adapter.UpdateCommand.Parameters[34].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[35].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[35].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[36].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[34].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[35].Value = ((string)(Original_f_chit_area_1));
+                this.Adapter.UpdateCommand.Parameters[35].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[36].Value = ((string)(Original_f_chit_area_1));
             }
             if ((Original_f_chit_mobile_no_1 == null)) {
-                this.Adapter.UpdateCommand.Parameters[36].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[37].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[37].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[38].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[36].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[37].Value = ((string)(Original_f_chit_mobile_no_1));
+                this.Adapter.UpdateCommand.Parameters[37].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[38].Value = ((string)(Original_f_chit_mobile_no_1));
             }
             if ((Original_f_chit_sno == null)) {
-                this.Adapter.UpdateCommand.Parameters[38].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[39].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[39].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[40].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[38].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[39].Value = ((string)(Original_f_chit_sno));
+                this.Adapter.UpdateCommand.Parameters[39].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[40].Value = ((string)(Original_f_chit_sno));
             }
             if ((Original_f_chit_date == null)) {
-                this.Adapter.UpdateCommand.Parameters[40].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[41].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[41].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[42].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[40].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[41].Value = ((string)(Original_f_chit_date));
+                this.Adapter.UpdateCommand.Parameters[41].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[42].Value = ((string)(Original_f_chit_date));
             }
             if ((Original_f_chit_month == null)) {
-                this.Adapter.UpdateCommand.Parameters[42].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[43].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[43].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[44].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[42].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[43].Value = ((string)(Original_f_chit_month));
+                this.Adapter.UpdateCommand.Parameters[43].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[44].Value = ((string)(Original_f_chit_month));
             }
             if ((Original_f_chit_type == null)) {
-                this.Adapter.UpdateCommand.Parameters[44].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[45].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[45].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[46].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[44].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[45].Value = ((string)(Original_f_chit_type));
+                this.Adapter.UpdateCommand.Parameters[45].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[46].Value = ((string)(Original_f_chit_type));
             }
             if ((Original_f_chit_amount == null)) {
-                this.Adapter.UpdateCommand.Parameters[46].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[47].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[47].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[48].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[46].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[47].Value = ((string)(Original_f_chit_amount));
+                this.Adapter.UpdateCommand.Parameters[47].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[48].Value = ((string)(Original_f_chit_amount));
             }
             if ((Original_f_chit_balance == null)) {
-                this.Adapter.UpdateCommand.Parameters[48].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[49].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[49].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[50].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[48].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[49].Value = ((string)(Original_f_chit_balance));
+                this.Adapter.UpdateCommand.Parameters[49].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[50].Value = ((string)(Original_f_chit_balance));
             }
             if ((Original_f_chit_amount_1 == null)) {
-                this.Adapter.UpdateCommand.Parameters[50].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[51].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[51].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[52].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[50].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[51].Value = ((string)(Original_f_chit_amount_1));
+                this.Adapter.UpdateCommand.Parameters[51].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[52].Value = ((string)(Original_f_chit_amount_1));
             }
             if ((Original_f_chit_id == null)) {
-                this.Adapter.UpdateCommand.Parameters[52].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[53].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[53].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[54].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[52].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[53].Value = ((string)(Original_f_chit_id));
+                this.Adapter.UpdateCommand.Parameters[53].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[54].Value = ((string)(Original_f_chit_id));
             }
             if ((Original_f_chit_area == null)) {
-                this.Adapter.UpdateCommand.Parameters[54].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[55].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[55].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[56].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[54].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[55].Value = ((string)(Original_f_chit_area));
+                this.Adapter.UpdateCommand.Parameters[55].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[56].Value = ((string)(Original_f_chit_area));
             }
             if ((Original_f_chit_mobile_no == null)) {
-                this.Adapter.UpdateCommand.Parameters[56].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[57].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[57].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[58].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[56].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[57].Value = ((string)(Original_f_chit_mobile_no));
+                this.Adapter.UpdateCommand.Parameters[57].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[58].Value = ((string)(Original_f_chit_mobile_no));
+            }
+            if ((Original_Field1 == null)) {
+                this.Adapter.UpdateCommand.Parameters[59].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[60].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[59].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[60].Value = ((string)(Original_Field1));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -10021,24 +9482,10 @@ namespace SS_SOFTWARE_CHIT.Settings_dbDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("f_type", "f_type");
             tableMapping.ColumnMappings.Add("f_amount", "f_amount");
             tableMapping.ColumnMappings.Add("f_date", "f_date");
-            tableMapping.ColumnMappings.Add("f_reports", "f_reports");
-            tableMapping.ColumnMappings.Add("f_rep_customer_id", "f_rep_customer_id");
-            tableMapping.ColumnMappings.Add("f_rep_customer_name", "f_rep_customer_name");
-            tableMapping.ColumnMappings.Add("f_rep_mobile_no", "f_rep_mobile_no");
-            tableMapping.ColumnMappings.Add("f_rep_type", "f_rep_type");
-            tableMapping.ColumnMappings.Add("f_rep_amount", "f_rep_amount");
-            tableMapping.ColumnMappings.Add("f_rep_date", "f_rep_date");
-            tableMapping.ColumnMappings.Add("f_reminder", "f_reminder");
-            tableMapping.ColumnMappings.Add("f_rem_customer_id", "f_rem_customer_id");
-            tableMapping.ColumnMappings.Add("f_rem_customer_name", "f_rem_customer_name");
-            tableMapping.ColumnMappings.Add("f_rem_mobile_no", "f_rem_mobile_no");
-            tableMapping.ColumnMappings.Add("f_rem_type", "f_rem_type");
-            tableMapping.ColumnMappings.Add("f_rem_amount", "f_rem_amount");
-            tableMapping.ColumnMappings.Add("f_rem_date", "f_rem_date");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `Whatsapp_db` WHERE ((`ID` = ?) AND ((? = 1 AND `f_customer_id` IS NULL) OR (`f_customer_id` = ?)) AND ((? = 1 AND `f_customer_name` IS NULL) OR (`f_customer_name` = ?)) AND ((? = 1 AND `f_mobile_no` IS NULL) OR (`f_mobile_no` = ?)) AND ((? = 1 AND `f_type` IS NULL) OR (`f_type` = ?)) AND ((? = 1 AND `f_amount` IS NULL) OR (`f_amount` = ?)) AND ((? = 1 AND `f_date` IS NULL) OR (`f_date` = ?)) AND ((? = 1 AND `f_rep_customer_id` IS NULL) OR (`f_rep_customer_id` = ?)) AND ((? = 1 AND `f_rep_customer_name` IS NULL) OR (`f_rep_customer_name` = ?)) AND ((? = 1 AND `f_rep_mobile_no` IS NULL) OR (`f_rep_mobile_no` = ?)) AND ((? = 1 AND `f_rep_type` IS NULL) OR (`f_rep_type` = ?)) AND ((? = 1 AND `f_rep_amount` IS NULL) OR (`f_rep_amount` = ?)) AND ((? = 1 AND `f_rep_date` IS NULL) OR (`f_rep_date` = ?)) AND ((? = 1 AND `f_rem_customer_id` IS NULL) OR (`f_rem_customer_id` = ?)) AND ((? = 1 AND `f_rem_customer_name` IS NULL) OR (`f_rem_customer_name` = ?)) AND ((? = 1 AND `f_rem_mobile_no` IS NULL) OR (`f_rem_mobile_no` = ?)) AND ((? = 1 AND `f_rem_type` IS NULL) OR (`f_rem_type` = ?)) AND ((? = 1 AND `f_rem_amount` IS NULL) OR (`f_rem_amount` = ?)) AND ((? = 1 AND `f_rem_date` IS NULL) OR (`f_rem_date` = ?)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `Whatsapp_db` WHERE ((`ID` = ?) AND ((? = 1 AND `f_customer_id` IS NULL) OR (`f_customer_id` = ?)) AND ((? = 1 AND `f_customer_name` IS NULL) OR (`f_customer_name` = ?)) AND ((? = 1 AND `f_mobile_no` IS NULL) OR (`f_mobile_no` = ?)) AND ((? = 1 AND `f_type` IS NULL) OR (`f_type` = ?)) AND ((? = 1 AND `f_amount` IS NULL) OR (`f_amount` = ?)) AND ((? = 1 AND `f_date` IS NULL) OR (`f_date` = ?)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_ID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ID", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_f_customer_id", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "f_customer_id", global::System.Data.DataRowVersion.Original, true, null));
@@ -10053,33 +9500,10 @@ namespace SS_SOFTWARE_CHIT.Settings_dbDataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_f_amount", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "f_amount", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_f_date", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "f_date", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_f_date", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "f_date", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_f_rep_customer_id", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "f_rep_customer_id", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_f_rep_customer_id", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "f_rep_customer_id", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_f_rep_customer_name", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "f_rep_customer_name", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_f_rep_customer_name", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "f_rep_customer_name", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_f_rep_mobile_no", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "f_rep_mobile_no", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_f_rep_mobile_no", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "f_rep_mobile_no", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_f_rep_type", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "f_rep_type", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_f_rep_type", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "f_rep_type", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_f_rep_amount", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "f_rep_amount", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_f_rep_amount", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "f_rep_amount", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_f_rep_date", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "f_rep_date", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_f_rep_date", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "f_rep_date", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_f_rem_customer_id", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "f_rem_customer_id", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_f_rem_customer_id", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "f_rem_customer_id", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_f_rem_customer_name", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "f_rem_customer_name", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_f_rem_customer_name", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "f_rem_customer_name", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_f_rem_mobile_no", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "f_rem_mobile_no", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_f_rem_mobile_no", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "f_rem_mobile_no", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_f_rem_type", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "f_rem_type", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_f_rem_type", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "f_rem_type", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_f_rem_amount", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "f_rem_amount", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_f_rem_amount", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "f_rem_amount", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_f_rem_date", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "f_rem_date", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_f_rem_date", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "f_rem_date", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.InsertCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO `Whatsapp_db` (`f_msg`, `f_customer_id`, `f_customer_name`, `f_mobile_no`, `f_type`, `f_amount`, `f_date`, `f_reports`, `f_rep_customer_id`, `f_rep_customer_name`, `f_rep_mobile_no`, `f_rep_type`, `f_rep_amount`, `f_rep_date`, `f_reminder`, `f_rem_customer_id`, `f_rem_customer_name`, `f_rem_mobile_no`, `f_rem_type`, `f_rem_amount`, `f_rem_date`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO `Whatsapp_db` (`f_msg`, `f_customer_id`, `f_customer_name`, `f_mobile" +
+                "_no`, `f_type`, `f_amount`, `f_date`) VALUES (?, ?, ?, ?, ?, ?, ?)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("f_msg", global::System.Data.OleDb.OleDbType.LongVarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "f_msg", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("f_customer_id", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "f_customer_id", global::System.Data.DataRowVersion.Current, false, null));
@@ -10088,43 +9512,9 @@ namespace SS_SOFTWARE_CHIT.Settings_dbDataSetTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("f_type", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "f_type", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("f_amount", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "f_amount", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("f_date", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "f_date", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("f_reports", global::System.Data.OleDb.OleDbType.LongVarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "f_reports", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("f_rep_customer_id", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "f_rep_customer_id", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("f_rep_customer_name", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "f_rep_customer_name", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("f_rep_mobile_no", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "f_rep_mobile_no", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("f_rep_type", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "f_rep_type", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("f_rep_amount", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "f_rep_amount", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("f_rep_date", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "f_rep_date", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("f_reminder", global::System.Data.OleDb.OleDbType.LongVarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "f_reminder", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("f_rem_customer_id", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "f_rem_customer_id", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("f_rem_customer_name", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "f_rem_customer_name", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("f_rem_mobile_no", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "f_rem_mobile_no", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("f_rem_type", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "f_rem_type", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("f_rem_amount", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "f_rem_amount", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("f_rem_date", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "f_rem_date", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = "UPDATE `Whatsapp_db` SET `f_msg` = ?, `f_customer_id` = ?, `f_customer_name` = ?," +
-                " `f_mobile_no` = ?, `f_type` = ?, `f_amount` = ?, `f_date` = ?, `f_reports` = ?," +
-                " `f_rep_customer_id` = ?, `f_rep_customer_name` = ?, `f_rep_mobile_no` = ?, `f_r" +
-                "ep_type` = ?, `f_rep_amount` = ?, `f_rep_date` = ?, `f_reminder` = ?, `f_rem_cus" +
-                "tomer_id` = ?, `f_rem_customer_name` = ?, `f_rem_mobile_no` = ?, `f_rem_type` = " +
-                "?, `f_rem_amount` = ?, `f_rem_date` = ? WHERE ((`ID` = ?) AND ((? = 1 AND `f_cus" +
-                "tomer_id` IS NULL) OR (`f_customer_id` = ?)) AND ((? = 1 AND `f_customer_name` I" +
-                "S NULL) OR (`f_customer_name` = ?)) AND ((? = 1 AND `f_mobile_no` IS NULL) OR (`" +
-                "f_mobile_no` = ?)) AND ((? = 1 AND `f_type` IS NULL) OR (`f_type` = ?)) AND ((? " +
-                "= 1 AND `f_amount` IS NULL) OR (`f_amount` = ?)) AND ((? = 1 AND `f_date` IS NUL" +
-                "L) OR (`f_date` = ?)) AND ((? = 1 AND `f_rep_customer_id` IS NULL) OR (`f_rep_cu" +
-                "stomer_id` = ?)) AND ((? = 1 AND `f_rep_customer_name` IS NULL) OR (`f_rep_custo" +
-                "mer_name` = ?)) AND ((? = 1 AND `f_rep_mobile_no` IS NULL) OR (`f_rep_mobile_no`" +
-                " = ?)) AND ((? = 1 AND `f_rep_type` IS NULL) OR (`f_rep_type` = ?)) AND ((? = 1 " +
-                "AND `f_rep_amount` IS NULL) OR (`f_rep_amount` = ?)) AND ((? = 1 AND `f_rep_date" +
-                "` IS NULL) OR (`f_rep_date` = ?)) AND ((? = 1 AND `f_rem_customer_id` IS NULL) O" +
-                "R (`f_rem_customer_id` = ?)) AND ((? = 1 AND `f_rem_customer_name` IS NULL) OR (" +
-                "`f_rem_customer_name` = ?)) AND ((? = 1 AND `f_rem_mobile_no` IS NULL) OR (`f_re" +
-                "m_mobile_no` = ?)) AND ((? = 1 AND `f_rem_type` IS NULL) OR (`f_rem_type` = ?)) " +
-                "AND ((? = 1 AND `f_rem_amount` IS NULL) OR (`f_rem_amount` = ?)) AND ((? = 1 AND" +
-                " `f_rem_date` IS NULL) OR (`f_rem_date` = ?)))";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE `Whatsapp_db` SET `f_msg` = ?, `f_customer_id` = ?, `f_customer_name` = ?, `f_mobile_no` = ?, `f_type` = ?, `f_amount` = ?, `f_date` = ? WHERE ((`ID` = ?) AND ((? = 1 AND `f_customer_id` IS NULL) OR (`f_customer_id` = ?)) AND ((? = 1 AND `f_customer_name` IS NULL) OR (`f_customer_name` = ?)) AND ((? = 1 AND `f_mobile_no` IS NULL) OR (`f_mobile_no` = ?)) AND ((? = 1 AND `f_type` IS NULL) OR (`f_type` = ?)) AND ((? = 1 AND `f_amount` IS NULL) OR (`f_amount` = ?)) AND ((? = 1 AND `f_date` IS NULL) OR (`f_date` = ?)))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("f_msg", global::System.Data.OleDb.OleDbType.LongVarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "f_msg", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("f_customer_id", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "f_customer_id", global::System.Data.DataRowVersion.Current, false, null));
@@ -10133,20 +9523,6 @@ namespace SS_SOFTWARE_CHIT.Settings_dbDataSetTableAdapters {
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("f_type", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "f_type", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("f_amount", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "f_amount", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("f_date", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "f_date", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("f_reports", global::System.Data.OleDb.OleDbType.LongVarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "f_reports", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("f_rep_customer_id", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "f_rep_customer_id", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("f_rep_customer_name", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "f_rep_customer_name", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("f_rep_mobile_no", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "f_rep_mobile_no", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("f_rep_type", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "f_rep_type", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("f_rep_amount", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "f_rep_amount", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("f_rep_date", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "f_rep_date", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("f_reminder", global::System.Data.OleDb.OleDbType.LongVarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "f_reminder", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("f_rem_customer_id", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "f_rem_customer_id", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("f_rem_customer_name", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "f_rem_customer_name", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("f_rem_mobile_no", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "f_rem_mobile_no", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("f_rem_type", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "f_rem_type", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("f_rem_amount", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "f_rem_amount", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("f_rem_date", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "f_rem_date", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_ID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ID", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_f_customer_id", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "f_customer_id", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_f_customer_id", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "f_customer_id", global::System.Data.DataRowVersion.Original, false, null));
@@ -10160,30 +9536,6 @@ namespace SS_SOFTWARE_CHIT.Settings_dbDataSetTableAdapters {
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_f_amount", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "f_amount", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_f_date", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "f_date", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_f_date", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "f_date", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_f_rep_customer_id", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "f_rep_customer_id", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_f_rep_customer_id", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "f_rep_customer_id", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_f_rep_customer_name", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "f_rep_customer_name", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_f_rep_customer_name", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "f_rep_customer_name", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_f_rep_mobile_no", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "f_rep_mobile_no", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_f_rep_mobile_no", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "f_rep_mobile_no", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_f_rep_type", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "f_rep_type", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_f_rep_type", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "f_rep_type", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_f_rep_amount", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "f_rep_amount", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_f_rep_amount", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "f_rep_amount", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_f_rep_date", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "f_rep_date", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_f_rep_date", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "f_rep_date", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_f_rem_customer_id", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "f_rem_customer_id", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_f_rem_customer_id", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "f_rem_customer_id", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_f_rem_customer_name", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "f_rem_customer_name", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_f_rem_customer_name", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "f_rem_customer_name", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_f_rem_mobile_no", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "f_rem_mobile_no", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_f_rem_mobile_no", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "f_rem_mobile_no", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_f_rem_type", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "f_rem_type", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_f_rem_type", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "f_rem_type", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_f_rem_amount", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "f_rem_amount", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_f_rem_amount", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "f_rem_amount", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_f_rem_date", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "f_rem_date", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_f_rem_date", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "f_rem_date", global::System.Data.DataRowVersion.Original, false, null));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -10199,7 +9551,8 @@ namespace SS_SOFTWARE_CHIT.Settings_dbDataSetTableAdapters {
             this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT ID, f_msg, f_customer_id, f_customer_name, f_mobile_no, f_type, f_amount, f_date, f_reports, f_rep_customer_id, f_rep_customer_name, f_rep_mobile_no, f_rep_type, f_rep_amount, f_rep_date, f_reminder, f_rem_customer_id, f_rem_customer_name, f_rem_mobile_no, f_rem_type, f_rem_amount, f_rem_date FROM Whatsapp_db";
+            this._commandCollection[0].CommandText = "SELECT ID, f_msg, f_customer_id, f_customer_name, f_mobile_no, f_type, f_amount, " +
+                "f_date FROM Whatsapp_db";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -10260,26 +9613,7 @@ namespace SS_SOFTWARE_CHIT.Settings_dbDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(
-                    int Original_ID, 
-                    string Original_f_customer_id, 
-                    string Original_f_customer_name, 
-                    string Original_f_mobile_no, 
-                    string Original_f_type, 
-                    string Original_f_amount, 
-                    string Original_f_date, 
-                    string Original_f_rep_customer_id, 
-                    string Original_f_rep_customer_name, 
-                    string Original_f_rep_mobile_no, 
-                    string Original_f_rep_type, 
-                    string Original_f_rep_amount, 
-                    string Original_f_rep_date, 
-                    string Original_f_rem_customer_id, 
-                    string Original_f_rem_customer_name, 
-                    string Original_f_rem_mobile_no, 
-                    string Original_f_rem_type, 
-                    string Original_f_rem_amount, 
-                    string Original_f_rem_date) {
+        public virtual int Delete(int Original_ID, string Original_f_customer_id, string Original_f_customer_name, string Original_f_mobile_no, string Original_f_type, string Original_f_amount, string Original_f_date) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_ID));
             if ((Original_f_customer_id == null)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
@@ -10329,102 +9663,6 @@ namespace SS_SOFTWARE_CHIT.Settings_dbDataSetTableAdapters {
                 this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(0));
                 this.Adapter.DeleteCommand.Parameters[12].Value = ((string)(Original_f_date));
             }
-            if ((Original_f_rep_customer_id == null)) {
-                this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[14].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[14].Value = ((string)(Original_f_rep_customer_id));
-            }
-            if ((Original_f_rep_customer_name == null)) {
-                this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[16].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[16].Value = ((string)(Original_f_rep_customer_name));
-            }
-            if ((Original_f_rep_mobile_no == null)) {
-                this.Adapter.DeleteCommand.Parameters[17].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[18].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[17].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[18].Value = ((string)(Original_f_rep_mobile_no));
-            }
-            if ((Original_f_rep_type == null)) {
-                this.Adapter.DeleteCommand.Parameters[19].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[20].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[19].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[20].Value = ((string)(Original_f_rep_type));
-            }
-            if ((Original_f_rep_amount == null)) {
-                this.Adapter.DeleteCommand.Parameters[21].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[22].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[21].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[22].Value = ((string)(Original_f_rep_amount));
-            }
-            if ((Original_f_rep_date == null)) {
-                this.Adapter.DeleteCommand.Parameters[23].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[24].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[23].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[24].Value = ((string)(Original_f_rep_date));
-            }
-            if ((Original_f_rem_customer_id == null)) {
-                this.Adapter.DeleteCommand.Parameters[25].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[26].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[25].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[26].Value = ((string)(Original_f_rem_customer_id));
-            }
-            if ((Original_f_rem_customer_name == null)) {
-                this.Adapter.DeleteCommand.Parameters[27].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[28].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[27].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[28].Value = ((string)(Original_f_rem_customer_name));
-            }
-            if ((Original_f_rem_mobile_no == null)) {
-                this.Adapter.DeleteCommand.Parameters[29].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[30].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[29].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[30].Value = ((string)(Original_f_rem_mobile_no));
-            }
-            if ((Original_f_rem_type == null)) {
-                this.Adapter.DeleteCommand.Parameters[31].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[32].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[31].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[32].Value = ((string)(Original_f_rem_type));
-            }
-            if ((Original_f_rem_amount == null)) {
-                this.Adapter.DeleteCommand.Parameters[33].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[34].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[33].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[34].Value = ((string)(Original_f_rem_amount));
-            }
-            if ((Original_f_rem_date == null)) {
-                this.Adapter.DeleteCommand.Parameters[35].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[36].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[35].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[36].Value = ((string)(Original_f_rem_date));
-            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -10445,28 +9683,7 @@ namespace SS_SOFTWARE_CHIT.Settings_dbDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(
-                    string f_msg, 
-                    string f_customer_id, 
-                    string f_customer_name, 
-                    string f_mobile_no, 
-                    string f_type, 
-                    string f_amount, 
-                    string f_date, 
-                    string f_reports, 
-                    string f_rep_customer_id, 
-                    string f_rep_customer_name, 
-                    string f_rep_mobile_no, 
-                    string f_rep_type, 
-                    string f_rep_amount, 
-                    string f_rep_date, 
-                    string f_reminder, 
-                    string f_rem_customer_id, 
-                    string f_rem_customer_name, 
-                    string f_rem_mobile_no, 
-                    string f_rem_type, 
-                    string f_rem_amount, 
-                    string f_rem_date) {
+        public virtual int Insert(string f_msg, string f_customer_id, string f_customer_name, string f_mobile_no, string f_type, string f_amount, string f_date) {
             if ((f_msg == null)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -10509,90 +9726,6 @@ namespace SS_SOFTWARE_CHIT.Settings_dbDataSetTableAdapters {
             else {
                 this.Adapter.InsertCommand.Parameters[6].Value = ((string)(f_date));
             }
-            if ((f_reports == null)) {
-                this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[7].Value = ((string)(f_reports));
-            }
-            if ((f_rep_customer_id == null)) {
-                this.Adapter.InsertCommand.Parameters[8].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[8].Value = ((string)(f_rep_customer_id));
-            }
-            if ((f_rep_customer_name == null)) {
-                this.Adapter.InsertCommand.Parameters[9].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[9].Value = ((string)(f_rep_customer_name));
-            }
-            if ((f_rep_mobile_no == null)) {
-                this.Adapter.InsertCommand.Parameters[10].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[10].Value = ((string)(f_rep_mobile_no));
-            }
-            if ((f_rep_type == null)) {
-                this.Adapter.InsertCommand.Parameters[11].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[11].Value = ((string)(f_rep_type));
-            }
-            if ((f_rep_amount == null)) {
-                this.Adapter.InsertCommand.Parameters[12].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[12].Value = ((string)(f_rep_amount));
-            }
-            if ((f_rep_date == null)) {
-                this.Adapter.InsertCommand.Parameters[13].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[13].Value = ((string)(f_rep_date));
-            }
-            if ((f_reminder == null)) {
-                this.Adapter.InsertCommand.Parameters[14].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[14].Value = ((string)(f_reminder));
-            }
-            if ((f_rem_customer_id == null)) {
-                this.Adapter.InsertCommand.Parameters[15].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[15].Value = ((string)(f_rem_customer_id));
-            }
-            if ((f_rem_customer_name == null)) {
-                this.Adapter.InsertCommand.Parameters[16].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[16].Value = ((string)(f_rem_customer_name));
-            }
-            if ((f_rem_mobile_no == null)) {
-                this.Adapter.InsertCommand.Parameters[17].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[17].Value = ((string)(f_rem_mobile_no));
-            }
-            if ((f_rem_type == null)) {
-                this.Adapter.InsertCommand.Parameters[18].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[18].Value = ((string)(f_rem_type));
-            }
-            if ((f_rem_amount == null)) {
-                this.Adapter.InsertCommand.Parameters[19].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[19].Value = ((string)(f_rem_amount));
-            }
-            if ((f_rem_date == null)) {
-                this.Adapter.InsertCommand.Parameters[20].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[20].Value = ((string)(f_rem_date));
-            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -10613,47 +9746,7 @@ namespace SS_SOFTWARE_CHIT.Settings_dbDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(
-                    string f_msg, 
-                    string f_customer_id, 
-                    string f_customer_name, 
-                    string f_mobile_no, 
-                    string f_type, 
-                    string f_amount, 
-                    string f_date, 
-                    string f_reports, 
-                    string f_rep_customer_id, 
-                    string f_rep_customer_name, 
-                    string f_rep_mobile_no, 
-                    string f_rep_type, 
-                    string f_rep_amount, 
-                    string f_rep_date, 
-                    string f_reminder, 
-                    string f_rem_customer_id, 
-                    string f_rem_customer_name, 
-                    string f_rem_mobile_no, 
-                    string f_rem_type, 
-                    string f_rem_amount, 
-                    string f_rem_date, 
-                    int Original_ID, 
-                    string Original_f_customer_id, 
-                    string Original_f_customer_name, 
-                    string Original_f_mobile_no, 
-                    string Original_f_type, 
-                    string Original_f_amount, 
-                    string Original_f_date, 
-                    string Original_f_rep_customer_id, 
-                    string Original_f_rep_customer_name, 
-                    string Original_f_rep_mobile_no, 
-                    string Original_f_rep_type, 
-                    string Original_f_rep_amount, 
-                    string Original_f_rep_date, 
-                    string Original_f_rem_customer_id, 
-                    string Original_f_rem_customer_name, 
-                    string Original_f_rem_mobile_no, 
-                    string Original_f_rem_type, 
-                    string Original_f_rem_amount, 
-                    string Original_f_rem_date) {
+        public virtual int Update(string f_msg, string f_customer_id, string f_customer_name, string f_mobile_no, string f_type, string f_amount, string f_date, int Original_ID, string Original_f_customer_id, string Original_f_customer_name, string Original_f_mobile_no, string Original_f_type, string Original_f_amount, string Original_f_date) {
             if ((f_msg == null)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -10696,234 +9789,54 @@ namespace SS_SOFTWARE_CHIT.Settings_dbDataSetTableAdapters {
             else {
                 this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(f_date));
             }
-            if ((f_reports == null)) {
-                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(f_reports));
-            }
-            if ((f_rep_customer_id == null)) {
-                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(f_rep_customer_id));
-            }
-            if ((f_rep_customer_name == null)) {
+            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_ID));
+            if ((Original_f_customer_id == null)) {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(f_rep_customer_name));
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_f_customer_id));
             }
-            if ((f_rep_mobile_no == null)) {
-                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(f_rep_mobile_no));
-            }
-            if ((f_rep_type == null)) {
+            if ((Original_f_customer_name == null)) {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(f_rep_type));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Original_f_customer_name));
             }
-            if ((f_rep_amount == null)) {
-                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(f_rep_amount));
-            }
-            if ((f_rep_date == null)) {
+            if ((Original_f_mobile_no == null)) {
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(f_rep_date));
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(Original_f_mobile_no));
             }
-            if ((f_reminder == null)) {
-                this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(f_reminder));
-            }
-            if ((f_rem_customer_id == null)) {
+            if ((Original_f_type == null)) {
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(f_rem_customer_id));
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(Original_f_type));
             }
-            if ((f_rem_customer_name == null)) {
-                this.Adapter.UpdateCommand.Parameters[16].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((string)(f_rem_customer_name));
-            }
-            if ((f_rem_mobile_no == null)) {
+            if ((Original_f_amount == null)) {
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((string)(f_rem_mobile_no));
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((string)(Original_f_amount));
             }
-            if ((f_rem_type == null)) {
-                this.Adapter.UpdateCommand.Parameters[18].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((string)(f_rem_type));
-            }
-            if ((f_rem_amount == null)) {
+            if ((Original_f_date == null)) {
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[19].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((string)(f_rem_amount));
-            }
-            if ((f_rem_date == null)) {
-                this.Adapter.UpdateCommand.Parameters[20].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((string)(f_rem_date));
-            }
-            this.Adapter.UpdateCommand.Parameters[21].Value = ((int)(Original_ID));
-            if ((Original_f_customer_id == null)) {
-                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[23].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[23].Value = ((string)(Original_f_customer_id));
-            }
-            if ((Original_f_customer_name == null)) {
-                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[25].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[25].Value = ((string)(Original_f_customer_name));
-            }
-            if ((Original_f_mobile_no == null)) {
-                this.Adapter.UpdateCommand.Parameters[26].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[27].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[26].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[27].Value = ((string)(Original_f_mobile_no));
-            }
-            if ((Original_f_type == null)) {
-                this.Adapter.UpdateCommand.Parameters[28].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[29].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[28].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[29].Value = ((string)(Original_f_type));
-            }
-            if ((Original_f_amount == null)) {
-                this.Adapter.UpdateCommand.Parameters[30].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[31].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[30].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[31].Value = ((string)(Original_f_amount));
-            }
-            if ((Original_f_date == null)) {
-                this.Adapter.UpdateCommand.Parameters[32].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[33].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[32].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[33].Value = ((string)(Original_f_date));
-            }
-            if ((Original_f_rep_customer_id == null)) {
-                this.Adapter.UpdateCommand.Parameters[34].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[35].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[34].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[35].Value = ((string)(Original_f_rep_customer_id));
-            }
-            if ((Original_f_rep_customer_name == null)) {
-                this.Adapter.UpdateCommand.Parameters[36].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[37].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[36].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[37].Value = ((string)(Original_f_rep_customer_name));
-            }
-            if ((Original_f_rep_mobile_no == null)) {
-                this.Adapter.UpdateCommand.Parameters[38].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[39].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[38].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[39].Value = ((string)(Original_f_rep_mobile_no));
-            }
-            if ((Original_f_rep_type == null)) {
-                this.Adapter.UpdateCommand.Parameters[40].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[41].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[40].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[41].Value = ((string)(Original_f_rep_type));
-            }
-            if ((Original_f_rep_amount == null)) {
-                this.Adapter.UpdateCommand.Parameters[42].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[43].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[42].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[43].Value = ((string)(Original_f_rep_amount));
-            }
-            if ((Original_f_rep_date == null)) {
-                this.Adapter.UpdateCommand.Parameters[44].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[45].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[44].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[45].Value = ((string)(Original_f_rep_date));
-            }
-            if ((Original_f_rem_customer_id == null)) {
-                this.Adapter.UpdateCommand.Parameters[46].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[47].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[46].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[47].Value = ((string)(Original_f_rem_customer_id));
-            }
-            if ((Original_f_rem_customer_name == null)) {
-                this.Adapter.UpdateCommand.Parameters[48].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[49].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[48].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[49].Value = ((string)(Original_f_rem_customer_name));
-            }
-            if ((Original_f_rem_mobile_no == null)) {
-                this.Adapter.UpdateCommand.Parameters[50].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[51].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[50].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[51].Value = ((string)(Original_f_rem_mobile_no));
-            }
-            if ((Original_f_rem_type == null)) {
-                this.Adapter.UpdateCommand.Parameters[52].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[53].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[52].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[53].Value = ((string)(Original_f_rem_type));
-            }
-            if ((Original_f_rem_amount == null)) {
-                this.Adapter.UpdateCommand.Parameters[54].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[55].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[54].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[55].Value = ((string)(Original_f_rem_amount));
-            }
-            if ((Original_f_rem_date == null)) {
-                this.Adapter.UpdateCommand.Parameters[56].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[57].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[56].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[57].Value = ((string)(Original_f_rem_date));
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((string)(Original_f_date));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 

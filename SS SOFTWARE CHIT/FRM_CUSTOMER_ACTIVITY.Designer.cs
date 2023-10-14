@@ -75,9 +75,10 @@ namespace SS_SOFTWARE_CHIT
             this.label7 = new System.Windows.Forms.Label();
             this.btnmailsender = new System.Windows.Forms.Button();
             this.lblusername = new System.Windows.Forms.Label();
-            this.mainDataSet = new SS_SOFTWARE_CHIT.MainDataSet();
             this.companydbBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.mainDataSet = new SS_SOFTWARE_CHIT.MainDataSet();
             this.company_dbTableAdapter = new SS_SOFTWARE_CHIT.MainDataSetTableAdapters.Company_dbTableAdapter();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picminimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.piclose)).BeginInit();
@@ -85,8 +86,8 @@ namespace SS_SOFTWARE_CHIT
             ((System.ComponentModel.ISupportInitialize)(this.dgw_customer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgw_view)).BeginInit();
             this.pnlmail.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.mainDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.companydbBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mainDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -591,19 +592,23 @@ namespace SS_SOFTWARE_CHIT
             this.lblusername.Size = new System.Drawing.Size(0, 21);
             this.lblusername.TabIndex = 922;
             // 
-            // mainDataSet
-            // 
-            this.mainDataSet.DataSetName = "MainDataSet";
-            this.mainDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // companydbBindingSource
             // 
             this.companydbBindingSource.DataMember = "Company_db";
             this.companydbBindingSource.DataSource = this.mainDataSet;
             // 
+            // mainDataSet
+            // 
+            this.mainDataSet.DataSetName = "MainDataSet";
+            this.mainDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // company_dbTableAdapter
             // 
             this.company_dbTableAdapter.ClearBeforeFill = true;
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // FRM_CUSTOMER_ACTIVITY
             // 
@@ -650,8 +655,8 @@ namespace SS_SOFTWARE_CHIT
             ((System.ComponentModel.ISupportInitialize)(this.dgw_view)).EndInit();
             this.pnlmail.ResumeLayout(false);
             this.pnlmail.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.mainDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.companydbBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mainDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -696,5 +701,6 @@ namespace SS_SOFTWARE_CHIT
         private MainDataSet mainDataSet;
         private System.Windows.Forms.BindingSource companydbBindingSource;
         private MainDataSetTableAdapters.Company_dbTableAdapter company_dbTableAdapter;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }

@@ -2,11 +2,9 @@
 <xs:schema id="Settings_dbDataSet" targetNamespace="http://tempuri.org/Settings_dbDataSet.xsd" xmlns:mstns="http://tempuri.org/Settings_dbDataSet.xsd" xmlns="http://tempuri.org/Settings_dbDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
-      <DataSource DefaultConnectionIndex="2" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
-          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="Settings_dbConnection" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="Settings_dbConnection (Settings)" PropertyReference="ApplicationSettings.SS_SOFTWARE_CHIT.Properties.Settings.GlobalReference.Default.Settings_dbConnection" Provider="System.Data.OleDb" />
-          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="Settings_dbConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="Settings_dbConnectionString (Settings)" PropertyReference="ApplicationSettings.SS_SOFTWARE_CHIT.Properties.Settings.GlobalReference.Default.Settings_dbConnectionString" Provider="System.Data.OleDb" />
-          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="Settings_dbConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="Settings_dbConnectionString (Settings)" PropertyReference="ApplicationSettings.SS_SOFTWARE_CHIT.Properties.Settings.GlobalReference.Default.Settings_dbConnectionString" Provider="System.Data.OleDb" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="Settings_dbConnection" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="Settings_dbConnection (Settings)" PropertyReference="ApplicationSettings.SS_SOFTWARE_CHIT.Properties.Settings.GlobalReference.Default.Settings_dbConnectionString" Provider="System.Data.OleDb" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Admin_dbTableAdapter" GeneratorDataComponentClassName="Admin_dbTableAdapter" Name="Admin_db" UserDataComponentName="Admin_dbTableAdapter">
@@ -165,7 +163,7 @@
               <DbSource ConnectionRef="Settings_dbConnection (Settings)" DbObjectName="Chit_Billing_db" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>DELETE FROM `Chit_Billing_db` WHERE ((`ID` = ?) AND ((? = 1 AND `f_chit_save` IS NULL) OR (`f_chit_save` = ?)) AND ((? = 1 AND `f_chit_edit` IS NULL) OR (`f_chit_edit` = ?)) AND ((? = 1 AND `f_chit_delete` IS NULL) OR (`f_chit_delete` = ?)) AND ((? = 1 AND `f_chit_customer_id` IS NULL) OR (`f_chit_customer_id` = ?)) AND ((? = 1 AND `f_chit_customer_id_1` IS NULL) OR (`f_chit_customer_id_1` = ?)) AND ((? = 1 AND `f_chit_customer_name` IS NULL) OR (`f_chit_customer_name` = ?)) AND ((? = 1 AND `f_chit_customer_name_1` IS NULL) OR (`f_chit_customer_name_1` = ?)) AND ((? = 1 AND `f_chit_area_1` IS NULL) OR (`f_chit_area_1` = ?)) AND ((? = 1 AND `f_chit_mobile_no_1` IS NULL) OR (`f_chit_mobile_no_1` = ?)) AND ((? = 1 AND `f_chit_sno` IS NULL) OR (`f_chit_sno` = ?)) AND ((? = 1 AND `f_chit_date` IS NULL) OR (`f_chit_date` = ?)) AND ((? = 1 AND `f_chit_month` IS NULL) OR (`f_chit_month` = ?)) AND ((? = 1 AND `f_chit_type` IS NULL) OR (`f_chit_type` = ?)) AND ((? = 1 AND `f_chit_amount` IS NULL) OR (`f_chit_amount` = ?)) AND ((? = 1 AND `f_chit_balance` IS NULL) OR (`f_chit_balance` = ?)) AND ((? = 1 AND `f_chit_amount_1` IS NULL) OR (`f_chit_amount_1` = ?)) AND ((? = 1 AND `f_chit_id` IS NULL) OR (`f_chit_id` = ?)) AND ((? = 1 AND `f_chit_area` IS NULL) OR (`f_chit_area` = ?)) AND ((? = 1 AND `f_chit_mobile_no` IS NULL) OR (`f_chit_mobile_no` = ?)))</CommandText>
+                    <CommandText>DELETE FROM `Chit_Billing_db` WHERE ((`ID` = ?) AND ((? = 1 AND `f_chit_save` IS NULL) OR (`f_chit_save` = ?)) AND ((? = 1 AND `f_chit_edit` IS NULL) OR (`f_chit_edit` = ?)) AND ((? = 1 AND `f_chit_delete` IS NULL) OR (`f_chit_delete` = ?)) AND ((? = 1 AND `f_chit_customer_id` IS NULL) OR (`f_chit_customer_id` = ?)) AND ((? = 1 AND `f_chit_customer_id_1` IS NULL) OR (`f_chit_customer_id_1` = ?)) AND ((? = 1 AND `f_chit_customer_name` IS NULL) OR (`f_chit_customer_name` = ?)) AND ((? = 1 AND `f_chit_customer_name_1` IS NULL) OR (`f_chit_customer_name_1` = ?)) AND ((? = 1 AND `f_chit_area_1` IS NULL) OR (`f_chit_area_1` = ?)) AND ((? = 1 AND `f_chit_mobile_no_1` IS NULL) OR (`f_chit_mobile_no_1` = ?)) AND ((? = 1 AND `f_chit_sno` IS NULL) OR (`f_chit_sno` = ?)) AND ((? = 1 AND `f_chit_date` IS NULL) OR (`f_chit_date` = ?)) AND ((? = 1 AND `f_chit_month` IS NULL) OR (`f_chit_month` = ?)) AND ((? = 1 AND `f_chit_type` IS NULL) OR (`f_chit_type` = ?)) AND ((? = 1 AND `f_chit_amount` IS NULL) OR (`f_chit_amount` = ?)) AND ((? = 1 AND `f_chit_balance` IS NULL) OR (`f_chit_balance` = ?)) AND ((? = 1 AND `f_chit_amount_1` IS NULL) OR (`f_chit_amount_1` = ?)) AND ((? = 1 AND `f_chit_id` IS NULL) OR (`f_chit_id` = ?)) AND ((? = 1 AND `f_chit_area` IS NULL) OR (`f_chit_area` = ?)) AND ((? = 1 AND `f_chit_mobile_no` IS NULL) OR (`f_chit_mobile_no` = ?)) AND ((? = 1 AND `Field1` IS NULL) OR (`Field1` = ?)))</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_ID" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_f_chit_save" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="f_chit_save" SourceColumnNullMapping="true" SourceVersion="Original" />
@@ -206,12 +204,14 @@
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_f_chit_area" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="f_chit_area" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_f_chit_mobile_no" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="f_chit_mobile_no" SourceColumnNullMapping="true" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_f_chit_mobile_no" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="f_chit_mobile_no" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Field1" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Field1" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_Field1" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Field1" SourceColumnNullMapping="false" SourceVersion="Original" />
                     </Parameters>
                   </DbCommand>
                 </DeleteCommand>
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>INSERT INTO `Chit_Billing_db` (`f_chit_save`, `f_chit_edit`, `f_chit_delete`, `f_chit_customer_id`, `f_chit_customer_id_1`, `f_chit_customer_name`, `f_chit_customer_name_1`, `f_chit_area_1`, `f_chit_mobile_no_1`, `f_chit_sno`, `f_chit_date`, `f_chit_month`, `f_chit_type`, `f_chit_amount`, `f_chit_balance`, `f_chit_amount_1`, `f_chit_id`, `f_chit_area`, `f_chit_mobile_no`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)</CommandText>
+                    <CommandText>INSERT INTO `Chit_Billing_db` (`f_chit_save`, `f_chit_edit`, `f_chit_delete`, `f_chit_customer_id`, `f_chit_customer_id_1`, `f_chit_customer_name`, `f_chit_customer_name_1`, `f_chit_area_1`, `f_chit_mobile_no_1`, `f_chit_sno`, `f_chit_date`, `f_chit_month`, `f_chit_type`, `f_chit_amount`, `f_chit_balance`, `f_chit_amount_1`, `f_chit_id`, `f_chit_area`, `f_chit_mobile_no`, `Field1`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="f_chit_save" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="f_chit_save" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="f_chit_edit" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="f_chit_edit" SourceColumnNullMapping="false" SourceVersion="Current" />
@@ -232,18 +232,19 @@
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="f_chit_id" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="f_chit_id" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="f_chit_area" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="f_chit_area" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="f_chit_mobile_no" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="f_chit_mobile_no" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Field1" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Field1" SourceColumnNullMapping="false" SourceVersion="Current" />
                     </Parameters>
                   </DbCommand>
                 </InsertCommand>
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT ID, f_chit_save, f_chit_edit, f_chit_delete, f_chit_customer_id, f_chit_customer_id_1, f_chit_customer_name, f_chit_customer_name_1, f_chit_area_1, f_chit_mobile_no_1, f_chit_sno, f_chit_date, f_chit_month, f_chit_type, f_chit_amount, f_chit_balance, f_chit_amount_1, f_chit_id, f_chit_area, f_chit_mobile_no FROM Chit_Billing_db</CommandText>
+                    <CommandText>SELECT ID, f_chit_save, f_chit_edit, f_chit_delete, f_chit_customer_id, f_chit_customer_id_1, f_chit_customer_name, f_chit_customer_name_1, f_chit_area_1, f_chit_mobile_no_1, f_chit_sno, f_chit_date, f_chit_month, f_chit_type, f_chit_amount, f_chit_balance, f_chit_amount_1, f_chit_id, f_chit_area, f_chit_mobile_no, Field1 FROM Chit_Billing_db</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
                 <UpdateCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>UPDATE `Chit_Billing_db` SET `f_chit_save` = ?, `f_chit_edit` = ?, `f_chit_delete` = ?, `f_chit_customer_id` = ?, `f_chit_customer_id_1` = ?, `f_chit_customer_name` = ?, `f_chit_customer_name_1` = ?, `f_chit_area_1` = ?, `f_chit_mobile_no_1` = ?, `f_chit_sno` = ?, `f_chit_date` = ?, `f_chit_month` = ?, `f_chit_type` = ?, `f_chit_amount` = ?, `f_chit_balance` = ?, `f_chit_amount_1` = ?, `f_chit_id` = ?, `f_chit_area` = ?, `f_chit_mobile_no` = ? WHERE ((`ID` = ?) AND ((? = 1 AND `f_chit_save` IS NULL) OR (`f_chit_save` = ?)) AND ((? = 1 AND `f_chit_edit` IS NULL) OR (`f_chit_edit` = ?)) AND ((? = 1 AND `f_chit_delete` IS NULL) OR (`f_chit_delete` = ?)) AND ((? = 1 AND `f_chit_customer_id` IS NULL) OR (`f_chit_customer_id` = ?)) AND ((? = 1 AND `f_chit_customer_id_1` IS NULL) OR (`f_chit_customer_id_1` = ?)) AND ((? = 1 AND `f_chit_customer_name` IS NULL) OR (`f_chit_customer_name` = ?)) AND ((? = 1 AND `f_chit_customer_name_1` IS NULL) OR (`f_chit_customer_name_1` = ?)) AND ((? = 1 AND `f_chit_area_1` IS NULL) OR (`f_chit_area_1` = ?)) AND ((? = 1 AND `f_chit_mobile_no_1` IS NULL) OR (`f_chit_mobile_no_1` = ?)) AND ((? = 1 AND `f_chit_sno` IS NULL) OR (`f_chit_sno` = ?)) AND ((? = 1 AND `f_chit_date` IS NULL) OR (`f_chit_date` = ?)) AND ((? = 1 AND `f_chit_month` IS NULL) OR (`f_chit_month` = ?)) AND ((? = 1 AND `f_chit_type` IS NULL) OR (`f_chit_type` = ?)) AND ((? = 1 AND `f_chit_amount` IS NULL) OR (`f_chit_amount` = ?)) AND ((? = 1 AND `f_chit_balance` IS NULL) OR (`f_chit_balance` = ?)) AND ((? = 1 AND `f_chit_amount_1` IS NULL) OR (`f_chit_amount_1` = ?)) AND ((? = 1 AND `f_chit_id` IS NULL) OR (`f_chit_id` = ?)) AND ((? = 1 AND `f_chit_area` IS NULL) OR (`f_chit_area` = ?)) AND ((? = 1 AND `f_chit_mobile_no` IS NULL) OR (`f_chit_mobile_no` = ?)))</CommandText>
+                    <CommandText>UPDATE `Chit_Billing_db` SET `f_chit_save` = ?, `f_chit_edit` = ?, `f_chit_delete` = ?, `f_chit_customer_id` = ?, `f_chit_customer_id_1` = ?, `f_chit_customer_name` = ?, `f_chit_customer_name_1` = ?, `f_chit_area_1` = ?, `f_chit_mobile_no_1` = ?, `f_chit_sno` = ?, `f_chit_date` = ?, `f_chit_month` = ?, `f_chit_type` = ?, `f_chit_amount` = ?, `f_chit_balance` = ?, `f_chit_amount_1` = ?, `f_chit_id` = ?, `f_chit_area` = ?, `f_chit_mobile_no` = ?, `Field1` = ? WHERE ((`ID` = ?) AND ((? = 1 AND `f_chit_save` IS NULL) OR (`f_chit_save` = ?)) AND ((? = 1 AND `f_chit_edit` IS NULL) OR (`f_chit_edit` = ?)) AND ((? = 1 AND `f_chit_delete` IS NULL) OR (`f_chit_delete` = ?)) AND ((? = 1 AND `f_chit_customer_id` IS NULL) OR (`f_chit_customer_id` = ?)) AND ((? = 1 AND `f_chit_customer_id_1` IS NULL) OR (`f_chit_customer_id_1` = ?)) AND ((? = 1 AND `f_chit_customer_name` IS NULL) OR (`f_chit_customer_name` = ?)) AND ((? = 1 AND `f_chit_customer_name_1` IS NULL) OR (`f_chit_customer_name_1` = ?)) AND ((? = 1 AND `f_chit_area_1` IS NULL) OR (`f_chit_area_1` = ?)) AND ((? = 1 AND `f_chit_mobile_no_1` IS NULL) OR (`f_chit_mobile_no_1` = ?)) AND ((? = 1 AND `f_chit_sno` IS NULL) OR (`f_chit_sno` = ?)) AND ((? = 1 AND `f_chit_date` IS NULL) OR (`f_chit_date` = ?)) AND ((? = 1 AND `f_chit_month` IS NULL) OR (`f_chit_month` = ?)) AND ((? = 1 AND `f_chit_type` IS NULL) OR (`f_chit_type` = ?)) AND ((? = 1 AND `f_chit_amount` IS NULL) OR (`f_chit_amount` = ?)) AND ((? = 1 AND `f_chit_balance` IS NULL) OR (`f_chit_balance` = ?)) AND ((? = 1 AND `f_chit_amount_1` IS NULL) OR (`f_chit_amount_1` = ?)) AND ((? = 1 AND `f_chit_id` IS NULL) OR (`f_chit_id` = ?)) AND ((? = 1 AND `f_chit_area` IS NULL) OR (`f_chit_area` = ?)) AND ((? = 1 AND `f_chit_mobile_no` IS NULL) OR (`f_chit_mobile_no` = ?)) AND ((? = 1 AND `Field1` IS NULL) OR (`Field1` = ?)))</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="f_chit_save" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="f_chit_save" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="f_chit_edit" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="f_chit_edit" SourceColumnNullMapping="false" SourceVersion="Current" />
@@ -264,6 +265,7 @@
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="f_chit_id" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="f_chit_id" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="f_chit_area" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="f_chit_area" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="f_chit_mobile_no" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="f_chit_mobile_no" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Field1" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Field1" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_ID" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_f_chit_save" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="f_chit_save" SourceColumnNullMapping="true" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_f_chit_save" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="f_chit_save" SourceColumnNullMapping="false" SourceVersion="Original" />
@@ -303,6 +305,8 @@
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_f_chit_area" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="f_chit_area" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_f_chit_mobile_no" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="f_chit_mobile_no" SourceColumnNullMapping="true" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_f_chit_mobile_no" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="f_chit_mobile_no" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Field1" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Field1" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_Field1" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Field1" SourceColumnNullMapping="false" SourceVersion="Original" />
                     </Parameters>
                   </DbCommand>
                 </UpdateCommand>
@@ -329,6 +333,7 @@
               <Mapping SourceColumn="f_chit_id" DataSetColumn="f_chit_id" />
               <Mapping SourceColumn="f_chit_area" DataSetColumn="f_chit_area" />
               <Mapping SourceColumn="f_chit_mobile_no" DataSetColumn="f_chit_mobile_no" />
+              <Mapping SourceColumn="Field1" DataSetColumn="Field1" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -647,10 +652,10 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Whatsapp_dbTableAdapter" GeneratorDataComponentClassName="Whatsapp_dbTableAdapter" Name="Whatsapp_db" UserDataComponentName="Whatsapp_dbTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="Settings_dbConnection (Settings)" DbObjectName="" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="Settings_dbConnection (Settings)" DbObjectName="Whatsapp_db" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>DELETE FROM `Whatsapp_db` WHERE ((`ID` = ?) AND ((? = 1 AND `f_customer_id` IS NULL) OR (`f_customer_id` = ?)) AND ((? = 1 AND `f_customer_name` IS NULL) OR (`f_customer_name` = ?)) AND ((? = 1 AND `f_mobile_no` IS NULL) OR (`f_mobile_no` = ?)) AND ((? = 1 AND `f_type` IS NULL) OR (`f_type` = ?)) AND ((? = 1 AND `f_amount` IS NULL) OR (`f_amount` = ?)) AND ((? = 1 AND `f_date` IS NULL) OR (`f_date` = ?)) AND ((? = 1 AND `f_rep_customer_id` IS NULL) OR (`f_rep_customer_id` = ?)) AND ((? = 1 AND `f_rep_customer_name` IS NULL) OR (`f_rep_customer_name` = ?)) AND ((? = 1 AND `f_rep_mobile_no` IS NULL) OR (`f_rep_mobile_no` = ?)) AND ((? = 1 AND `f_rep_type` IS NULL) OR (`f_rep_type` = ?)) AND ((? = 1 AND `f_rep_amount` IS NULL) OR (`f_rep_amount` = ?)) AND ((? = 1 AND `f_rep_date` IS NULL) OR (`f_rep_date` = ?)) AND ((? = 1 AND `f_rem_customer_id` IS NULL) OR (`f_rem_customer_id` = ?)) AND ((? = 1 AND `f_rem_customer_name` IS NULL) OR (`f_rem_customer_name` = ?)) AND ((? = 1 AND `f_rem_mobile_no` IS NULL) OR (`f_rem_mobile_no` = ?)) AND ((? = 1 AND `f_rem_type` IS NULL) OR (`f_rem_type` = ?)) AND ((? = 1 AND `f_rem_amount` IS NULL) OR (`f_rem_amount` = ?)) AND ((? = 1 AND `f_rem_date` IS NULL) OR (`f_rem_date` = ?)))</CommandText>
+                    <CommandText>DELETE FROM `Whatsapp_db` WHERE ((`ID` = ?) AND ((? = 1 AND `f_customer_id` IS NULL) OR (`f_customer_id` = ?)) AND ((? = 1 AND `f_customer_name` IS NULL) OR (`f_customer_name` = ?)) AND ((? = 1 AND `f_mobile_no` IS NULL) OR (`f_mobile_no` = ?)) AND ((? = 1 AND `f_type` IS NULL) OR (`f_type` = ?)) AND ((? = 1 AND `f_amount` IS NULL) OR (`f_amount` = ?)) AND ((? = 1 AND `f_date` IS NULL) OR (`f_date` = ?)))</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_ID" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_f_customer_id" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="f_customer_id" SourceColumnNullMapping="true" SourceVersion="Original" />
@@ -665,36 +670,12 @@
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_f_amount" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="f_amount" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_f_date" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="f_date" SourceColumnNullMapping="true" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_f_date" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="f_date" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_f_rep_customer_id" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="f_rep_customer_id" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_f_rep_customer_id" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="f_rep_customer_id" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_f_rep_customer_name" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="f_rep_customer_name" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_f_rep_customer_name" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="f_rep_customer_name" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_f_rep_mobile_no" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="f_rep_mobile_no" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_f_rep_mobile_no" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="f_rep_mobile_no" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_f_rep_type" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="f_rep_type" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_f_rep_type" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="f_rep_type" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_f_rep_amount" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="f_rep_amount" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_f_rep_amount" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="f_rep_amount" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_f_rep_date" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="f_rep_date" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_f_rep_date" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="f_rep_date" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_f_rem_customer_id" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="f_rem_customer_id" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_f_rem_customer_id" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="f_rem_customer_id" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_f_rem_customer_name" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="f_rem_customer_name" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_f_rem_customer_name" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="f_rem_customer_name" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_f_rem_mobile_no" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="f_rem_mobile_no" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_f_rem_mobile_no" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="f_rem_mobile_no" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_f_rem_type" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="f_rem_type" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_f_rem_type" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="f_rem_type" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_f_rem_amount" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="f_rem_amount" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_f_rem_amount" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="f_rem_amount" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_f_rem_date" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="f_rem_date" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_f_rem_date" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="f_rem_date" SourceColumnNullMapping="false" SourceVersion="Original" />
                     </Parameters>
                   </DbCommand>
                 </DeleteCommand>
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>INSERT INTO `Whatsapp_db` (`f_msg`, `f_customer_id`, `f_customer_name`, `f_mobile_no`, `f_type`, `f_amount`, `f_date`, `f_reports`, `f_rep_customer_id`, `f_rep_customer_name`, `f_rep_mobile_no`, `f_rep_type`, `f_rep_amount`, `f_rep_date`, `f_reminder`, `f_rem_customer_id`, `f_rem_customer_name`, `f_rem_mobile_no`, `f_rem_type`, `f_rem_amount`, `f_rem_date`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)</CommandText>
+                    <CommandText>INSERT INTO `Whatsapp_db` (`f_msg`, `f_customer_id`, `f_customer_name`, `f_mobile_no`, `f_type`, `f_amount`, `f_date`) VALUES (?, ?, ?, ?, ?, ?, ?)</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="f_msg" Precision="0" ProviderType="LongVarWChar" Scale="0" Size="0" SourceColumn="f_msg" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="f_customer_id" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="f_customer_id" SourceColumnNullMapping="false" SourceVersion="Current" />
@@ -703,32 +684,18 @@
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="f_type" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="f_type" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="f_amount" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="f_amount" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="f_date" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="f_date" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="f_reports" Precision="0" ProviderType="LongVarWChar" Scale="0" Size="0" SourceColumn="f_reports" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="f_rep_customer_id" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="f_rep_customer_id" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="f_rep_customer_name" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="f_rep_customer_name" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="f_rep_mobile_no" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="f_rep_mobile_no" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="f_rep_type" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="f_rep_type" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="f_rep_amount" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="f_rep_amount" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="f_rep_date" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="f_rep_date" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="f_reminder" Precision="0" ProviderType="LongVarWChar" Scale="0" Size="0" SourceColumn="f_reminder" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="f_rem_customer_id" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="f_rem_customer_id" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="f_rem_customer_name" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="f_rem_customer_name" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="f_rem_mobile_no" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="f_rem_mobile_no" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="f_rem_type" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="f_rem_type" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="f_rem_amount" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="f_rem_amount" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="f_rem_date" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="f_rem_date" SourceColumnNullMapping="false" SourceVersion="Current" />
                     </Parameters>
                   </DbCommand>
                 </InsertCommand>
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT ID, f_msg, f_customer_id, f_customer_name, f_mobile_no, f_type, f_amount, f_date, f_reports, f_rep_customer_id, f_rep_customer_name, f_rep_mobile_no, f_rep_type, f_rep_amount, f_rep_date, f_reminder, f_rem_customer_id, f_rem_customer_name, f_rem_mobile_no, f_rem_type, f_rem_amount, f_rem_date FROM Whatsapp_db</CommandText>
+                    <CommandText>SELECT ID, f_msg, f_customer_id, f_customer_name, f_mobile_no, f_type, f_amount, f_date FROM Whatsapp_db</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
                 <UpdateCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>UPDATE `Whatsapp_db` SET `f_msg` = ?, `f_customer_id` = ?, `f_customer_name` = ?, `f_mobile_no` = ?, `f_type` = ?, `f_amount` = ?, `f_date` = ?, `f_reports` = ?, `f_rep_customer_id` = ?, `f_rep_customer_name` = ?, `f_rep_mobile_no` = ?, `f_rep_type` = ?, `f_rep_amount` = ?, `f_rep_date` = ?, `f_reminder` = ?, `f_rem_customer_id` = ?, `f_rem_customer_name` = ?, `f_rem_mobile_no` = ?, `f_rem_type` = ?, `f_rem_amount` = ?, `f_rem_date` = ? WHERE ((`ID` = ?) AND ((? = 1 AND `f_customer_id` IS NULL) OR (`f_customer_id` = ?)) AND ((? = 1 AND `f_customer_name` IS NULL) OR (`f_customer_name` = ?)) AND ((? = 1 AND `f_mobile_no` IS NULL) OR (`f_mobile_no` = ?)) AND ((? = 1 AND `f_type` IS NULL) OR (`f_type` = ?)) AND ((? = 1 AND `f_amount` IS NULL) OR (`f_amount` = ?)) AND ((? = 1 AND `f_date` IS NULL) OR (`f_date` = ?)) AND ((? = 1 AND `f_rep_customer_id` IS NULL) OR (`f_rep_customer_id` = ?)) AND ((? = 1 AND `f_rep_customer_name` IS NULL) OR (`f_rep_customer_name` = ?)) AND ((? = 1 AND `f_rep_mobile_no` IS NULL) OR (`f_rep_mobile_no` = ?)) AND ((? = 1 AND `f_rep_type` IS NULL) OR (`f_rep_type` = ?)) AND ((? = 1 AND `f_rep_amount` IS NULL) OR (`f_rep_amount` = ?)) AND ((? = 1 AND `f_rep_date` IS NULL) OR (`f_rep_date` = ?)) AND ((? = 1 AND `f_rem_customer_id` IS NULL) OR (`f_rem_customer_id` = ?)) AND ((? = 1 AND `f_rem_customer_name` IS NULL) OR (`f_rem_customer_name` = ?)) AND ((? = 1 AND `f_rem_mobile_no` IS NULL) OR (`f_rem_mobile_no` = ?)) AND ((? = 1 AND `f_rem_type` IS NULL) OR (`f_rem_type` = ?)) AND ((? = 1 AND `f_rem_amount` IS NULL) OR (`f_rem_amount` = ?)) AND ((? = 1 AND `f_rem_date` IS NULL) OR (`f_rem_date` = ?)))</CommandText>
+                    <CommandText>UPDATE `Whatsapp_db` SET `f_msg` = ?, `f_customer_id` = ?, `f_customer_name` = ?, `f_mobile_no` = ?, `f_type` = ?, `f_amount` = ?, `f_date` = ? WHERE ((`ID` = ?) AND ((? = 1 AND `f_customer_id` IS NULL) OR (`f_customer_id` = ?)) AND ((? = 1 AND `f_customer_name` IS NULL) OR (`f_customer_name` = ?)) AND ((? = 1 AND `f_mobile_no` IS NULL) OR (`f_mobile_no` = ?)) AND ((? = 1 AND `f_type` IS NULL) OR (`f_type` = ?)) AND ((? = 1 AND `f_amount` IS NULL) OR (`f_amount` = ?)) AND ((? = 1 AND `f_date` IS NULL) OR (`f_date` = ?)))</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="f_msg" Precision="0" ProviderType="LongVarWChar" Scale="0" Size="0" SourceColumn="f_msg" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="f_customer_id" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="f_customer_id" SourceColumnNullMapping="false" SourceVersion="Current" />
@@ -737,20 +704,6 @@
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="f_type" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="f_type" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="f_amount" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="f_amount" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="f_date" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="f_date" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="f_reports" Precision="0" ProviderType="LongVarWChar" Scale="0" Size="0" SourceColumn="f_reports" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="f_rep_customer_id" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="f_rep_customer_id" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="f_rep_customer_name" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="f_rep_customer_name" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="f_rep_mobile_no" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="f_rep_mobile_no" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="f_rep_type" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="f_rep_type" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="f_rep_amount" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="f_rep_amount" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="f_rep_date" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="f_rep_date" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="f_reminder" Precision="0" ProviderType="LongVarWChar" Scale="0" Size="0" SourceColumn="f_reminder" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="f_rem_customer_id" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="f_rem_customer_id" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="f_rem_customer_name" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="f_rem_customer_name" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="f_rem_mobile_no" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="f_rem_mobile_no" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="f_rem_type" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="f_rem_type" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="f_rem_amount" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="f_rem_amount" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="f_rem_date" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="f_rem_date" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_ID" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_f_customer_id" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="f_customer_id" SourceColumnNullMapping="true" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_f_customer_id" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="f_customer_id" SourceColumnNullMapping="false" SourceVersion="Original" />
@@ -764,30 +717,6 @@
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_f_amount" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="f_amount" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_f_date" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="f_date" SourceColumnNullMapping="true" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_f_date" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="f_date" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_f_rep_customer_id" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="f_rep_customer_id" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_f_rep_customer_id" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="f_rep_customer_id" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_f_rep_customer_name" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="f_rep_customer_name" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_f_rep_customer_name" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="f_rep_customer_name" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_f_rep_mobile_no" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="f_rep_mobile_no" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_f_rep_mobile_no" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="f_rep_mobile_no" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_f_rep_type" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="f_rep_type" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_f_rep_type" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="f_rep_type" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_f_rep_amount" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="f_rep_amount" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_f_rep_amount" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="f_rep_amount" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_f_rep_date" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="f_rep_date" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_f_rep_date" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="f_rep_date" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_f_rem_customer_id" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="f_rem_customer_id" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_f_rem_customer_id" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="f_rem_customer_id" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_f_rem_customer_name" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="f_rem_customer_name" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_f_rem_customer_name" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="f_rem_customer_name" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_f_rem_mobile_no" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="f_rem_mobile_no" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_f_rem_mobile_no" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="f_rem_mobile_no" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_f_rem_type" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="f_rem_type" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_f_rem_type" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="f_rem_type" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_f_rem_amount" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="f_rem_amount" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_f_rem_amount" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="f_rem_amount" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_f_rem_date" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="f_rem_date" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_f_rem_date" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="f_rem_date" SourceColumnNullMapping="false" SourceVersion="Original" />
                     </Parameters>
                   </DbCommand>
                 </UpdateCommand>
@@ -802,20 +731,6 @@
               <Mapping SourceColumn="f_type" DataSetColumn="f_type" />
               <Mapping SourceColumn="f_amount" DataSetColumn="f_amount" />
               <Mapping SourceColumn="f_date" DataSetColumn="f_date" />
-              <Mapping SourceColumn="f_reports" DataSetColumn="f_reports" />
-              <Mapping SourceColumn="f_rep_customer_id" DataSetColumn="f_rep_customer_id" />
-              <Mapping SourceColumn="f_rep_customer_name" DataSetColumn="f_rep_customer_name" />
-              <Mapping SourceColumn="f_rep_mobile_no" DataSetColumn="f_rep_mobile_no" />
-              <Mapping SourceColumn="f_rep_type" DataSetColumn="f_rep_type" />
-              <Mapping SourceColumn="f_rep_amount" DataSetColumn="f_rep_amount" />
-              <Mapping SourceColumn="f_rep_date" DataSetColumn="f_rep_date" />
-              <Mapping SourceColumn="f_reminder" DataSetColumn="f_reminder" />
-              <Mapping SourceColumn="f_rem_customer_id" DataSetColumn="f_rem_customer_id" />
-              <Mapping SourceColumn="f_rem_customer_name" DataSetColumn="f_rem_customer_name" />
-              <Mapping SourceColumn="f_rem_mobile_no" DataSetColumn="f_rem_mobile_no" />
-              <Mapping SourceColumn="f_rem_type" DataSetColumn="f_rem_type" />
-              <Mapping SourceColumn="f_rem_amount" DataSetColumn="f_rem_amount" />
-              <Mapping SourceColumn="f_rem_date" DataSetColumn="f_rem_date" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -1077,6 +992,13 @@
                 </xs:simpleType>
               </xs:element>
               <xs:element name="f_chit_mobile_no" msprop:Generator_ColumnVarNameInTable="columnf_chit_mobile_no" msprop:Generator_ColumnPropNameInRow="f_chit_mobile_no" msprop:Generator_ColumnPropNameInTable="f_chit_mobile_noColumn" msprop:Generator_UserColumnName="f_chit_mobile_no" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Field1" msprop:Generator_ColumnVarNameInTable="columnField1" msprop:Generator_ColumnPropNameInRow="Field1" msprop:Generator_ColumnPropNameInTable="Field1Column" msprop:Generator_UserColumnName="Field1" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="255" />
@@ -1350,104 +1272,6 @@
                 </xs:simpleType>
               </xs:element>
               <xs:element name="f_date" msprop:Generator_ColumnVarNameInTable="columnf_date" msprop:Generator_ColumnPropNameInRow="f_date" msprop:Generator_ColumnPropNameInTable="f_dateColumn" msprop:Generator_UserColumnName="f_date" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="255" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="f_reports" msprop:Generator_ColumnVarNameInTable="columnf_reports" msprop:Generator_ColumnPropNameInRow="f_reports" msprop:Generator_ColumnPropNameInTable="f_reportsColumn" msprop:Generator_UserColumnName="f_reports" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="536870910" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="f_rep_customer_id" msprop:Generator_ColumnVarNameInTable="columnf_rep_customer_id" msprop:Generator_ColumnPropNameInRow="f_rep_customer_id" msprop:Generator_ColumnPropNameInTable="f_rep_customer_idColumn" msprop:Generator_UserColumnName="f_rep_customer_id" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="255" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="f_rep_customer_name" msprop:Generator_ColumnVarNameInTable="columnf_rep_customer_name" msprop:Generator_ColumnPropNameInRow="f_rep_customer_name" msprop:Generator_ColumnPropNameInTable="f_rep_customer_nameColumn" msprop:Generator_UserColumnName="f_rep_customer_name" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="255" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="f_rep_mobile_no" msprop:Generator_ColumnVarNameInTable="columnf_rep_mobile_no" msprop:Generator_ColumnPropNameInRow="f_rep_mobile_no" msprop:Generator_ColumnPropNameInTable="f_rep_mobile_noColumn" msprop:Generator_UserColumnName="f_rep_mobile_no" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="255" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="f_rep_type" msprop:Generator_ColumnVarNameInTable="columnf_rep_type" msprop:Generator_ColumnPropNameInRow="f_rep_type" msprop:Generator_ColumnPropNameInTable="f_rep_typeColumn" msprop:Generator_UserColumnName="f_rep_type" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="255" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="f_rep_amount" msprop:Generator_ColumnVarNameInTable="columnf_rep_amount" msprop:Generator_ColumnPropNameInRow="f_rep_amount" msprop:Generator_ColumnPropNameInTable="f_rep_amountColumn" msprop:Generator_UserColumnName="f_rep_amount" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="255" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="f_rep_date" msprop:Generator_ColumnVarNameInTable="columnf_rep_date" msprop:Generator_ColumnPropNameInRow="f_rep_date" msprop:Generator_ColumnPropNameInTable="f_rep_dateColumn" msprop:Generator_UserColumnName="f_rep_date" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="255" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="f_reminder" msprop:Generator_ColumnVarNameInTable="columnf_reminder" msprop:Generator_ColumnPropNameInRow="f_reminder" msprop:Generator_ColumnPropNameInTable="f_reminderColumn" msprop:Generator_UserColumnName="f_reminder" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="536870910" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="f_rem_customer_id" msprop:Generator_ColumnVarNameInTable="columnf_rem_customer_id" msprop:Generator_ColumnPropNameInRow="f_rem_customer_id" msprop:Generator_ColumnPropNameInTable="f_rem_customer_idColumn" msprop:Generator_UserColumnName="f_rem_customer_id" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="255" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="f_rem_customer_name" msprop:Generator_ColumnVarNameInTable="columnf_rem_customer_name" msprop:Generator_ColumnPropNameInRow="f_rem_customer_name" msprop:Generator_ColumnPropNameInTable="f_rem_customer_nameColumn" msprop:Generator_UserColumnName="f_rem_customer_name" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="255" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="f_rem_mobile_no" msprop:Generator_ColumnVarNameInTable="columnf_rem_mobile_no" msprop:Generator_ColumnPropNameInRow="f_rem_mobile_no" msprop:Generator_ColumnPropNameInTable="f_rem_mobile_noColumn" msprop:Generator_UserColumnName="f_rem_mobile_no" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="255" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="f_rem_type" msprop:Generator_ColumnVarNameInTable="columnf_rem_type" msprop:Generator_ColumnPropNameInRow="f_rem_type" msprop:Generator_ColumnPropNameInTable="f_rem_typeColumn" msprop:Generator_UserColumnName="f_rem_type" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="255" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="f_rem_amount" msprop:Generator_ColumnVarNameInTable="columnf_rem_amount" msprop:Generator_ColumnPropNameInRow="f_rem_amount" msprop:Generator_ColumnPropNameInTable="f_rem_amountColumn" msprop:Generator_UserColumnName="f_rem_amount" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="255" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="f_rem_date" msprop:Generator_ColumnVarNameInTable="columnf_rem_date" msprop:Generator_ColumnPropNameInRow="f_rem_date" msprop:Generator_ColumnPropNameInTable="f_rem_dateColumn" msprop:Generator_UserColumnName="f_rem_date" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="255" />
