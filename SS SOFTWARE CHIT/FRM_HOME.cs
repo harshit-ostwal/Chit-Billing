@@ -13,7 +13,7 @@ namespace SS_SOFTWARE_CHIT
         {
             try
             {
-                //timer2.Start();
+                timer2.Start();
                 if (app.driver.WindowHandles.Count > 0)
                 {
                     if (app.driver.Url.Contains("https://web.whatsapp.com/") == false)
