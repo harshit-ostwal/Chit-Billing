@@ -25,7 +25,7 @@ namespace SS_SOFTWARE_CHIT
 
 
         //Bill
-        public void Bill(TextBox txtcustomerid, TextBox txtcustomername, TextBox txtarea, TextBox txtmobileno, TextBox txtsno, DateTimePicker txtdate, TextBox txtmonth, TextBox txttype, TextBox txtamount)
+        public void Bill(TextBox txtcustomerid, TextBox txtcustomername, TextBox txtarea, TextBox txtmobileno,DataGridView dgw_view)
         {
             CRY_CHIT_BILLING cr = new CRY_CHIT_BILLING();
             FRM_CRY_CHIT_BILLING Print = new FRM_CRY_CHIT_BILLING();
@@ -39,16 +39,18 @@ namespace SS_SOFTWARE_CHIT
             Area.Text = txtarea.Text;
             TextObject MobileNo = (TextObject)cr.ReportDefinition.Sections["Section1"].ReportObjects["lblmobileno"];
             MobileNo.Text = txtmobileno.Text;
-            TextObject Sno = (TextObject)cr.ReportDefinition.Sections["Section3"].ReportObjects["lblsno"];
-            Sno.Text = txtsno.Text;
-            TextObject Date = (TextObject)cr.ReportDefinition.Sections["Section3"].ReportObjects["lbldate"];
-            Date.Text = txtdate.Text;
-            TextObject Month = (TextObject)cr.ReportDefinition.Sections["Section3"].ReportObjects["lblmonth"];
-            Month.Text = txtmonth.Text;
-            TextObject Type = (TextObject)cr.ReportDefinition.Sections["Section3"].ReportObjects["lbltype"];
-            Type.Text = txttype.Text;
-            TextObject Amount = (TextObject)cr.ReportDefinition.Sections["Section3"].ReportObjects["lblamount"];
-            Amount.Text = txtamount.Text;
+            DataTable dt = new DataTable();
+            dt.Columns.Add("S.NO");
+            dt.Columns.Add("DATE");
+            dt.Columns.Add("MONTH");
+            dt.Columns.Add("TYPE");
+            dt.Columns.Add("AMOUNT");
+            dgw_view.Columns[6].DefaultCellStyle.Format = "dd/MM/yyyy";
+            foreach (DataGridViewRow dgw_detail in dgw_view.Rows)
+            {
+                dt.Rows.Add(dgw_detail.Cells[5].Value, dgw_detail.Cells[6].Value, dgw_detail.Cells[7].Value, dgw_detail.Cells[8].Value, dgw_detail.Cells[9].Value);
+            }
+            ds.Tables.Add(dt);
             ds.WriteXmlSchema("ChitBilling.xml");
             cr.SetDataSource(ds);
             Print.View_Report.ReportSource = cr;
@@ -95,7 +97,7 @@ namespace SS_SOFTWARE_CHIT
             }
         }
 
-        public async void MainSave(string MSaveData,TextBox txtcustomerid, TextBox txtcustomername, TextBox txtarea, TextBox txtmobileno, TextBox txtsno, DateTimePicker txtdate, TextBox txtmonth, TextBox txttype, TextBox txtamount)
+        public async void MainSave(string MSaveData,TextBox txtcustomerid, TextBox txtcustomername, TextBox txtarea, TextBox txtmobileno,DataGridView dgw_view)
         {
             try
             {
@@ -107,15 +109,16 @@ namespace SS_SOFTWARE_CHIT
                     cmd.CommandText = MSaveData;
                     cmd.ExecuteNonQuery();
                     con.Close();
+                    dgw_view.Refresh();
                     MessageBox.Show("ADDED SUCCESSFULLY!!!", "SS SOFTWARE", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    await Task.Run(() =>
-                    {
-                        Bill(txtcustomerid, txtcustomername, txtarea, txtmobileno, txtsno, txtdate, txtmonth, txttype, txtamount);
-                    });
                     string ThisDB = Application.StartupPath + "\\DATABASE\\Main_db.accdb";
                     string SP = Application.StartupPath + "\\BACKUP\\";
                     string Destitnation = SP + "\\Main_db " + DateTime.Now.ToString(" dd-MM-yyyy hh-mm-ss") + ".bak";
                     File.Copy(ThisDB, Destitnation);
+                    await Task.Run(() =>
+                    {
+                        Bill(txtcustomerid, txtcustomername, txtarea, txtmobileno, dgw_view);
+                    });
                 }
         }
             catch (Exception)
@@ -124,7 +127,7 @@ namespace SS_SOFTWARE_CHIT
             }
 }
 
-        public async void MainEdit(string MEditdata, TextBox txtcustomerid, TextBox txtcustomername, TextBox txtarea, TextBox txtmobileno, TextBox txtsno, DateTimePicker txtdate, TextBox txtmonth, TextBox txttype, TextBox txtamount)
+        public async void MainEdit(string MEditdata, TextBox txtcustomerid, TextBox txtcustomername, TextBox txtarea, TextBox txtmobileno, DataGridView dgw_view)
         {
             try
             {
@@ -136,10 +139,11 @@ namespace SS_SOFTWARE_CHIT
                     cmd.CommandText = MEditdata;
                     cmd.ExecuteNonQuery();
                     con.Close();
+                    dgw_view.Refresh();
                     MessageBox.Show("UPDATED SUCCESSFULLY!!!", "SS SOFTWARE", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     await Task.Run(() =>
                     {
-                        Bill(txtcustomerid, txtcustomername, txtarea, txtmobileno, txtsno, txtdate, txtmonth, txttype, txtamount);
+                        Bill(txtcustomerid, txtcustomername, txtarea, txtmobileno, dgw_view);
                     }); string ThisDB = Application.StartupPath + "\\DATABASE\\Main_db.accdb";
                     string SP = Application.StartupPath + "\\BACKUP\\";
                     string Destitnation = SP + "\\Main_db " + DateTime.Now.ToString(" dd-MM-yyyy hh-mm-ss") + ".bak";

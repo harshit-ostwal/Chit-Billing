@@ -223,6 +223,7 @@ namespace SS_SOFTWARE_CHIT
                 else
                 {
                     lblstatus.Text = "WHATSAPP READY";
+                    picqrcode.Image = picqrcode.InitialImage;
                 }
             }
             catch (Exception)

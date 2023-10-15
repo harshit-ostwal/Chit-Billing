@@ -278,7 +278,7 @@ namespace SS_SOFTWARE_CHIT
 
         private void ChitBillingData()
         {
-            string str = "Select ID,f_customer_id,f_customer_name,f_area,f_mobile_no,f_sno,f_date,f_month,f_type,f_amount,f_balance from Chit_Billing_db order by f_sno asc";
+            string str = "Select ID,f_customer_id,f_customer_name,f_area,f_mobile_no,f_sno,f_date,f_month,f_type,f_amount,f_balance from Chit_Billing_db order by f_sno desc";
             DataSet ds = new DataSet();
             OleDbDataAdapter ad = new OleDbDataAdapter(str, Main);
             ad.Fill(ds);
@@ -344,7 +344,7 @@ namespace SS_SOFTWARE_CHIT
                 msg();
                 string pdf = Path.Combine(Application.StartupPath, "REPORTS", "BILL" + ".pdf");
                 openFileDialog1.FileName = pdf;
-                string Url = "https://web.whatsapp.com/send?phone=" + txtmobileno.Text + "&text=" + lblmsg.Text + "%0a%0a_" + "👍 Feel free to reach out if you need any further assistance or have specific payment preferences. Thank you for your business. 😊" + "_%0a%0a*_Best regards,_*%0a%0a*_SS SOFTWARE_*%0a*♥️ Developed By ♥️ Harshit Jain ♥️*";
+                string Url = "https://web.whatsapp.com/send?phone=" + txtmobileno.Text + "&text=" + lblmsg.Text + "%0a%0a_" + "👍 Feel free to reach out if you need any further assistance or have specific payment preferences. Thank you for your business. 😊" + ";
                 if (lblstatus.Text == "WHATSAPP READY")
                 {
                     WebDriverWait wait = new WebDriverWait(app.driver, TimeSpan.FromSeconds(10));
@@ -368,7 +368,7 @@ namespace SS_SOFTWARE_CHIT
                         MessageBox.Show("SMS SENT SUCCESSFULLY!", "SS SOFTWARE", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     this.Focus();
-                }
+                }   
                 else
                 {
                     MessageBox.Show("WHATSAPP NOT AUTHORIZED?", "SS SOFTWARE", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -383,7 +383,10 @@ namespace SS_SOFTWARE_CHIT
                 if (txtcustomername.Text != "" && txtamount.Text != "" && txtarea.Text != "" && txtbalance.Text != "" && txtmobileno.Text != "" && txtmonth.Text != "" && txttype.Text != "")
                 {
                     string MSaveData = "Insert into Chit_Billing_db (f_customer_id,f_customer_name,f_area,f_mobile_no,f_sno,f_date,f_month,f_type,f_amount,f_balance) Values ('" + txtcustomerid.Text + "', '" + txtcustomername.Text + "', '" + txtarea.Text + "', '" + txtmobileno.Text + "', '" + txtsno.Text + "', '" + txtdate.Text + "', '" + txtmonth.Text + "', '" + txttype.Text + "', '" + txtamount.Text + "', '" + txtbalance.Text + "')";
-                    connection.MainSave(MSaveData, txtcustomerid, txtcustomername, txtarea, txtmobileno, txtsno, txtdate, txtmonth, txttype, txtamount);
+                    connection.MainSave(MSaveData, txtcustomerid, txtcustomername, txtarea, txtmobileno, dgw_view);
+                    ChitBillingData();
+                    (dgw_view.DataSource as DataTable).DefaultView.RowFilter = string.Format("f_customer_id LIKE '{0}'", txtcustomerid.Text);
+                    (dgw_view.DataSource as DataTable).DefaultView.RowFilter = string.Format("f_customer_name LIKE '{0}'", txtcustomername.Text);
                     Send();
                     Clear();
                 }
@@ -400,9 +403,12 @@ namespace SS_SOFTWARE_CHIT
                     if (txtcustomername.Text != "" && txtamount.Text != "" && txtarea.Text != "" && txtbalance.Text != "" && txtmobileno.Text != "" && txtmonth.Text != "" && txttype.Text != "")
                     {
                         string MEditData = "Update Chit_Billing_db set f_customer_id='" + txtcustomerid.Text + "', f_customer_name='" + txtcustomername.Text + "',f_area='" + txtarea.Text + "',f_mobile_no='" + txtmobileno.Text + "',f_sno='" + txtsno.Text + "',f_date='" + txtdate.Text + "',f_month='" + txtmonth.Text + "',f_type='" + txttype.Text + "',f_amount='" + txtamount.Text + "',f_balance='" + txtbalance.Text + "'  where ID=" + dgw_view.SelectedRows[i].Cells[0].Value.ToString() + "";
-                        connection.MainEdit(MEditData, txtcustomerid, txtcustomername, txtarea, txtmobileno, txtsno, txtdate, txtmonth, txttype, txtamount);
-                        Clear();
+                        connection.MainEdit(MEditData, txtcustomerid, txtcustomername, txtarea, txtmobileno, dgw_view);
+                        ChitBillingData();
+                        (dgw_view.DataSource as DataTable).DefaultView.RowFilter = string.Format("f_customer_id LIKE '{0}'", txtcustomerid.Text);
+                        (dgw_view.DataSource as DataTable).DefaultView.RowFilter = string.Format("f_customer_name LIKE '{0}'", txtcustomername.Text);
                         Send();
+                        Clear();
                         btnsave.Text = "F2 Save";
                         grpchit.Text = "Create";
                     }
@@ -634,8 +640,7 @@ namespace SS_SOFTWARE_CHIT
                     display();
                     try
                     {
-                        int lastRow = dgw_view.Rows.Count - 1;
-                        txtsno.Text = dgw_view.Rows[lastRow].Cells[5].Value.ToString();
+                        txtsno.Text = dgw_view.Rows[0].Cells[5].Value.ToString();
                         double a;
                         double b;
                         double.TryParse(txtsno.Text, out a);
@@ -678,8 +683,7 @@ namespace SS_SOFTWARE_CHIT
                 display();
                 try
                 {
-                    int lastRow = dgw_view.Rows.Count - 1;
-                    txtsno.Text = dgw_view.Rows[lastRow].Cells[5].Value.ToString();
+                    txtsno.Text = dgw_view.Rows[0].Cells[5].Value.ToString();
                     double a;
                     double b;
                     double.TryParse(txtsno.Text, out a);

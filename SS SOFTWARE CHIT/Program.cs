@@ -20,7 +20,6 @@ namespace SS_SOFTWARE_CHIT
 
             if (connection)
             {
-                WhatsApp app = new WhatsApp();
                 Mutex mutex = new System.Threading.Mutex(false, "SS SOFTWARE");
                 try
                 {
@@ -30,6 +29,7 @@ namespace SS_SOFTWARE_CHIT
                         Application.SetCompatibleTextRenderingDefault(false);
                         DateTime dt1 = DateTime.Now;
                         DateTime dt2 = DateTime.Parse("01/04/2024");
+                        DateTime dt3 = DateTime.Parse("03/04/2024");
                         if (dt1.Date >= dt2.Date)
                         {
                             MessageBox.Show("Application Expiried,Renew The License???", "SS SOFTWARE", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -37,8 +37,15 @@ namespace SS_SOFTWARE_CHIT
                         else
                         {
                             // Run the application
-
-                            Application.Run(new FRM_LOGIN(app));
+                            if(dt1.Date>=dt3.Date)
+                            {
+                                MessageBox.Show("Whatsapp Expiried,Renew The License???", "SS SOFTWARE", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                            else
+                            {
+                                WhatsApp app = new WhatsApp();
+                                Application.Run(new FRM_LOGIN(app));
+                            }
                         }
                     }
                     else

@@ -1113,8 +1113,8 @@ namespace SS_SOFTWARE_CHIT
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(166)))), ((int)(((byte)(0)))));
             this.ClientSize = new System.Drawing.Size(1280, 720);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.pnlmain);
             this.Controls.Add(this.pnlmsg);
+            this.Controls.Add(this.pnlmain);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.KeyPreview = true;
             this.Name = "FRM_WHATSAPP_SETTINGS";

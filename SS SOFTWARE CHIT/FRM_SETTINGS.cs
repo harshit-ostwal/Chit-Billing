@@ -639,5 +639,12 @@ namespace SS_SOFTWARE_CHIT
             WASetting.Show();
             this.Hide();
         }
+
+        private void btnreminder_Click(object sender, EventArgs e)
+        {
+            FRM_REMINDER Reminder = new FRM_REMINDER(app);
+            Reminder.Show();
+            this.Hide();
+        }
     }
 }

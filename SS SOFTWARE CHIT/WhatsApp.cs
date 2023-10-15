@@ -28,7 +28,7 @@ namespace SS_SOFTWARE_CHIT
             try
             {
                 service.HideCommandPromptWindow = true;
-                options.AddArguments("--window-position=0,0","user-data-dir=" + Application.StartupPath + "\\WHATSAPP DATA\\Google\\Chrome\\User Data");
+                options.AddArguments("--window-position=32000,-32000","user-data-dir="+Application.StartupPath + "\\WHATSAPP DATA\\Google\\Chrome\\User Data");
                 driver = new ChromeDriver(service, options);
             }
             catch (Exception)
