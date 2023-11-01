@@ -1,14 +1,8 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.OleDb;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -58,7 +52,7 @@ namespace SS_SOFTWARE_CHIT
             {
                 for (int i = 0; i < dgw_view.RowCount; i++)
                 {
-                    string Url = "https://web.whatsapp.com/send?phone=" + dgw_view.Rows[i].Cells[6].Value + "&text=" + "Hi *" + dgw_view.Rows[i].Cells[2].Value + "*," + "%0a%0a_*" + "Greetings from M.S JEWELLERY!*_%0a%0a" + "*📢Monthly Chit Scheme Payment Reminder📢*%0a%0a" + "_*Customer ID - "+dgw_view.Rows[i].Cells[1].Value + "*_%0a*_Amount - ₹"+dgw_view.Rows[i].Cells[8].Value + ".00_*%0a%0a_📢 Friendly reminder for your Monthly Chit Scheme Payment. Kindly ensure your payment is made by this month._%0a%0a*You can do Online Payment also.*%0a%0a_*Phone No : 6379742362*_%0a*All UPI Payments Available.*%0a_Share us a screenshot in this Phone No._%0a%0aThank You!♥️";
+                    string Url = "https://web.whatsapp.com/send?phone=" + dgw_view.Rows[i].Cells[6].Value + "&text=" + "Hi *" + dgw_view.Rows[i].Cells[2].Value + "*," + "%0a%0a_*" + "Greetings from M.S JEWELLERY!*_%0a%0a" + "*📢Monthly Chit Scheme Payment Reminder📢*%0a%0a" + "_*Customer ID - " + dgw_view.Rows[i].Cells[1].Value + "*_%0a*_Amount - ₹" + dgw_view.Rows[i].Cells[8].Value + ".00_*%0a%0a_📢 Friendly reminder for your Monthly Chit Scheme Payment. Kindly ensure your payment is made by this month._%0a%0a*You can do Online Payment also.*%0a%0a_*Phone No : 6379742362*_%0a*All UPI Payments Available.*%0a_Share us a screenshot in this Phone No._%0a%0aThank You!♥️";
                     app.driver.Navigate().GoToUrl(Url);
                     WebDriverWait wait = new WebDriverWait(app.driver, TimeSpan.FromSeconds(10));
                     await Task.Run(() =>
@@ -75,10 +69,10 @@ namespace SS_SOFTWARE_CHIT
                         {
                             wait.Until(driver => app.driver.FindElement(By.XPath("// span[@data-icon='send']"))).Click();
                             dgw_view.Rows[i].Cells[9].Value = "SUCCESS";
-                            MessageBox.Show("SMS SENT SUCCESSFULLY!", "SS SOFTWARE", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                     });
                 }
+                MessageBox.Show("SMS SENT SUCCESSFULLY!", "SS SOFTWARE", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Focus();
             }
         }
@@ -114,7 +108,7 @@ namespace SS_SOFTWARE_CHIT
 
         private void FRM_REMINDER_KeyDown(object sender, KeyEventArgs e)
         {
-            if(e.KeyCode==System.Windows.Forms.Keys.Escape)
+            if (e.KeyCode == System.Windows.Forms.Keys.Escape)
             {
                 if (MessageBox.Show("DO YOU WANT TO EXIT?", "SS SOFTWARE", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
                 {

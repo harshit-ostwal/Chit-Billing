@@ -25,7 +25,7 @@ namespace SS_SOFTWARE_CHIT
 
 
         //Bill
-        public void Bill(TextBox txtcustomerid, TextBox txtcustomername, TextBox txtarea, TextBox txtmobileno,DataGridView dgw_view)
+        public void Bill(TextBox txtcustomerid, TextBox txtcustomername, TextBox txtarea, TextBox txtmobileno, DataGridView dgw_view)
         {
             CRY_CHIT_BILLING cr = new CRY_CHIT_BILLING();
             FRM_CRY_CHIT_BILLING Print = new FRM_CRY_CHIT_BILLING();
@@ -56,7 +56,7 @@ namespace SS_SOFTWARE_CHIT
             Print.View_Report.ReportSource = cr;
             cr.PrintOptions.PaperOrientation = CrystalDecisions.Shared.PaperOrientation.Landscape;
             cr.PrintOptions.PaperSize = CrystalDecisions.Shared.PaperSize.PaperA5;
-            cr.ExportToDisk(CrystalDecisions.Shared.ExportFormatType.PortableDocFormat, "" + Application.StartupPath + "\\REPORTS\\" + "BILL" +".pdf");
+            cr.ExportToDisk(CrystalDecisions.Shared.ExportFormatType.PortableDocFormat, "" + Application.StartupPath + "\\REPORTS\\" + "BILL" + ".pdf");
         }
 
         //Save
@@ -97,7 +97,7 @@ namespace SS_SOFTWARE_CHIT
             }
         }
 
-        public async void MainSave(string MSaveData,TextBox txtcustomerid, TextBox txtcustomername, TextBox txtarea, TextBox txtmobileno,DataGridView dgw_view)
+        public async void MainSave(string MSaveData, TextBox txtcustomerid, TextBox txtcustomername, TextBox txtarea, TextBox txtmobileno, DataGridView dgw_view)
         {
             try
             {
@@ -120,12 +120,12 @@ namespace SS_SOFTWARE_CHIT
                         Bill(txtcustomerid, txtcustomername, txtarea, txtmobileno, dgw_view);
                     });
                 }
-        }
+            }
             catch (Exception)
             {
                 MessageBox.Show("UNABLE TO SAVE???", "SS SOFTWARE", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-}
+        }
 
         public async void MainEdit(string MEditdata, TextBox txtcustomerid, TextBox txtcustomername, TextBox txtarea, TextBox txtmobileno, DataGridView dgw_view)
         {
@@ -162,29 +162,17 @@ namespace SS_SOFTWARE_CHIT
             {
                 if (MessageBox.Show("DO YOU WANT TO EDIT???", "SS SOFTWARE", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    using (OleDbConnection con = new OleDbConnection(Main))
-                    {
-                        con.Open();
-                        using (OleDbCommand cmd = new OleDbCommand(AEditData, con))
-                        {
-                            int Count = Convert.ToInt32(cmd.ExecuteScalar());
-                            if (Count > 0)
-                            {
-                                MessageBox.Show("ALREADY EXISTED???", "SS SOFTWARE", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            }
-                            else
-                            {
-                                cmd.CommandText = MEditdata;
-                                cmd.ExecuteNonQuery();
-                                con.Close();
-                                MessageBox.Show("UPDATED SUCCESSFULLY!!!", "SS SOFTWARE", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                string ThisDB = Application.StartupPath + "\\DATABASE\\Main_db.accdb";
-                                string SP = Application.StartupPath + "\\BACKUP\\";
-                                string Destitnation = SP + "\\Main_db " + DateTime.Now.ToString(" dd-MM-yyyy hh-mm-ss") + ".bak";
-                                File.Copy(ThisDB, Destitnation);
-                            }
-                        }
-                    }
+                    con = new OleDbConnection(Main);
+                    con.Open();
+                    cmd.Connection = con;
+                    cmd.CommandText = MEditdata;
+                    cmd.ExecuteNonQuery();
+                    con.Close();
+                    MessageBox.Show("UPDATED SUCCESSFULLY!!!", "SS SOFTWARE", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    string ThisDB = Application.StartupPath + "\\DATABASE\\Main_db.accdb";
+                    string SP = Application.StartupPath + "\\BACKUP\\";
+                    string Destitnation = SP + "\\Main_db " + DateTime.Now.ToString(" dd-MM-yyyy hh-mm-ss") + ".bak";
+                    File.Copy(ThisDB, Destitnation);
                 }
             }
             catch (Exception)

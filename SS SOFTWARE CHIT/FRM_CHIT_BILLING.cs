@@ -62,7 +62,7 @@ namespace SS_SOFTWARE_CHIT
         {
             // TODO: This line of code loads data into the 'settings_dbDataSet.Whatsapp_db' table. You can move, or remove it, as needed.
             this.whatsapp_dbTableAdapter.Fill(this.settings_dbDataSet.Whatsapp_db);
-            timer1.Start();
+            //timer1.Start();
             try
             {
                 if (app.driver.WindowHandles.Count > 0)
@@ -344,7 +344,7 @@ namespace SS_SOFTWARE_CHIT
                 msg();
                 string pdf = Path.Combine(Application.StartupPath, "REPORTS", "BILL" + ".pdf");
                 openFileDialog1.FileName = pdf;
-                string Url = "https://web.whatsapp.com/send?phone=" + txtmobileno.Text + "&text=" + lblmsg.Text + "%0a%0a_" + "👍 Feel free to reach out if you need any further assistance or have specific payment preferences. Thank you for your business. 😊" + ";
+                string Url = "https://web.whatsapp.com/send?phone=" + txtmobileno.Text + "&text=" + lblmsg.Text + "%0a%0a_" + "👍 Feel free to reach out if you need any further assistance or have specific payment preferences. Thank you for your business.😊_" ;
                 if (lblstatus.Text == "WHATSAPP READY")
                 {
                     WebDriverWait wait = new WebDriverWait(app.driver, TimeSpan.FromSeconds(10));
@@ -357,6 +357,7 @@ namespace SS_SOFTWARE_CHIT
                             app.driver.FindElement(By.XPath("// div[@class='tvf2evcx m0h2a7mj lb5m6g5c j7l1k36l ktfrpxia nu7pwgvd p357zi0d dnb887gk gjuq5ydh i2cterl7 i6vnu1w3 qjslfuze ac2vgrno sap93d0t gndfcl4n']")).Click();
                             MessageBox.Show("WRONG MOBILE NO?", "SS SOFTWARE", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                             txtmobileno.Focus();
+                            lbl();
                         }
                     }
                     catch (Exception)
@@ -366,6 +367,7 @@ namespace SS_SOFTWARE_CHIT
                         wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(By.XPath("//div[@aria-label='Send']")));
                         app.driver.FindElement(By.XPath("//div[@aria-label='Send']")).Click();
                         MessageBox.Show("SMS SENT SUCCESSFULLY!", "SS SOFTWARE", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        lbl();
                     }
                     this.Focus();
                 }   
@@ -382,6 +384,7 @@ namespace SS_SOFTWARE_CHIT
             {
                 if (txtcustomername.Text != "" && txtamount.Text != "" && txtarea.Text != "" && txtbalance.Text != "" && txtmobileno.Text != "" && txtmonth.Text != "" && txttype.Text != "")
                 {
+                    lbl();
                     string MSaveData = "Insert into Chit_Billing_db (f_customer_id,f_customer_name,f_area,f_mobile_no,f_sno,f_date,f_month,f_type,f_amount,f_balance) Values ('" + txtcustomerid.Text + "', '" + txtcustomername.Text + "', '" + txtarea.Text + "', '" + txtmobileno.Text + "', '" + txtsno.Text + "', '" + txtdate.Text + "', '" + txtmonth.Text + "', '" + txttype.Text + "', '" + txtamount.Text + "', '" + txtbalance.Text + "')";
                     connection.MainSave(MSaveData, txtcustomerid, txtcustomername, txtarea, txtmobileno, dgw_view);
                     ChitBillingData();
