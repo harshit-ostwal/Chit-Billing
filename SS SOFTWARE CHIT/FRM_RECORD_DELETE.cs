@@ -223,10 +223,18 @@ namespace SS_SOFTWARE_CHIT
             if (txtcustomerid.Text != "" && txtcustomername.Text != "" && txtarea.Text != "" && txtmobileno.Text != "")
             {
                 string MDeleteData = "DELETE FROM Customer_db  Where ID=" + dgw_customer.SelectedRows[i].Cells[0].Value.ToString() + "";
-                connection.MainDeleteData(MDeleteData);
-                Display();
+                OleDbConnection con = new OleDbConnection(Main);
+                OleDbCommand cmd = new OleDbCommand();
+                con = new OleDbConnection(Main);
+                con.Open();
+                cmd.Connection = con;
+                cmd.CommandText = MDeleteData;
+                cmd.ExecuteNonQuery();
+                con.Close();
                 DeleteChitData();
                 Data();
+                Display();
+                MessageBox.Show("RECORD DELETED SUCCESSFULLY!", "SS SOFTWARE", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
