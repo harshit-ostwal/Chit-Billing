@@ -6,18 +6,15 @@ using System.Windows.Forms;
 
 namespace SS_SOFTWARE_CHIT
 {
-    public partial class FRM_RECORD_DELETE : Form
+    public partial class FRM_RECORD_DELETE1 : Form
     {
         int i = 0;
         Connection connection = new Connection();
         public static string Main = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source =" + Application.StartupPath + "/DATABASE/Main_db.accdb;Jet OLEDB:Database Password = SS9975";
         public static string Setting = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source =" + Application.StartupPath + "/DATABASE/Settings_db.accdb;Jet OLEDB:Database Password = SS9975";
         WhatsApp app;
-        OleDbCommand cmd = new OleDbCommand();
-        OleDbConnection con;
 
-
-        public FRM_RECORD_DELETE(WhatsApp whatsappInitialize)
+        public FRM_RECORD_DELETE1(WhatsApp whatsappInitialize)
         {
             InitializeComponent();
             try
@@ -77,6 +74,7 @@ namespace SS_SOFTWARE_CHIT
         {
             Clear();
         }
+
 
         private void Clear()
         {
@@ -224,18 +222,18 @@ namespace SS_SOFTWARE_CHIT
         {
             if (txtcustomerid.Text != "" && txtcustomername.Text != "" && txtarea.Text != "" && txtmobileno.Text != "")
             {
-                string MDeleteData = "DELETE FROM Customer_db Where ID=" + dgw_customer.SelectedRows[i].Cells[0].Value.ToString() + "";
+                string MDeleteData = "Delete From Customer_db Where ID=" + dgw_customer.Rows[i].Cells[0].Value.ToString() + "";
+                OleDbConnection con = new OleDbConnection(Main);
+                OleDbCommand cmd = new OleDbCommand();
                 con = new OleDbConnection(Main);
                 con.Open();
                 cmd.Connection = con;
                 cmd.CommandText = MDeleteData;
                 cmd.ExecuteNonQuery();
                 con.Close();
-                DeleteChitData();
-                Data();
-                Display();
-                MessageBox.Show("RECORD DELETED SUCCESSFULLY!", "SS SOFTWARE", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+            MessageBox.Show("RECORD DELETED SUCCESSFULLY!", "SS SOFTWARE", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            DeleteChitData();
         }
 
         private void DeleteChitData()
@@ -244,7 +242,9 @@ namespace SS_SOFTWARE_CHIT
             {
                 foreach (DataGridViewRow row in dgw_view.Rows)
                 {
-                    string MDeleteData = "DELETE FROM Chit_Billing_db  Where ID=" + row.Cells[0].Value.ToString() + "";
+                    OleDbConnection con = new OleDbConnection(Main);
+                    OleDbCommand cmd = new OleDbCommand();
+                    string MDeleteData = "Delete From Chit_Billing_db Where ID=" + row.Cells[0].Value.ToString() + "";
                     con = new OleDbConnection(Main);
                     con.Open();
                     cmd.Connection = con;
@@ -257,7 +257,6 @@ namespace SS_SOFTWARE_CHIT
                 string SP = Application.StartupPath + "\\BACKUP\\";
                 string Destitnation = SP + "\\Main_db " + DateTime.Now.ToString(" dd-MM-yyyy hh-mm-ss") + ".bak";
                 File.Copy(ThisDB, Destitnation);
-                dgw_customer.Show();
             }
         }
 

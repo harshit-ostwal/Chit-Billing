@@ -15,8 +15,8 @@ namespace SS_SOFTWARE_CHIT
     {
         int i = 0;
         Connection connection = new Connection();
-        public static string Main = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source =" + Application.StartupPath + "/DATABASE/Main_db.accdb;Jet OLEDB:Database Password = SS9975";
-        public static string Setting = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source =" + Application.StartupPath + "/DATABASE/Settings_db.accdb;Jet OLEDB:Database Password = SS9975";
+        string Main = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source =" + Application.StartupPath + "/DATABASE/Main_db.accdb;Jet OLEDB:Database Password = SS9975";
+        string Setting = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source =" + Application.StartupPath + "/DATABASE/Settings_db.accdb;Jet OLEDB:Database Password = SS9975";
         WhatsApp app;
 
         public FRM_CUSTOMER_MASTER(WhatsApp whatsappInitialize)
@@ -207,43 +207,51 @@ namespace SS_SOFTWARE_CHIT
 
         private void btnsave_Click(object sender, EventArgs e)
         {
-            if (btnsave.Text == "F2 Save")
+            if (txtmobileno.TextLength >= 10 && txtmobileno.TextLength <= 10 || txtmobileno.Text == "0")
             {
-                if (txtcustomername.Text != "" && txtaddress.Text != "" && txtarea.Text != "" && txtpincode.Text != "" && txtmobileno.Text != "" && txtchittype.Text != "" && txtchitamount.Text != "")
+                if (btnsave.Text == "F2 Save")
                 {
-                    string CSaveData = "Select * from Customer_db where f_customer_name ='" + txtcustomername.Text + "'";
-                    string MSaveData = "Insert into Customer_db (f_customer_id,f_customer_name,f_address,f_area,f_pincode,f_mobile_no,f_chit_type,f_chit_amount) Values('" + txtcustomerid.Text + "', '" + txtcustomername.Text + "', '" + txtaddress.Text + "', '" + txtarea.Text + "', '" + txtpincode.Text + "', '" + txtmobileno.Text + "', '" + txtchittype.Text + "', '" + txtchitamount.Text + "')";
-                    connection.MainSaveData(MSaveData, CSaveData);
-                    AutoNumber();
-                    Clear();
-                }
-                else
-                {
-                    MessageBox.Show("FILL ALL THE BOXES!", "SS SOFTWARE", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    Clear();
-                }
-            }
-            if (btnsave.Text == "F2 Update")
-            {
-                if (grpcustomer.Text == "Update")
-                {
-                    if (txtpincode.Text != "" && txtmobileno.Text != "" && txtchittype.Text != "" && txtchitamount.Text != "")
+                    if (txtcustomername.Text != "" && txtaddress.Text != "" && txtarea.Text != "" && txtpincode.Text != "" && txtmobileno.Text != "" && txtchittype.Text != "" && txtchitamount.Text != "")
                     {
-                        string CEditData = "Select * from Customer_db where f_customer_name ='" + txtcustomername.Text + "'";
-                        string MEditData = "Update Customer_db set f_customer_id='" + txtcustomerid.Text + "', f_customer_name='" + txtcustomername.Text + "', f_address= '" + txtaddress.Text + "', f_area = '" + txtarea.Text + "',f_pincode='" + txtpincode.Text + "',f_mobile_no='" + txtmobileno.Text + "',f_chit_type='" + txtchittype.Text + "',f_chit_amount='" + txtchitamount.Text + "'  where ID=" + dgw_view.SelectedRows[i].Cells[0].Value.ToString() + "";
-                        connection.MainEditData(MEditData, CEditData);
+                        string CSaveData = "Select * from Customer_db where f_customer_name ='" + txtcustomername.Text + "'";
+                        string MSaveData = "Insert into Customer_db (f_customer_id,f_customer_name,f_address,f_area,f_pincode,f_mobile_no,f_chit_type,f_chit_amount) Values('" + txtcustomerid.Text + "', '" + txtcustomername.Text + "', '" + txtaddress.Text + "', '" + txtarea.Text + "', '" + txtpincode.Text + "', '" + txtmobileno.Text + "', '" + txtchittype.Text + "', '" + txtchitamount.Text + "')";
+                        connection.MainSaveData(MSaveData, CSaveData);
                         AutoNumber();
                         Clear();
-                        btnsave.Text = "F2 Save";
-                        grpcustomer.Text = "Create";
                     }
                     else
                     {
                         MessageBox.Show("FILL ALL THE BOXES!", "SS SOFTWARE", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         Clear();
-                        btnsave.Text = "F2 Save";
                     }
                 }
+                if (btnsave.Text == "F2 Update")
+                {
+                    if (grpcustomer.Text == "Update")
+                    {
+                        if (txtpincode.Text != "" && txtmobileno.Text != "" && txtchittype.Text != "" && txtchitamount.Text != "")
+                        {
+                            string CEditData = "Select * from Customer_db where f_customer_name ='" + txtcustomername.Text + "'";
+                            string MEditData = "Update Customer_db set f_customer_id='" + txtcustomerid.Text + "', f_customer_name='" + txtcustomername.Text + "', f_address= '" + txtaddress.Text + "', f_area = '" + txtarea.Text + "',f_pincode='" + txtpincode.Text + "',f_mobile_no='" + txtmobileno.Text + "',f_chit_type='" + txtchittype.Text + "',f_chit_amount='" + txtchitamount.Text + "'  where ID=" + dgw_view.SelectedRows[i].Cells[0].Value.ToString() + "";
+                            connection.MainEditData(MEditData, CEditData);
+                            AutoNumber();
+                            Clear();
+                            btnsave.Text = "F2 Save";
+                            grpcustomer.Text = "Create";
+                        }
+                        else
+                        {
+                            MessageBox.Show("FILL ALL THE BOXES!", "SS SOFTWARE", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            Clear();
+                            btnsave.Text = "F2 Save";
+                        }
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("MOBILE NO MUST BE 10 DIGITS?", "SS SOFTWARE", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                Clear();
             }
             if (grpcustomer.Text == "Create")
             {
@@ -491,7 +499,7 @@ namespace SS_SOFTWARE_CHIT
                 {
                     if (txtpincode.Text != "" && txtmobileno.Text != "" && txtchittype.Text != "" && txtchitamount.Text != "")
                     {
-                        string MDeleteData = "DELETE FROM Customer_db where ID=" + dgw_view.SelectedRows[i].Cells[0].Value.ToString() + "";
+                        string MDeleteData = "Delete From Customer_db where ID=" + dgw_view.SelectedRows[i].Cells[0].Value.ToString() + "";
                         connection.MainDeleteData(MDeleteData);
                         AutoNumber();
                         Clear();

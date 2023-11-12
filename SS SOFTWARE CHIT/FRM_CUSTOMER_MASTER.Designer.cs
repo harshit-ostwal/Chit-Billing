@@ -65,6 +65,8 @@ namespace SS_SOFTWARE_CHIT
             this.btndelete = new System.Windows.Forms.Button();
             this.btnview = new System.Windows.Forms.Button();
             this.lbladdress = new System.Windows.Forms.Label();
+            this.customerdbBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.settings_dbDataSet = new SS_SOFTWARE_CHIT.Settings_dbDataSet();
             this.lblcustomername = new System.Windows.Forms.Label();
             this.lblcustomerid = new System.Windows.Forms.Label();
             this.lbldelete = new System.Windows.Forms.Label();
@@ -76,8 +78,6 @@ namespace SS_SOFTWARE_CHIT
             this.lblchitamount = new System.Windows.Forms.Label();
             this.lblchittype = new System.Windows.Forms.Label();
             this.lblid = new System.Windows.Forms.Label();
-            this.settings_dbDataSet = new SS_SOFTWARE_CHIT.Settings_dbDataSet();
-            this.customerdbBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.customer_dbTableAdapter = new SS_SOFTWARE_CHIT.Settings_dbDataSetTableAdapters.Customer_dbTableAdapter();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picminimize)).BeginInit();
@@ -85,8 +85,8 @@ namespace SS_SOFTWARE_CHIT
             this.grpcustomer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgw_view)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.settings_dbDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customerdbBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.settings_dbDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -504,6 +504,16 @@ namespace SS_SOFTWARE_CHIT
             this.lbladdress.TabIndex = 682;
             this.lbladdress.Text = "label13";
             // 
+            // customerdbBindingSource
+            // 
+            this.customerdbBindingSource.DataMember = "Customer_db";
+            this.customerdbBindingSource.DataSource = this.settings_dbDataSet;
+            // 
+            // settings_dbDataSet
+            // 
+            this.settings_dbDataSet.DataSetName = "Settings_dbDataSet";
+            this.settings_dbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // lblcustomername
             // 
             this.lblcustomername.AutoSize = true;
@@ -625,16 +635,6 @@ namespace SS_SOFTWARE_CHIT
             this.lblid.TabIndex = 692;
             this.lblid.Text = "label11";
             // 
-            // settings_dbDataSet
-            // 
-            this.settings_dbDataSet.DataSetName = "Settings_dbDataSet";
-            this.settings_dbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // customerdbBindingSource
-            // 
-            this.customerdbBindingSource.DataMember = "Customer_db";
-            this.customerdbBindingSource.DataSource = this.settings_dbDataSet;
-            // 
             // customer_dbTableAdapter
             // 
             this.customer_dbTableAdapter.ClearBeforeFill = true;
@@ -675,8 +675,8 @@ namespace SS_SOFTWARE_CHIT
             this.grpcustomer.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgw_view)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.settings_dbDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.customerdbBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.settings_dbDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

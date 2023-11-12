@@ -509,7 +509,7 @@ namespace SS_SOFTWARE_CHIT
 
         private void btnrecorddelete_Click(object sender, EventArgs e)
         {
-            FRM_RECORD_DELETE Record_Delete = new FRM_RECORD_DELETE(app);
+            FRM_RECORD_DELETE1 Record_Delete = new FRM_RECORD_DELETE1(app);
             Record_Delete.Show();
             this.Hide();
         }
