@@ -473,92 +473,38 @@ namespace SS_SOFTWARE_CHIT
 
         private void txtcompanyname_KeyDown(object sender, KeyEventArgs e)
         {
-            if (grpcustomer.Text == "Edit")
+            if (e.KeyCode == Keys.Enter)
             {
-                if (e.KeyCode == Keys.Enter)
+                if (txtcompanyname.Text == "")
                 {
-                    if (txtcompanyname.Text == "")
+                    if (dgw_view.Visible)
                     {
-                        if (dgw_view.Visible == true)
-                        {
-                            SendKeys.Send("{TAB}");
-                            dgw_view.Hide();
-                        }
-                        else
-                        {
-                            dgw_view.Focus();
-                        }
+                        SendKeys.Send("{TAB}");
+                        dgw_view.Hide();
+                    }
+                    else if (grpcustomer.Text == "View" && !dgw_view.Visible)
+                    {
+                        SendKeys.Send("{TAB}");
                     }
                     else
                     {
                         dgw_view.Focus();
                     }
                 }
-            }
-            else if (grpcustomer.Text == "View")
-            {
-                if (e.KeyCode == Keys.Enter)
-                {
-                    if (txtcompanyname.Text == "")
-                    {
-                        if (dgw_view.Visible == true)
-                        {
-                            SendKeys.Send("{TAB}");
-                            dgw_view.Hide();
-                        }
-                        else
-                        {
-                            dgw_view.Focus();
-                        }
-                    }
-                    else if (dgw_view.Visible == false)
-                    {
-                        if (e.KeyCode == Keys.Enter)
-                        {
-                            SendKeys.Send("{TAB}");
-                        }
-                        if (e.KeyCode == Keys.Down)
-                        {
-                            SendKeys.Send("{TAB}");
-                        }
-                    }
-                    else
-                    {
-                        dgw_view.Focus();
-                    }
-                }
-            }
-            else if (grpcustomer.Text == "Update")
-            {
-                if (e.KeyCode == Keys.Enter)
-                {
-                    SendKeys.Send("{TAB}");
-                }
-                if (e.KeyCode == Keys.Down)
+                else
                 {
                     SendKeys.Send("{TAB}");
                 }
             }
-            else
+            else if (e.KeyCode == Keys.Down)
             {
-                if (e.KeyCode == Keys.Enter)
-                {
-                    SendKeys.Send("{TAB}");
-                }
-                if (e.KeyCode == Keys.Down)
-                {
-                    SendKeys.Send("{TAB}");
-                }
+                SendKeys.Send("{TAB}");
             }
         }
 
         private void Enter_Only(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
-            {
-                SendKeys.Send("{TAB}");
-            }
-            if (e.KeyCode == Keys.Down)
+            if (e.KeyCode == Keys.Enter || e.KeyCode == Keys.Down)
             {
                 SendKeys.Send("{TAB}");
             }
@@ -568,51 +514,31 @@ namespace SS_SOFTWARE_CHIT
         {
             if (e.KeyCode == Keys.Escape)
             {
-                if (dgw_view.Visible == false)
+                if (MessageBox.Show("DO YOU WANT TO CLOSE?", "SS SOFTWARE", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
                 {
-                    Clear();
-                    if (MessageBox.Show("DO YOU WANT TO CLOSE?", "SS SOFTWARE", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
-                    {
-                        FRM_HOME Home = new FRM_HOME(app);
-                        this.Hide();
-                        Home.Show();
-                    }
+                    FRM_HOME Home = new FRM_HOME(app);
+                    this.Hide();
+                    Home.Show();
                 }
-                else
-                {
-                    if (dgw_view.Visible == false)
-                    {
-                        Clear();
-                        if (MessageBox.Show("DO YOU WANT TO CLOSE?", "SS SOFTWARE", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
-                        {
-                            FRM_HOME Home = new FRM_HOME(app);
-                            this.Hide();
-                            Home.Show();
-                        }
-                    }
-                    else
-                    {
-                        Clear();
-                    }
-                }
+                Clear();
             }
-            if (e.KeyCode == Keys.F1)
+            else if (e.KeyCode == Keys.F1)
             {
                 btnnew.PerformClick();
             }
-            if (e.KeyCode == Keys.F2)
+            else if (e.KeyCode == Keys.F2)
             {
                 btnsave.PerformClick();
             }
-            if (e.KeyCode == Keys.F3)
+            else if (e.KeyCode == Keys.F3)
             {
                 btnedit.PerformClick();
             }
-            if (e.KeyCode == Keys.F4)
+            else if (e.KeyCode == Keys.F4)
             {
                 btndelete.PerformClick();
             }
-            if (e.KeyCode == Keys.F5)
+            else if (e.KeyCode == Keys.F5)
             {
                 btnview.PerformClick();
             }

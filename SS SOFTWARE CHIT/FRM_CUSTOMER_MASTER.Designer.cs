@@ -31,11 +31,11 @@ namespace SS_SOFTWARE_CHIT
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FRM_CUSTOMER_MASTER));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.picminimize = new System.Windows.Forms.PictureBox();
@@ -64,21 +64,21 @@ namespace SS_SOFTWARE_CHIT
             this.btnedit = new System.Windows.Forms.Button();
             this.btndelete = new System.Windows.Forms.Button();
             this.btnview = new System.Windows.Forms.Button();
-            this.lbladdress = new System.Windows.Forms.Label();
             this.customerdbBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.settings_dbDataSet = new SS_SOFTWARE_CHIT.Settings_dbDataSet();
-            this.lblcustomername = new System.Windows.Forms.Label();
-            this.lblcustomerid = new System.Windows.Forms.Label();
-            this.lbldelete = new System.Windows.Forms.Label();
-            this.lbledit = new System.Windows.Forms.Label();
-            this.lblsave = new System.Windows.Forms.Label();
+            this.customer_dbTableAdapter = new SS_SOFTWARE_CHIT.Settings_dbDataSetTableAdapters.Customer_dbTableAdapter();
+            this.lblid = new System.Windows.Forms.Label();
             this.lblmobileno = new System.Windows.Forms.Label();
             this.lblpincode = new System.Windows.Forms.Label();
             this.lblarea = new System.Windows.Forms.Label();
             this.lblchitamount = new System.Windows.Forms.Label();
             this.lblchittype = new System.Windows.Forms.Label();
-            this.lblid = new System.Windows.Forms.Label();
-            this.customer_dbTableAdapter = new SS_SOFTWARE_CHIT.Settings_dbDataSetTableAdapters.Customer_dbTableAdapter();
+            this.lbldelete = new System.Windows.Forms.Label();
+            this.lbledit = new System.Windows.Forms.Label();
+            this.lblsave = new System.Windows.Forms.Label();
+            this.lbladdress = new System.Windows.Forms.Label();
+            this.lblcustomername = new System.Windows.Forms.Label();
+            this.lblcustomerid = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picminimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.piclose)).BeginInit();
@@ -99,7 +99,7 @@ namespace SS_SOFTWARE_CHIT
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1280, 40);
-            this.panel1.TabIndex = 3;
+            this.panel1.TabIndex = 4;
             // 
             // label1
             // 
@@ -162,56 +162,56 @@ namespace SS_SOFTWARE_CHIT
             this.grpcustomer.Location = new System.Drawing.Point(140, 89);
             this.grpcustomer.Name = "grpcustomer";
             this.grpcustomer.Size = new System.Drawing.Size(1000, 500);
-            this.grpcustomer.TabIndex = 1;
+            this.grpcustomer.TabIndex = 5;
             this.grpcustomer.TabStop = false;
             this.grpcustomer.Text = "Create";
             // 
             // dgw_view
             // 
             this.dgw_view.AllowUserToAddRows = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dgw_view.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dgw_view.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
             this.dgw_view.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgw_view.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgw_view.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(63)))), ((int)(((byte)(92)))));
             this.dgw_view.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
             this.dgw_view.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgw_view.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgw_view.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.dgw_view.ColumnHeadersHeight = 30;
             this.dgw_view.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.LemonChiffon;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.LightCoral;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgw_view.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.LemonChiffon;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
+            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.LightCoral;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgw_view.DefaultCellStyle = dataGridViewCellStyle13;
             this.dgw_view.EnableHeadersVisualStyles = false;
             this.dgw_view.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(63)))), ((int)(((byte)(92)))));
             this.dgw_view.Location = new System.Drawing.Point(6, 253);
             this.dgw_view.Name = "dgw_view";
             this.dgw_view.ReadOnly = true;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.LemonChiffon;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgw_view.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.LemonChiffon;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgw_view.RowHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.dgw_view.RowHeadersVisible = false;
             this.dgw_view.RowHeadersWidth = 40;
             this.dgw_view.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dgw_view.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dgw_view.RowsDefaultCellStyle = dataGridViewCellStyle15;
             this.dgw_view.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgw_view.Size = new System.Drawing.Size(988, 241);
             this.dgw_view.TabIndex = 14;
@@ -312,7 +312,6 @@ namespace SS_SOFTWARE_CHIT
             this.txtchitamount.Name = "txtchitamount";
             this.txtchitamount.Size = new System.Drawing.Size(312, 27);
             this.txtchitamount.TabIndex = 8;
-            this.txtchitamount.TextChanged += new System.EventHandler(this.txtchitamount_TextChanged);
             this.txtchitamount.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Enter_Only);
             // 
             // txtchittype
@@ -325,7 +324,7 @@ namespace SS_SOFTWARE_CHIT
             this.txtchittype.Size = new System.Drawing.Size(312, 27);
             this.txtchittype.TabIndex = 7;
             this.txtchittype.Text = "MONTHLY";
-            this.txtchittype.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtchittype_KeyDown);
+            this.txtchittype.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Enter_Only);
             // 
             // txtmobileno
             // 
@@ -406,7 +405,7 @@ namespace SS_SOFTWARE_CHIT
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(5);
             this.flowLayoutPanel1.Size = new System.Drawing.Size(515, 61);
-            this.flowLayoutPanel1.TabIndex = 7;
+            this.flowLayoutPanel1.TabIndex = 8;
             // 
             // btnnew
             // 
@@ -493,17 +492,6 @@ namespace SS_SOFTWARE_CHIT
             this.btnview.UseVisualStyleBackColor = false;
             this.btnview.Click += new System.EventHandler(this.btnview_Click);
             // 
-            // lbladdress
-            // 
-            this.lbladdress.AutoSize = true;
-            this.lbladdress.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customerdbBindingSource, "f_customer_master_address", true));
-            this.lbladdress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(166)))), ((int)(((byte)(0)))));
-            this.lbladdress.Location = new System.Drawing.Point(12, 609);
-            this.lbladdress.Name = "lbladdress";
-            this.lbladdress.Size = new System.Drawing.Size(41, 13);
-            this.lbladdress.TabIndex = 682;
-            this.lbladdress.Text = "label13";
-            // 
             // customerdbBindingSource
             // 
             this.customerdbBindingSource.DataMember = "Customer_db";
@@ -514,70 +502,30 @@ namespace SS_SOFTWARE_CHIT
             this.settings_dbDataSet.DataSetName = "Settings_dbDataSet";
             this.settings_dbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // lblcustomername
+            // customer_dbTableAdapter
             // 
-            this.lblcustomername.AutoSize = true;
-            this.lblcustomername.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customerdbBindingSource, "f_customer_master_name", true));
-            this.lblcustomername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(166)))), ((int)(((byte)(0)))));
-            this.lblcustomername.Location = new System.Drawing.Point(12, 596);
-            this.lblcustomername.Name = "lblcustomername";
-            this.lblcustomername.Size = new System.Drawing.Size(41, 13);
-            this.lblcustomername.TabIndex = 681;
-            this.lblcustomername.Text = "label12";
+            this.customer_dbTableAdapter.ClearBeforeFill = true;
             // 
-            // lblcustomerid
+            // lblid
             // 
-            this.lblcustomerid.AutoSize = true;
-            this.lblcustomerid.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customerdbBindingSource, "f_customer_master_id", true));
-            this.lblcustomerid.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(166)))), ((int)(((byte)(0)))));
-            this.lblcustomerid.Location = new System.Drawing.Point(12, 583);
-            this.lblcustomerid.Name = "lblcustomerid";
-            this.lblcustomerid.Size = new System.Drawing.Size(41, 13);
-            this.lblcustomerid.TabIndex = 680;
-            this.lblcustomerid.Text = "label11";
-            // 
-            // lbldelete
-            // 
-            this.lbldelete.AutoSize = true;
-            this.lbldelete.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customerdbBindingSource, "f_customer_delete", true));
-            this.lbldelete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(166)))), ((int)(((byte)(0)))));
-            this.lbldelete.Location = new System.Drawing.Point(12, 571);
-            this.lbldelete.Name = "lbldelete";
-            this.lbldelete.Size = new System.Drawing.Size(41, 13);
-            this.lbldelete.TabIndex = 685;
-            this.lbldelete.Text = "label13";
-            // 
-            // lbledit
-            // 
-            this.lbledit.AutoSize = true;
-            this.lbledit.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customerdbBindingSource, "f_customer_edit", true));
-            this.lbledit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(166)))), ((int)(((byte)(0)))));
-            this.lbledit.Location = new System.Drawing.Point(12, 558);
-            this.lbledit.Name = "lbledit";
-            this.lbledit.Size = new System.Drawing.Size(41, 13);
-            this.lbledit.TabIndex = 684;
-            this.lbledit.Text = "label12";
-            // 
-            // lblsave
-            // 
-            this.lblsave.AutoSize = true;
-            this.lblsave.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customerdbBindingSource, "f_customer_save", true));
-            this.lblsave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(166)))), ((int)(((byte)(0)))));
-            this.lblsave.Location = new System.Drawing.Point(12, 545);
-            this.lblsave.Name = "lblsave";
-            this.lblsave.Size = new System.Drawing.Size(41, 13);
-            this.lblsave.TabIndex = 683;
-            this.lblsave.Text = "label11";
+            this.lblid.AutoSize = true;
+            this.lblid.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customerdbBindingSource, "f_customer_id", true));
+            this.lblid.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(166)))), ((int)(((byte)(0)))));
+            this.lblid.Location = new System.Drawing.Point(12, 526);
+            this.lblid.Name = "lblid";
+            this.lblid.Size = new System.Drawing.Size(41, 13);
+            this.lblid.TabIndex = 704;
+            this.lblid.Text = "label11";
             // 
             // lblmobileno
             // 
             this.lblmobileno.AutoSize = true;
             this.lblmobileno.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customerdbBindingSource, "f_customer_master_mobile_no", true));
             this.lblmobileno.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(166)))), ((int)(((byte)(0)))));
-            this.lblmobileno.Location = new System.Drawing.Point(12, 646);
+            this.lblmobileno.Location = new System.Drawing.Point(12, 640);
             this.lblmobileno.Name = "lblmobileno";
             this.lblmobileno.Size = new System.Drawing.Size(41, 13);
-            this.lblmobileno.TabIndex = 691;
+            this.lblmobileno.TabIndex = 703;
             this.lblmobileno.Text = "label13";
             // 
             // lblpincode
@@ -585,10 +533,10 @@ namespace SS_SOFTWARE_CHIT
             this.lblpincode.AutoSize = true;
             this.lblpincode.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customerdbBindingSource, "f_customer_master_pincode", true));
             this.lblpincode.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(166)))), ((int)(((byte)(0)))));
-            this.lblpincode.Location = new System.Drawing.Point(12, 633);
+            this.lblpincode.Location = new System.Drawing.Point(12, 627);
             this.lblpincode.Name = "lblpincode";
             this.lblpincode.Size = new System.Drawing.Size(41, 13);
-            this.lblpincode.TabIndex = 690;
+            this.lblpincode.TabIndex = 702;
             this.lblpincode.Text = "label12";
             // 
             // lblarea
@@ -596,10 +544,10 @@ namespace SS_SOFTWARE_CHIT
             this.lblarea.AutoSize = true;
             this.lblarea.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customerdbBindingSource, "f_customer_master_area", true));
             this.lblarea.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(166)))), ((int)(((byte)(0)))));
-            this.lblarea.Location = new System.Drawing.Point(12, 620);
+            this.lblarea.Location = new System.Drawing.Point(12, 614);
             this.lblarea.Name = "lblarea";
             this.lblarea.Size = new System.Drawing.Size(41, 13);
-            this.lblarea.TabIndex = 689;
+            this.lblarea.TabIndex = 701;
             this.lblarea.Text = "label11";
             // 
             // lblchitamount
@@ -607,10 +555,10 @@ namespace SS_SOFTWARE_CHIT
             this.lblchitamount.AutoSize = true;
             this.lblchitamount.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customerdbBindingSource, "f_customer_master_chit_amount", true));
             this.lblchitamount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(166)))), ((int)(((byte)(0)))));
-            this.lblchitamount.Location = new System.Drawing.Point(12, 671);
+            this.lblchitamount.Location = new System.Drawing.Point(12, 665);
             this.lblchitamount.Name = "lblchitamount";
             this.lblchitamount.Size = new System.Drawing.Size(41, 13);
-            this.lblchitamount.TabIndex = 687;
+            this.lblchitamount.TabIndex = 700;
             this.lblchitamount.Text = "label12";
             // 
             // lblchittype
@@ -618,26 +566,77 @@ namespace SS_SOFTWARE_CHIT
             this.lblchittype.AutoSize = true;
             this.lblchittype.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customerdbBindingSource, "f_customer_master_chit_type", true));
             this.lblchittype.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(166)))), ((int)(((byte)(0)))));
-            this.lblchittype.Location = new System.Drawing.Point(12, 658);
+            this.lblchittype.Location = new System.Drawing.Point(12, 652);
             this.lblchittype.Name = "lblchittype";
             this.lblchittype.Size = new System.Drawing.Size(41, 13);
-            this.lblchittype.TabIndex = 686;
+            this.lblchittype.TabIndex = 699;
             this.lblchittype.Text = "label11";
             // 
-            // lblid
+            // lbldelete
             // 
-            this.lblid.AutoSize = true;
-            this.lblid.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customerdbBindingSource, "f_customer_id", true));
-            this.lblid.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(166)))), ((int)(((byte)(0)))));
-            this.lblid.Location = new System.Drawing.Point(12, 532);
-            this.lblid.Name = "lblid";
-            this.lblid.Size = new System.Drawing.Size(41, 13);
-            this.lblid.TabIndex = 692;
-            this.lblid.Text = "label11";
+            this.lbldelete.AutoSize = true;
+            this.lbldelete.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customerdbBindingSource, "f_customer_delete", true));
+            this.lbldelete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(166)))), ((int)(((byte)(0)))));
+            this.lbldelete.Location = new System.Drawing.Point(12, 565);
+            this.lbldelete.Name = "lbldelete";
+            this.lbldelete.Size = new System.Drawing.Size(41, 13);
+            this.lbldelete.TabIndex = 698;
+            this.lbldelete.Text = "label13";
             // 
-            // customer_dbTableAdapter
+            // lbledit
             // 
-            this.customer_dbTableAdapter.ClearBeforeFill = true;
+            this.lbledit.AutoSize = true;
+            this.lbledit.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customerdbBindingSource, "f_customer_edit", true));
+            this.lbledit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(166)))), ((int)(((byte)(0)))));
+            this.lbledit.Location = new System.Drawing.Point(12, 552);
+            this.lbledit.Name = "lbledit";
+            this.lbledit.Size = new System.Drawing.Size(41, 13);
+            this.lbledit.TabIndex = 697;
+            this.lbledit.Text = "label12";
+            // 
+            // lblsave
+            // 
+            this.lblsave.AutoSize = true;
+            this.lblsave.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customerdbBindingSource, "f_customer_save", true));
+            this.lblsave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(166)))), ((int)(((byte)(0)))));
+            this.lblsave.Location = new System.Drawing.Point(12, 539);
+            this.lblsave.Name = "lblsave";
+            this.lblsave.Size = new System.Drawing.Size(41, 13);
+            this.lblsave.TabIndex = 696;
+            this.lblsave.Text = "label11";
+            // 
+            // lbladdress
+            // 
+            this.lbladdress.AutoSize = true;
+            this.lbladdress.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customerdbBindingSource, "f_customer_master_address", true));
+            this.lbladdress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(166)))), ((int)(((byte)(0)))));
+            this.lbladdress.Location = new System.Drawing.Point(12, 603);
+            this.lbladdress.Name = "lbladdress";
+            this.lbladdress.Size = new System.Drawing.Size(41, 13);
+            this.lbladdress.TabIndex = 695;
+            this.lbladdress.Text = "label13";
+            // 
+            // lblcustomername
+            // 
+            this.lblcustomername.AutoSize = true;
+            this.lblcustomername.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customerdbBindingSource, "f_customer_master_name", true));
+            this.lblcustomername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(166)))), ((int)(((byte)(0)))));
+            this.lblcustomername.Location = new System.Drawing.Point(12, 590);
+            this.lblcustomername.Name = "lblcustomername";
+            this.lblcustomername.Size = new System.Drawing.Size(41, 13);
+            this.lblcustomername.TabIndex = 694;
+            this.lblcustomername.Text = "label12";
+            // 
+            // lblcustomerid
+            // 
+            this.lblcustomerid.AutoSize = true;
+            this.lblcustomerid.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customerdbBindingSource, "f_customer_master_id", true));
+            this.lblcustomerid.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(166)))), ((int)(((byte)(0)))));
+            this.lblcustomerid.Location = new System.Drawing.Point(12, 577);
+            this.lblcustomerid.Name = "lblcustomerid";
+            this.lblcustomerid.Size = new System.Drawing.Size(41, 13);
+            this.lblcustomerid.TabIndex = 693;
+            this.lblcustomerid.Text = "label11";
             // 
             // FRM_CUSTOMER_MASTER
             // 
@@ -658,13 +657,13 @@ namespace SS_SOFTWARE_CHIT
             this.Controls.Add(this.lblcustomername);
             this.Controls.Add(this.lblcustomerid);
             this.Controls.Add(this.flowLayoutPanel1);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.grpcustomer);
+            this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.KeyPreview = true;
             this.Name = "FRM_CUSTOMER_MASTER";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "SS SOFTWARE";
+            this.Text = "FRM_CUSTOMER_MASTER";
             this.Load += new System.EventHandler(this.FRM_CUSTOMER_MASTER_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FRM_CUSTOMER_MASTER_KeyDown);
             this.panel1.ResumeLayout(false);
@@ -685,9 +684,9 @@ namespace SS_SOFTWARE_CHIT
         #endregion
 
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox picminimize;
         private System.Windows.Forms.PictureBox piclose;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox grpcustomer;
         private System.Windows.Forms.DataGridView dgw_view;
         private System.Windows.Forms.TextBox txtarea;
@@ -712,20 +711,20 @@ namespace SS_SOFTWARE_CHIT
         private System.Windows.Forms.Button btnedit;
         private System.Windows.Forms.Button btndelete;
         private System.Windows.Forms.Button btnview;
-        private System.Windows.Forms.Label lbladdress;
-        private System.Windows.Forms.Label lblcustomername;
-        private System.Windows.Forms.Label lblcustomerid;
-        private System.Windows.Forms.Label lbldelete;
-        private System.Windows.Forms.Label lbledit;
-        private System.Windows.Forms.Label lblsave;
+        private System.Windows.Forms.BindingSource customerdbBindingSource;
+        private Settings_dbDataSet settings_dbDataSet;
+        private Settings_dbDataSetTableAdapters.Customer_dbTableAdapter customer_dbTableAdapter;
+        private System.Windows.Forms.Label lblid;
         private System.Windows.Forms.Label lblmobileno;
         private System.Windows.Forms.Label lblpincode;
         private System.Windows.Forms.Label lblarea;
         private System.Windows.Forms.Label lblchitamount;
         private System.Windows.Forms.Label lblchittype;
-        private System.Windows.Forms.Label lblid;
-        private Settings_dbDataSet settings_dbDataSet;
-        private System.Windows.Forms.BindingSource customerdbBindingSource;
-        private Settings_dbDataSetTableAdapters.Customer_dbTableAdapter customer_dbTableAdapter;
+        private System.Windows.Forms.Label lbldelete;
+        private System.Windows.Forms.Label lbledit;
+        private System.Windows.Forms.Label lblsave;
+        private System.Windows.Forms.Label lbladdress;
+        private System.Windows.Forms.Label lblcustomername;
+        private System.Windows.Forms.Label lblcustomerid;
     }
 }

@@ -31,7 +31,7 @@ namespace SS_SOFTWARE_CHIT
         }
         private void Display()
         {
-            string Data = "Select ID,f_customer_id,f_customer_name,f_address,f_area,f_pincode,f_mobile_no,f_chit_type,f_chit_amount From Customer_db order by f_customer_id desc";
+            string Data = "Select ID,f_customer_id,f_customer_name,f_address,f_area,f_pincode,f_mobile_no,f_chit_type,f_chit_amount From Customer_db order by ID desc";
             DataSet ds = new DataSet();
             OleDbDataAdapter ad = new OleDbDataAdapter(Data, Main);
             ad.Fill(ds);

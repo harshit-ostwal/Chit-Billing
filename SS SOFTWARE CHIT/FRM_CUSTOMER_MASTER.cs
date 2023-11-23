@@ -13,11 +13,13 @@ namespace SS_SOFTWARE_CHIT
 {
     public partial class FRM_CUSTOMER_MASTER : Form
     {
+
         int i = 0;
         Connection connection = new Connection();
-        string Main = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source =" + Application.StartupPath + "/DATABASE/Main_db.accdb;Jet OLEDB:Database Password = SS9975";
-        string Setting = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source =" + Application.StartupPath + "/DATABASE/Settings_db.accdb;Jet OLEDB:Database Password = SS9975";
+        public static string Main = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source =" + Application.StartupPath + "/DATABASE/Main_db.accdb;Jet OLEDB:Database Password = SS9975";
+        public static string Setting = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source =" + Application.StartupPath + "/DATABASE/Settings_db.accdb;Jet OLEDB:Database Password = SS9975";
         WhatsApp app;
+
 
         public FRM_CUSTOMER_MASTER(WhatsApp whatsappInitialize)
         {
@@ -190,21 +192,6 @@ namespace SS_SOFTWARE_CHIT
             AutoNumber();
         }
 
-        private void btnedit_Click(object sender, EventArgs e)
-        {
-            grpcustomer.Text = "Edit";
-            if (grpcustomer.Text == "Edit")
-            {
-                Clear();
-                grpcustomer.Text = "Edit";
-                Display();
-            }
-            else
-            {
-                Clear();
-            }
-        }
-
         private void btnsave_Click(object sender, EventArgs e)
         {
             if (txtmobileno.TextLength >= 10 && txtmobileno.TextLength <= 10 || txtmobileno.Text == "0")
@@ -229,7 +216,7 @@ namespace SS_SOFTWARE_CHIT
                 {
                     if (grpcustomer.Text == "Update")
                     {
-                        if (txtpincode.Text != "" && txtmobileno.Text != "" && txtchittype.Text != "" && txtchitamount.Text != "")
+                        if (txtcustomername.Text != "" && txtaddress.Text != "" && txtarea.Text != "" && txtpincode.Text != "" && txtmobileno.Text != "" && txtchittype.Text != "" && txtchitamount.Text != "")
                         {
                             string CEditData = "Select * from Customer_db where f_customer_name ='" + txtcustomername.Text + "'";
                             string MEditData = "Update Customer_db set f_customer_id='" + txtcustomerid.Text + "', f_customer_name='" + txtcustomername.Text + "', f_address= '" + txtaddress.Text + "', f_area = '" + txtarea.Text + "',f_pincode='" + txtpincode.Text + "',f_mobile_no='" + txtmobileno.Text + "',f_chit_type='" + txtchittype.Text + "',f_chit_amount='" + txtchitamount.Text + "'  where ID=" + dgw_view.SelectedRows[i].Cells[0].Value.ToString() + "";
@@ -287,21 +274,6 @@ namespace SS_SOFTWARE_CHIT
             Clear();
         }
 
-        private void txtcustomername_TextChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                if (grpcustomer.Text == "Edit" || grpcustomer.Text == "View" && dgw_view.Visible == true)
-                {
-                    (dgw_view.DataSource as DataTable).DefaultView.RowFilter = string.Format("f_customer_name LIKE '%{0}%'", txtcustomername.Text);
-                }
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("INVAILD,PLS TRY AGAIN!!!", "SS SOFTWARE", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
         private void btnview_Click(object sender, EventArgs e)
         {
             grpcustomer.Text = "View";
@@ -317,84 +289,18 @@ namespace SS_SOFTWARE_CHIT
             }
         }
 
-        private void txtcustomername_KeyDown(object sender, KeyEventArgs e)
+        private void btnedit_Click(object sender, EventArgs e)
         {
+            grpcustomer.Text = "Edit";
             if (grpcustomer.Text == "Edit")
             {
-                if (e.KeyCode == Keys.Enter)
-                {
-                    if (txtcustomername.Text == "")
-                    {
-                        if (dgw_view.Visible == true)
-                        {
-                            SendKeys.Send("{TAB}");
-                            dgw_view.Hide();
-                        }
-                        else
-                        {
-                            dgw_view.Focus();
-                        }
-                    }
-                    else
-                    {
-                        dgw_view.Focus();
-                    }
-                }
-            }
-            else if (grpcustomer.Text == "View")
-            {
-                if (e.KeyCode == Keys.Enter)
-                {
-                    if (txtcustomername.Text == "")
-                    {
-                        if (dgw_view.Visible == true)
-                        {
-                            SendKeys.Send("{TAB}");
-                            dgw_view.Hide();
-                        }
-                        else
-                        {
-                            dgw_view.Focus();
-                        }
-                    }
-                    else if (dgw_view.Visible == false)
-                    {
-                        if (e.KeyCode == Keys.Enter)
-                        {
-                            SendKeys.Send("{TAB}");
-                        }
-                        if (e.KeyCode == Keys.Down)
-                        {
-                            SendKeys.Send("{TAB}");
-                        }
-                    }
-                    else
-                    {
-                        dgw_view.Focus();
-                    }
-                }
-            }
-            else if (grpcustomer.Text == "Update")
-            {
-                if (e.KeyCode == Keys.Enter)
-                {
-                    SendKeys.Send("{TAB}");
-                }
-                if (e.KeyCode == Keys.Down)
-                {
-                    SendKeys.Send("{TAB}");
-                }
+                Clear();
+                grpcustomer.Text = "Edit";
+                Display();
             }
             else
             {
-                if (e.KeyCode == Keys.Enter)
-                {
-                    SendKeys.Send("{TAB}");
-                }
-                if (e.KeyCode == Keys.Down)
-                {
-                    SendKeys.Send("{TAB}");
-                }
+                Clear();
             }
         }
 
@@ -497,9 +403,9 @@ namespace SS_SOFTWARE_CHIT
             {
                 if (grpcustomer.Text == "Update" || grpcustomer.Text == "View" || dgw_view.Visible == true)
                 {
-                    if (txtpincode.Text != "" && txtmobileno.Text != "" && txtchittype.Text != "" && txtchitamount.Text != "")
+                    if (txtcustomername.Text != "" && txtaddress.Text != "" && txtarea.Text != "" && txtpincode.Text != "" && txtmobileno.Text != "" && txtchittype.Text != "" && txtchitamount.Text != "")
                     {
-                        string MDeleteData = "Delete From Customer_db where ID=" + dgw_view.SelectedRows[i].Cells[0].Value.ToString() + "";
+                        string MDeleteData = "DELETE FROM Customer_db  Where ID=" + dgw_view.SelectedRows[i].Cells[0].Value.ToString() + "";
                         connection.MainDeleteData(MDeleteData);
                         AutoNumber();
                         Clear();
@@ -523,60 +429,6 @@ namespace SS_SOFTWARE_CHIT
             }
         }
 
-        private void FRM_CUSTOMER_MASTER_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Escape)
-            {
-                if (dgw_view.Visible == false)
-                {
-                    Clear();
-                    if (MessageBox.Show("DO YOU WANT TO CLOSE?", "SS SOFTWARE", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
-                    {
-                        FRM_HOME Home = new FRM_HOME(app);
-                        this.Hide();
-                        Home.Show();
-                    }
-                }
-                else
-                {
-                    if (dgw_view.Visible == false)
-                    {
-                        Clear();
-                        if (MessageBox.Show("DO YOU WANT TO CLOSE?", "SS SOFTWARE", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
-                        {
-                            FRM_HOME Home = new FRM_HOME(app);
-                            this.Hide();
-                            Home.Show();
-                        }
-                    }
-                    else
-                    {
-                        Clear();
-                    }
-                }
-            }
-            if (e.KeyCode == Keys.F1)
-            {
-                btnnew.PerformClick();
-            }
-            if (e.KeyCode == Keys.F2)
-            {
-                btnsave.PerformClick();
-            }
-            if (e.KeyCode == Keys.F3)
-            {
-                btnedit.PerformClick();
-            }
-            if (e.KeyCode == Keys.F4)
-            {
-                btndelete.PerformClick();
-            }
-            if (e.KeyCode == Keys.F5)
-            {
-                btnview.PerformClick();
-            }
-        }
-
         private void picminimize_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
@@ -593,38 +445,6 @@ namespace SS_SOFTWARE_CHIT
             }
         }
 
-        private void txtpincode_TextChanged(object sender, EventArgs e)
-        {
-            while (System.Text.RegularExpressions.Regex.IsMatch(txtpincode.Text, "[^0-9]"))
-            {
-                MessageBox.Show("ONLY NUMBERS !!!", "SS SOFTWARE", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                txtpincode.Text = "";
-                txtpincode.Focus();
-            }
-        }
-
-        private void txtchitamount_TextChanged(object sender, EventArgs e)
-        {
-            while (System.Text.RegularExpressions.Regex.IsMatch(txtchitamount.Text, "[^0-9]"))
-            {
-                MessageBox.Show("ONLY NUMBERS !!!", "SS SOFTWARE", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                txtchitamount.Text = "";
-                txtchitamount.Focus();
-            }
-        }
-
-        private void Enter_Only(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                SendKeys.Send("{TAB}");
-            }
-            if (e.KeyCode == Keys.Down)
-            {
-                SendKeys.Send("{TAB}");
-            }
-        }
-
         private void txtmobileno_TextChanged(object sender, EventArgs e)
         {
             while (System.Text.RegularExpressions.Regex.IsMatch(txtmobileno.Text, "[^0-9]"))
@@ -635,56 +455,101 @@ namespace SS_SOFTWARE_CHIT
             }
         }
 
-        private void txtchittype_KeyDown(object sender, KeyEventArgs e)
+        private void txtpincode_TextChanged(object sender, EventArgs e)
         {
-            if (e.KeyCode == Keys.Space)
+            while (System.Text.RegularExpressions.Regex.IsMatch(txtpincode.Text, "[^0-9]"))
             {
-                if (txtchittype.Text == "DAILY")
+                MessageBox.Show("ONLY NUMBERS !!!", "SS SOFTWARE", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtpincode.Text = "";
+                txtpincode.Focus();
+            }
+        }
+
+        private void txtcustomername_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (grpcustomer.Text == "Edit" || grpcustomer.Text == "View" && dgw_view.Visible == true)
                 {
-                    txtchittype.Text = "MONTHLY";
+                    (dgw_view.DataSource as DataTable).DefaultView.RowFilter = string.Format("f_customer_name LIKE '%{0}%'", txtcustomername.Text);
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("INVAILD,PLS TRY AGAIN!!!", "SS SOFTWARE", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void txtcustomername_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (txtcustomername.Text == "")
+                {
+                    if (dgw_view.Visible)
+                    {
+                        SendKeys.Send("{TAB}");
+                        dgw_view.Hide();
+                    }
+                    else if (grpcustomer.Text == "View" && !dgw_view.Visible)
+                    {
+                        SendKeys.Send("{TAB}");
+                    }
+                    else
+                    {
+                        dgw_view.Focus();
+                    }
                 }
                 else
                 {
-                    if (e.KeyCode == Keys.Space)
-                    {
-                        if (txtchittype.Text == "DAILY")
-                        {
-                            txtchittype.Text = "MONTHLY";
-                        }
-                        else
-                        {
-                            if (e.KeyCode == Keys.Space)
-                            {
-                                if (txtchittype.Text == "MONTHLY")
-                                {
-                                    txtchittype.Text = "YEARLY";
-                                }
-                                else
-                                {
-                                    if (e.KeyCode == Keys.Space)
-                                    {
-                                        if (txtchittype.Text == "YEARLY")
-                                        {
-                                            txtchittype.Text = "DAILY";
-                                        }
-                                        else
-                                        {
-
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
+                    SendKeys.Send("{TAB}");
                 }
             }
-            else
-            {
-
-            }
-            if (e.KeyCode == Keys.Enter)
+            else if (e.KeyCode == Keys.Down)
             {
                 SendKeys.Send("{TAB}");
+            }
+        }
+
+        private void Enter_Only(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter || e.KeyCode == Keys.Down)
+            {
+                SendKeys.Send("{TAB}");
+            }
+        }
+
+        private void FRM_CUSTOMER_MASTER_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                if (MessageBox.Show("DO YOU WANT TO CLOSE?", "SS SOFTWARE", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                {
+                    FRM_HOME Home = new FRM_HOME(app);
+                    this.Hide();
+                    Home.Show();
+                }
+                Clear();
+            }
+            else if (e.KeyCode == Keys.F1)
+            {
+                btnnew.PerformClick();
+            }
+            else if (e.KeyCode == Keys.F2)
+            {
+                btnsave.PerformClick();
+            }
+            else if (e.KeyCode == Keys.F3)
+            {
+                btnedit.PerformClick();
+            }
+            else if (e.KeyCode == Keys.F4)
+            {
+                btndelete.PerformClick();
+            }
+            else if (e.KeyCode == Keys.F5)
+            {
+                btnview.PerformClick();
             }
         }
     }
