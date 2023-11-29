@@ -155,7 +155,7 @@ namespace SS_SOFTWARE_CHIT
                 }
             }
             OleDbConnection con1 = new OleDbConnection(Main);
-            string str = "select last(f_customer_id) from Customer_db";
+            string str = "SELECT f_customer_id FROM Customer_db order by ID desc";
             cmd = new OleDbCommand(str, con1);
             con1.Open();
             var maxid = cmd.ExecuteScalar() as string;

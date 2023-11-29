@@ -296,9 +296,10 @@ namespace SS_SOFTWARE_CHIT
             dgw_view.Columns[10].HeaderText = "BALANCE";
         }
 
-        private void msg()
+        string msg;
+        private void Msg()
         {
-            string msg = lblmsg.Text;
+            msg = lblmsg.Text;
             string customerIdRemove = "{CUSTOMER_ID}";
             string customerNameRemove = "{CUSTOMER_NAME}";
             string mobileNoRemove = "{MOBILE_NO}";
@@ -341,20 +342,20 @@ namespace SS_SOFTWARE_CHIT
         {
             if (MessageBox.Show("DO YOU WANT TO SEND WHATSAPP BILL?", "SS SOFTWARE", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
             {
-                msg();
+                Msg();
                 string pdf = Path.Combine(Application.StartupPath, "REPORTS", "BILL" + ".pdf");
                 openFileDialog1.FileName = pdf;
-                string Url = "https://web.whatsapp.com/send?phone=" + txtmobileno.Text + "&text=" + lblmsg.Text + "%0a%0a_" + "👍 Feel free to reach out if you need any further assistance or have specific payment preferences. Thank you for your business.😊_" ;
+                string Url = "https://web.whatsapp.com/send?phone=" + txtmobileno.Text + "&text=" + lblmsg.Text + "%0a%0a_" + "👍 Feel free to reach out if you need any further assistance or have specific payment preferences. Thank you for your business.😊_";
                 if (lblstatus.Text == "WHATSAPP READY")
                 {
-                    WebDriverWait wait = new WebDriverWait(app.driver, TimeSpan.FromSeconds(10));
+                    WebDriverWait wait = new WebDriverWait(app.driver, TimeSpan.FromSeconds(15));
                     app.driver.Navigate().GoToUrl(Url);
 
                     try
                     {
                         if (wait.Until(driver => driver.PageSource.Contains("Phone number shared via url is invalid.")) == true)
                         {
-                            app.driver.FindElement(By.XPath("// div[@class='tvf2evcx m0h2a7mj lb5m6g5c j7l1k36l ktfrpxia nu7pwgvd p357zi0d dnb887gk gjuq5ydh i2cterl7 i6vnu1w3 qjslfuze ac2vgrno sap93d0t gndfcl4n']")).Click();
+                            app.driver.FindElement(By.XPath("// div[@class='tvf2evcx m0h2a7mj lb5m6g5c j7l1k36l ktfrpxia nu7pwgvd p357zi0d dnb887gk gjuq5ydh i2cterl7 fhf7t426 sap93d0t r6jd426a niluw8xz']")).Click();
                             MessageBox.Show("WRONG MOBILE NO?", "SS SOFTWARE", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                             txtmobileno.Focus();
                             lbl();
@@ -370,7 +371,21 @@ namespace SS_SOFTWARE_CHIT
                         lbl();
                     }
                     this.Focus();
-                }   
+                    msg = null;
+                    OleDbCommand cmd = new OleDbCommand();
+                    OleDbConnection con = new OleDbConnection(Setting);
+                    string Data = "Select f_msg from Whatsapp_db";
+                    OleDbDataReader dr;
+                    con.Open();
+                    cmd = new OleDbCommand(Data, con);
+                    dr = cmd.ExecuteReader();
+                    while (dr.Read())
+                    {
+                        lblmsg.Text = dr.GetValue(0).ToString();
+                    }
+                    con.Close();
+                    msg = lblmsg.Text;
+                }
                 else
                 {
                     MessageBox.Show("WHATSAPP NOT AUTHORIZED?", "SS SOFTWARE", MessageBoxButtons.OK, MessageBoxIcon.Warning);
