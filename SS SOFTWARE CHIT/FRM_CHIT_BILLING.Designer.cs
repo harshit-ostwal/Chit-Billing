@@ -951,7 +951,7 @@ namespace SS_SOFTWARE_CHIT
             this.lblmsg.AutoSize = true;
             this.lblmsg.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.whatsappdbBindingSource, "f_msg", true));
             this.lblmsg.Font = new System.Drawing.Font("Futura Std Book", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblmsg.ForeColor = System.Drawing.Color.Black;
+            this.lblmsg.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(166)))), ((int)(((byte)(0)))));
             this.lblmsg.Location = new System.Drawing.Point(11, 597);
             this.lblmsg.Name = "lblmsg";
             this.lblmsg.Size = new System.Drawing.Size(125, 21);
