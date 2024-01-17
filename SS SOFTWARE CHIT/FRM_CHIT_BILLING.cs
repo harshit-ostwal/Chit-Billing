@@ -1,16 +1,9 @@
-﻿using CrystalDecisions.CrystalReports.Engine;
-using OpenQA.Selenium;
+﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.OleDb;
-using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SS_SOFTWARE_CHIT
@@ -345,7 +338,7 @@ namespace SS_SOFTWARE_CHIT
                 Msg();
                 string pdf = Path.Combine(Application.StartupPath, "REPORTS", "BILL" + ".pdf");
                 openFileDialog1.FileName = pdf;
-                string Url = "https://web.whatsapp.com/send?phone=" + txtmobileno.Text + "&text=" + lblmsg.Text + "%0a%0a_" + "👍 Feel free to reach out if you need any further assistance or have specific payment preferences. Thank you for your business.😊_";
+                string Url = "https://web.whatsapp.com/send?phone=" + "+91" + txtmobileno.Text + "&text=" + lblmsg.Text + "%0a%0a_" + "👍 Feel free to reach out if you need any further assistance or have specific payment preferences. Thank you for your business.😊_";
                 if (lblstatus.Text == "WHATSAPP READY")
                 {
                     WebDriverWait wait = new WebDriverWait(app.driver, TimeSpan.FromSeconds(15));
