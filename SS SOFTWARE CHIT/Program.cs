@@ -28,7 +28,7 @@ namespace SS_SOFTWARE_CHIT
                         Application.EnableVisualStyles();
                         Application.SetCompatibleTextRenderingDefault(false);
                         DateTime dt1 = DateTime.Now;
-                        DateTime dt2 = DateTime.Parse("01/04/2024");
+                        DateTime dt2 = DateTime.Parse("01/04/2025");
                         DateTime dt3 = DateTime.Parse("03/04/2024");
                         if (dt1.Date >= dt2.Date)
                         {
