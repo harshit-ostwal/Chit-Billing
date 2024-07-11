@@ -28,7 +28,7 @@ namespace SS_SOFTWARE_CHIT
             {
                 app = whatsappInitialize;
             }
-            catch (Exception)
+            catch
             {
 
             }
@@ -341,7 +341,7 @@ namespace SS_SOFTWARE_CHIT
                     Clear();
                 }
             }
-            catch (Exception)
+            catch
             {
                 MessageBox.Show("UNABLE TO DISPLAY DATA???", "SS SOFTWARE", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -391,7 +391,7 @@ namespace SS_SOFTWARE_CHIT
                     Clear();
                 }
             }
-            catch (Exception)
+            catch
             {
                 MessageBox.Show("UNABLE TO DISPLAY DATA???", "SS SOFTWARE", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -474,7 +474,7 @@ namespace SS_SOFTWARE_CHIT
                     (dgw_view.DataSource as DataTable).DefaultView.RowFilter = string.Format("f_customer_name LIKE '%{0}%'", txtcustomername.Text);
                 }
             }
-            catch (Exception)
+            catch
             {
                 MessageBox.Show("INVAILD,PLS TRY AGAIN!!!", "SS SOFTWARE", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }

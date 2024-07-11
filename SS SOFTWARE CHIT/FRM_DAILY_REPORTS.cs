@@ -25,7 +25,7 @@ namespace SS_SOFTWARE_CHIT
             {
                 app = whatsappInitialize;
             }
-            catch (Exception)
+            catch
             {
 
             }
@@ -311,7 +311,7 @@ namespace SS_SOFTWARE_CHIT
                     Cal();
                 }
             }
-            catch (Exception)
+            catch
             {
                 MessageBox.Show("INVAILD,PLS TRY AGAIN!!!", "SS SOFTWARE", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -363,7 +363,7 @@ namespace SS_SOFTWARE_CHIT
                                 txtmobileno.Focus();
                             }
                         }
-                        catch (Exception)
+                        catch
                         {
                             app.driver.FindElement(By.XPath("//div[@title='Attach']")).Click();
                             app.driver.FindElement(By.XPath("//input[@accept='*']")).SendKeys(openFileDialog1.FileName.ToString());
@@ -377,7 +377,7 @@ namespace SS_SOFTWARE_CHIT
                     }
                 }
             }
-            catch (Exception)
+            catch
             {
 
             }
@@ -499,7 +499,7 @@ namespace SS_SOFTWARE_CHIT
                     }
                 }
             }
-            catch (Exception)
+            catch
             {
                 pnlmail.Hide();
             }

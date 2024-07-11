@@ -34,7 +34,7 @@ namespace SS_SOFTWARE_CHIT
             {
                 app = whatsappInitialize;
             }
-            catch (Exception)
+            catch
             {
 
             }

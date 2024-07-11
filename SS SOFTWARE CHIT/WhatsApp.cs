@@ -16,7 +16,7 @@ namespace SS_SOFTWARE_CHIT
         public IWebDriver driver;
         public ChromeDriverService service = ChromeDriverService.CreateDefaultService();
         public ChromeOptions options = new ChromeOptions();
-        public string Url = "https://web.whatsapp.com"; 
+        public string Url = "https://web.whatsapp.com";
 
         public WhatsApp()
         {
@@ -28,10 +28,10 @@ namespace SS_SOFTWARE_CHIT
             try
             {
                 service.HideCommandPromptWindow = true;
-                options.AddArguments("--window-position=32000,-32000","user-data-dir="+Application.StartupPath + "\\WHATSAPP DATA\\Google\\Chrome\\User Data");
+                options.AddArguments("--headless=new", "user-data-dir=" + Application.StartupPath + "\\WHATSAPP DATA\\Google\\Chrome\\User Data");
                 driver = new ChromeDriver(service, options);
             }
-            catch (Exception)
+            catch
             {
 
             }
@@ -43,7 +43,7 @@ namespace SS_SOFTWARE_CHIT
             {
                 await Task.Run(() => driver.Navigate().GoToUrl(Url));
             }
-            catch (Exception)
+            catch
             {
 
             }
@@ -69,7 +69,7 @@ namespace SS_SOFTWARE_CHIT
                         MessageBox.Show("NOT CONNECTED TO WHATSAPP?", "SS SOFTWARE", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
-                catch (Exception)
+                catch
                 {
 
                 }
@@ -80,7 +80,7 @@ namespace SS_SOFTWARE_CHIT
         {
             try
             {
-                IWebElement divElement = driver.FindElement(By.XPath("//div[@class='_2I5ox']"));
+                IWebElement divElement = driver.FindElement(By.XPath("//div[@class='_akau']"));
                 var location = divElement.Location;
                 var size = divElement.Size;
                 Screenshot screenshot = ((ITakesScreenshot)driver).GetScreenshot();
@@ -102,7 +102,7 @@ namespace SS_SOFTWARE_CHIT
                     }
                 }
             }
-            catch (Exception)
+            catch
             {
 
             }

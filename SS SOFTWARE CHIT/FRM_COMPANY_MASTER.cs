@@ -26,7 +26,7 @@ namespace SS_SOFTWARE_CHIT
             {
                 app = whatsappInitialize;
             }
-            catch (Exception)
+            catch
             {
 
             }
@@ -43,7 +43,7 @@ namespace SS_SOFTWARE_CHIT
         {
             OleDbCommand cmd = new OleDbCommand();
             OleDbConnection con = new OleDbConnection(Setting);
-            string Data = "Select f_company_master_no from Company_db";
+            string Data = "SELECT f_company_master_no FROM Company_db";
             OleDbDataReader dr;
             con.Open();
             cmd = new OleDbCommand(Data, con);
@@ -332,7 +332,7 @@ namespace SS_SOFTWARE_CHIT
                     Clear();
                 }
             }
-            catch (Exception)
+            catch
             {
                 MessageBox.Show("UNABLE TO DISPLAY DATA???", "SS SOFTWARE", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -382,7 +382,7 @@ namespace SS_SOFTWARE_CHIT
                     Clear();
                 }
             }
-            catch (Exception)
+            catch
             {
                 MessageBox.Show("UNABLE TO DISPLAY DATA???", "SS SOFTWARE", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -465,7 +465,7 @@ namespace SS_SOFTWARE_CHIT
                     (dgw_view.DataSource as DataTable).DefaultView.RowFilter = string.Format("f_company_name LIKE '%{0}%'", txtcompanyname.Text);
                 }
             }
-            catch (Exception)
+            catch
             {
                 MessageBox.Show("INVAILD,PLS TRY AGAIN!!!", "SS SOFTWARE", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }

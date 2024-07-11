@@ -667,6 +667,7 @@ namespace SS_SOFTWARE_CHIT
             this.Controls.Add(this.pnlbuttons);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnldate);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.KeyPreview = true;
             this.Name = "FRM_YEARLY_REPORTS";

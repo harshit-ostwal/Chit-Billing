@@ -91,7 +91,7 @@ namespace SS_SOFTWARE_CHIT
                     }
                 }
             }
-            catch (Exception)
+            catch
             {
                 MessageBox.Show("UNABLE TO SAVE???", "SS SOFTWARE", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -121,7 +121,7 @@ namespace SS_SOFTWARE_CHIT
                     });
                 }
             }
-            catch (Exception)
+            catch
             {
                 MessageBox.Show("UNABLE TO SAVE???", "SS SOFTWARE", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -150,7 +150,7 @@ namespace SS_SOFTWARE_CHIT
                     File.Copy(ThisDB, Destitnation);
                 }
             }
-            catch (Exception)
+            catch
             {
                 MessageBox.Show("UNABLE TO SAVE???", "SS SOFTWARE", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -175,7 +175,7 @@ namespace SS_SOFTWARE_CHIT
                     File.Copy(ThisDB, Destitnation);
                 }
             }
-            catch (Exception)
+            catch
             {
                 MessageBox.Show("UNABLE TO EDIT???", "SS SOFTWARE", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -200,7 +200,7 @@ namespace SS_SOFTWARE_CHIT
                     File.Copy(ThisDB, Destitnation);
                 }
             }
-            catch (Exception)
+            catch
             {
                 MessageBox.Show("UNABLE TO DELETE???,PLS TRY AGAIN!!!", "SS SOFTWARE", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }

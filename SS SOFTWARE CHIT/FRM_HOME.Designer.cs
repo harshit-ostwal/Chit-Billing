@@ -1325,6 +1325,7 @@ namespace SS_SOFTWARE_CHIT
             this.Controls.Add(this.lblstatus);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.KeyPreview = true;
             this.Name = "FRM_HOME";

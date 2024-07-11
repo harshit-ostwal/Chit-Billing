@@ -25,7 +25,7 @@ namespace SS_SOFTWARE_CHIT
             {
                 app = whatsappInitialize;
             }
-            catch (Exception)
+            catch
             {
 
             }
@@ -88,7 +88,7 @@ namespace SS_SOFTWARE_CHIT
                     Clearall();
                 }
             }
-            catch (Exception)
+            catch
             {
                 MessageBox.Show("INCORRECT EMAIL ID???,PLS TRY AGAIN!!!", "SS SOFTWARE", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Clearall();

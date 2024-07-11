@@ -1,7 +1,10 @@
-﻿using System;
+﻿using OpenQA.Selenium;
+using OpenQA.Selenium.Support.UI;
+using System;
 using System.Data;
 using System.Data.OleDb;
 using System.IO;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace SS_SOFTWARE_CHIT
@@ -24,7 +27,7 @@ namespace SS_SOFTWARE_CHIT
             {
                 app = whatsappInitialize;
             }
-            catch (Exception)
+            catch
             {
 
             }
@@ -95,7 +98,7 @@ namespace SS_SOFTWARE_CHIT
                 dgw_view.Visible = true;
                 dgw_customer.Visible = true;
             }
-            catch (Exception)
+            catch
             {
                 MessageBox.Show("INVAILD,PLS TRY AGAIN!!!", "SS SOFTWARE", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -109,7 +112,7 @@ namespace SS_SOFTWARE_CHIT
                 (dgw_customer.DataSource as DataTable).DefaultView.RowFilter = string.Format("f_customer_id LIKE '%{0}%'", txtcustomerid.Text);
                 (dgw_view.DataSource as DataTable).DefaultView.RowFilter = string.Format("f_customer_id LIKE '{0}'", txtcustomerid.Text);
             }
-            catch (Exception)
+            catch
             {
                 MessageBox.Show("INVAILD,PLS TRY AGAIN!!!", "SS SOFTWARE", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -123,7 +126,7 @@ namespace SS_SOFTWARE_CHIT
                 (dgw_customer.DataSource as DataTable).DefaultView.RowFilter = string.Format("f_customer_name LIKE '%{0}%'", txtcustomername.Text);
                 (dgw_view.DataSource as DataTable).DefaultView.RowFilter = string.Format("f_customer_name LIKE '{0}'", txtcustomername.Text);
             }
-            catch (Exception)
+            catch
             {
                 MessageBox.Show("INVAILD,PLS TRY AGAIN!!!", "SS SOFTWARE", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -134,7 +137,7 @@ namespace SS_SOFTWARE_CHIT
         {
             try
             {
-                if (e.KeyCode == Keys.Enter)
+                if (e.KeyCode == System.Windows.Forms.Keys.Enter)
                 {
                     if (txtcustomername.Text == "")
                     {
@@ -145,7 +148,7 @@ namespace SS_SOFTWARE_CHIT
                         dgw_customer.Focus();
                     }
                 }
-                if (e.KeyCode == Keys.Down)
+                if (e.KeyCode == System.Windows.Forms.Keys.Down)
                 {
                     if (dgw_customer.Visible == true)
                     {
@@ -157,7 +160,7 @@ namespace SS_SOFTWARE_CHIT
                     }
                 }
             }
-            catch (Exception)
+            catch
             {
                 MessageBox.Show("ERROR,PLS TRY AGAIN!!!", "SS SOFTWARE", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -167,7 +170,7 @@ namespace SS_SOFTWARE_CHIT
         {
             try
             {
-                if (e.KeyCode == Keys.Enter)
+                if (e.KeyCode == System.Windows.Forms.Keys.Enter)
                 {
                     if (txtcustomerid.Text == "")
                     {
@@ -178,7 +181,7 @@ namespace SS_SOFTWARE_CHIT
                         dgw_customer.Focus();
                     }
                 }
-                if (e.KeyCode == Keys.Down)
+                if (e.KeyCode == System.Windows.Forms.Keys.Down)
                 {
                     if (dgw_customer.Visible == true)
                     {
@@ -190,7 +193,7 @@ namespace SS_SOFTWARE_CHIT
                     }
                 }
             }
-            catch (Exception)
+            catch
             {
                 MessageBox.Show("ERROR,PLS TRY AGAIN!!!", "SS SOFTWARE", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -200,7 +203,7 @@ namespace SS_SOFTWARE_CHIT
         {
             try
             {
-                if (e.KeyCode == Keys.Enter)
+                if (e.KeyCode == System.Windows.Forms.Keys.Enter)
                 {
                     txtcustomerid.Text = dgw_customer.SelectedRows[i].Cells[1].Value.ToString();
                     txtcustomername.Text = dgw_customer.SelectedRows[i].Cells[2].Value.ToString();
@@ -209,10 +212,29 @@ namespace SS_SOFTWARE_CHIT
                     dgw_view.Visible = true;
                 }
             }
-            catch (Exception)
+            catch
             {
 
             }
+        }
+
+        public void Send()
+        {
+            string Url = "https://web.whatsapp.com/send?phone=" + "+91" + txtmobileno.Text + "&text=" + "Hi *" + txtcustomername.Text + "*,%0a%0a*❌Chit Scheme Cancellation Request❌*%0a%0a*_Customer ID - " + txtcustomerid.Text + "_*%0a*_Mobile No - " + txtmobileno.Text + "_*" + "%0a%0a_📅 We wanted to inform you that your chit scheme card has been cancelled as per your request._%0a%0a_🙏 We appreciate your understanding and thank you for being a valued customer._%0a%0a_🔍 We hope you come back again and apply for another chit scheme card in the future._" + "%0a%0a*_Thank You!♥️_*%0a*M.S JEWELLERY*";
+            WebDriverWait web = new WebDriverWait(app.driver, TimeSpan.FromSeconds(30));
+            app.driver.Navigate().GoToUrl(Url);
+            Thread.Sleep(5000);
+            if (app.driver.PageSource.Contains("Phone number shared via url is invalid.") == true)
+            {
+                app.driver.FindElement(By.XPath("// div[@class='tvf2evcx m0h2a7mj lb5m6g5c j7l1k36l ktfrpxia nu7pwgvd p357zi0d dnb887gk gjuq5ydh i2cterl7 fhf7t426 sap93d0t r6jd426a niluw8xz']")).Click();
+                MessageBox.Show("WRONG MOBILE NO?", "SS SOFTWARE", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                web.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(By.XPath("//button[@aria-label='Send']")));
+                app.driver.FindElement(By.XPath("//button[@aria-label='Send']")).Click();
+            }
+            this.Focus();
         }
 
         private void btndelete_Click(object sender, EventArgs e)
@@ -224,6 +246,7 @@ namespace SS_SOFTWARE_CHIT
         {
             if (txtcustomerid.Text != "" && txtcustomername.Text != "" && txtarea.Text != "" && txtmobileno.Text != "")
             {
+                Send();
                 string MDeleteData = "DELETE FROM Customer_db Where ID=" + dgw_customer.SelectedRows[i].Cells[0].Value.ToString() + "";
                 con = new OleDbConnection(Main);
                 con.Open();
@@ -232,9 +255,9 @@ namespace SS_SOFTWARE_CHIT
                 cmd.ExecuteNonQuery();
                 con.Close();
                 DeleteChitData();
+                MessageBox.Show("RECORD DELETED SUCCESSFULLY!", "SS SOFTWARE", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Data();
                 Display();
-                MessageBox.Show("RECORD DELETED SUCCESSFULLY!", "SS SOFTWARE", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -278,7 +301,7 @@ namespace SS_SOFTWARE_CHIT
 
         private void FRM_RECORD_DELETE_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Escape)
+            if (e.KeyCode == System.Windows.Forms.Keys.Escape)
             {
                 if (dgw_view.Visible == false && dgw_customer.Visible == false)
                 {

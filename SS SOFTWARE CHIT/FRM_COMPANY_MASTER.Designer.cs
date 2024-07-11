@@ -729,6 +729,7 @@ namespace SS_SOFTWARE_CHIT
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.grpcustomer);
             this.Controls.Add(this.panel1);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.KeyPreview = true;
             this.Name = "FRM_COMPANY_MASTER";

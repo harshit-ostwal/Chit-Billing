@@ -1080,6 +1080,7 @@ namespace SS_SOFTWARE_CHIT
             this.Controls.Add(this.lblcustomerid1);
             this.Controls.Add(this.lblcustomername);
             this.Controls.Add(this.lblcustomerid);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.KeyPreview = true;
             this.Name = "FRM_CHIT_BILLING";

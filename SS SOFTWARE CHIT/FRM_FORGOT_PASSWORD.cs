@@ -24,7 +24,7 @@ namespace SS_SOFTWARE_CHIT
             {
                 app = whatsappInitialize;
             }
-            catch (Exception)
+            catch
             {
 
             }
@@ -174,7 +174,7 @@ namespace SS_SOFTWARE_CHIT
                     MessageBox.Show("TURN ON THE INTERNET CONNECTION???", "SS SOFTWARE", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            catch (Exception)
+            catch
             {
 
             }
@@ -335,7 +335,7 @@ namespace SS_SOFTWARE_CHIT
                     MessageBox.Show("TURN ON THE INTERNET CONNECTION???", "SS SOFTWARE", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            catch (Exception)
+            catch
             {
 
             }
@@ -607,7 +607,7 @@ namespace SS_SOFTWARE_CHIT
                     MessageBox.Show("TURN ON THE INTERNET CONNECTION???", "SS SOFTWARE", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            catch (Exception)
+            catch
             {
 
             }

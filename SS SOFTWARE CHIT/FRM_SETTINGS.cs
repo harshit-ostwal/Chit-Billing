@@ -21,7 +21,7 @@ namespace SS_SOFTWARE_CHIT
             {
                 app = whatsappInitialize;
             }
-            catch (Exception)
+            catch
             {
 
             }
@@ -187,7 +187,7 @@ namespace SS_SOFTWARE_CHIT
                     }
                 }
             }
-            catch (Exception)
+            catch
             {
 
             }
@@ -298,7 +298,7 @@ namespace SS_SOFTWARE_CHIT
                     bunifubtn.Visible = bunifubtn.Text.ToLower().Contains(txtsearch.Text.ToLower().Trim());
                 }
             }
-            catch (Exception)
+            catch
             {
                 MessageBox.Show("INVAILD,PLS TRY AGAIN!!!", "SS SOFTWARE", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -536,7 +536,7 @@ namespace SS_SOFTWARE_CHIT
                     MessageBox.Show("BACKUP SUCCESSFULLY!!!", "SS SOFTWARE", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
-            catch (Exception)
+            catch
             {
 
             }
@@ -576,7 +576,7 @@ namespace SS_SOFTWARE_CHIT
 
                 }
             }
-            catch (Exception)
+            catch
             {
 
             }
@@ -644,6 +644,13 @@ namespace SS_SOFTWARE_CHIT
         {
             FRM_REMINDER Reminder = new FRM_REMINDER(app);
             Reminder.Show();
+            this.Hide();
+        }
+
+        private void btnBlukMsg_Click(object sender, EventArgs e)
+        {
+            FRM_BULK_MSG BlukMSG = new FRM_BULK_MSG(app);
+            BlukMSG.Show();
             this.Hide();
         }
     }

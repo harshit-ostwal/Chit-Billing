@@ -28,7 +28,7 @@ namespace SS_SOFTWARE_CHIT
             {
                 app = whatsappInitialize;
             }
-            catch (Exception)
+            catch
             {
 
             }
@@ -46,7 +46,7 @@ namespace SS_SOFTWARE_CHIT
                         wait.Until(driver => driver.Url.Contains("web.whatsapp.com"));
                         wait.Until(driver => app.driver.PageSource.Contains("Use WhatsApp on your computer"));
                     }
-                    catch (Exception)
+                    catch
                     {
 
                     }
@@ -61,7 +61,7 @@ namespace SS_SOFTWARE_CHIT
                     lblstatus.Text = "WHATSAPP READY";
                 }
             }
-            catch (Exception)
+            catch
             {
 
             }
@@ -80,7 +80,7 @@ namespace SS_SOFTWARE_CHIT
                     this.Focus();
                 }
             }
-            catch (Exception)
+            catch
             {
                 MessageBox.Show("WHATSAPP IS NOT RUNNING...", "SS SOFTWARE", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -95,7 +95,7 @@ namespace SS_SOFTWARE_CHIT
                 MessageBox.Show("WHATSAPP IS TERMINATED...", "SS SOFTWARE", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 picqrcode.Image = picqrcode.InitialImage;
             }
-            catch (Exception)
+            catch
             {
 
             }
@@ -120,7 +120,7 @@ namespace SS_SOFTWARE_CHIT
                     MessageBox.Show("WHATSAPP IS RUNNING...", "SS SOFTWARE", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
-            catch (Exception)
+            catch
             {
                 app.InitializeDriver();
                 await Initialize();
@@ -151,7 +151,7 @@ namespace SS_SOFTWARE_CHIT
                     MessageBox.Show("ALREADY CONNECTED TO WHATSAPP!", "SS SOFTWARE", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            catch (Exception)
+            catch
             {
                 lblstatus.Text = "WHATSAPP NOT READY";
                 MessageBox.Show("WHATSAPP IS NOT RUNNING...", "SS SOFTWARE", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -174,7 +174,7 @@ namespace SS_SOFTWARE_CHIT
                     picqrcode.Image = picqrcode.InitialImage;
                 }
             }
-            catch (Exception)
+            catch
             {
                 lblstatus.Text = "WHATSAPP NOT READY";
                 MessageBox.Show("WHATSAPP IS NOT RUNNING...", "SS SOFTWARE", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -200,7 +200,7 @@ namespace SS_SOFTWARE_CHIT
                     timer2.Start();
                 }
             }
-            catch (Exception)
+            catch
             {
 
             }
@@ -226,7 +226,7 @@ namespace SS_SOFTWARE_CHIT
                     picqrcode.Image = picqrcode.InitialImage;
                 }
             }
-            catch (Exception)
+            catch
             {
                 lblstatus.Text = "WHATSAPP NOT READY";
             }

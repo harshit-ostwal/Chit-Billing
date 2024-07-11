@@ -22,7 +22,7 @@ namespace SS_SOFTWARE_CHIT
                     }
                 }
             }
-            catch (Exception)
+            catch
             {
                 MessageBox.Show("WHATSAPP NOT LOADED?", "SS SOFTWARE", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
@@ -49,7 +49,7 @@ namespace SS_SOFTWARE_CHIT
                             wait.Until(driver => driver.Url.Contains("web.whatsapp.com"));
                             wait.Until(driver => app.driver.PageSource.Contains("Use WhatsApp on your computer"));
                         }
-                        catch (Exception)
+                        catch
                         {
 
                         }
@@ -74,7 +74,7 @@ namespace SS_SOFTWARE_CHIT
                     MessageBox.Show("WHATSAPP IS NOT RUNNING...", "SS SOFTWARE", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
-            catch (Exception)
+            catch
             {
 
             }
@@ -422,7 +422,7 @@ namespace SS_SOFTWARE_CHIT
                     lblstatus.Text = "WHATSAPP READY";
                 }
             }
-            catch (Exception)
+            catch
             {
                 lblstatus.Text = "WHATSAPP NOT READY";
             }
