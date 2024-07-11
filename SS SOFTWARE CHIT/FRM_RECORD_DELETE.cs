@@ -256,6 +256,7 @@ namespace SS_SOFTWARE_CHIT
                 con.Close();
                 DeleteChitData();
                 MessageBox.Show("RECORD DELETED SUCCESSFULLY!", "SS SOFTWARE", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Clear();
                 Data();
                 Display();
             }
